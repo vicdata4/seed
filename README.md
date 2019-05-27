@@ -46,6 +46,10 @@ export default {
     ]
 }
 
+## Babel installation
+
+Run: npm install @babel/core @babel/preset-env rollup-plugin-babel
+
 
 
 
