@@ -51,6 +51,11 @@ export default {
 Run: npm install @babel/core @babel/preset-env rollup-plugin-babel
 
 
+## Code minification
+
+npm install rollup-plugin-uglify --save-dev
+
+
 
 
 
