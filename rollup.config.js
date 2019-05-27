@@ -23,7 +23,7 @@ export default {
         }),
         uglify(),
         copy({
-            tarjets: ['src/assets', './index.html'],
+            targets: ['src/assets', './index.html'],
             outputFolder: 'build'
         }),
         serve({
