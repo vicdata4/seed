@@ -40,7 +40,7 @@ export default {
     plugins: [
         resolve(),
         commonJS({
-            includes: 'node_modules/xx'
+            includes: 'node_modules/**'
         }),
         json()
     ]
