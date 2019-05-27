@@ -12,14 +12,18 @@
         "rollup": "^1.12.4",
         "rollup-plugin-commonjs": "^10.0.0",
         "rollup-plugin-copy": "^2.0.1",
+        "rollup-plugin-delete": "^1.0.0",
         "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-livereload": "^1.0.0",
         "rollup-plugin-node-resolve": "^5.0.0",
+        "rollup-plugin-progress": "^1.1.1",
         "rollup-plugin-serve": "^1.0.1",
         "rollup-plugin-uglify": "^6.0.2"
     },
     "dependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
+        "ip": "^1.1.5",
         "rollup-plugin-babel": "^4.3.2"
     }
 }

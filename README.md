@@ -24,6 +24,14 @@ npm i -S -D rollup-plugin-node-resolve
 
 npm i -S -D rollup-plugin-commonjs
 
+npm i -S -D rollup-plugin-progress
+
+npm i -S -D rollup-plugin-delete
+
+npm i -S -D rollup-plugin-livereload
+
+npm i ip
+
 ## Babel installation
 
 Run: npm install @babel/core @babel/preset-env rollup-plugin-babel

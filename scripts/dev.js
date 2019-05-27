@@ -1,6 +1,6 @@
 const { watch, rollup } = require('rollup');
-console.log(rollup);
-/* const {folders, rollupConfig } = require('./utils/rollupConfig');
+
+const {folders, rollupConfig } = require('./utils/rollupConfig');
 
 const ip = require('ip');
 const chalk = require('chalk');
@@ -42,4 +42,4 @@ rollup(config)
         .finally(() => {
             global.console = consoleBackup;
             console.log(chalk`${CLEAR_OUTPUT}{green.bold We're up and running! 🚀}\n\n{blue Listening on} {black.bgBlue http://localhost:2900}\nAlso on your local network at {underline http://${IP_ADDRESS}:2900}\n`);
-        }).catch((error) => console.error(error)); */
+        }).catch((error) => console.error(error));
