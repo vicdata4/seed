@@ -30,6 +30,9 @@ npm i -S -D rollup-plugin-commonjs
 import json from 'rollup-plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
 import commonJS from 'rollup-plugin-commonjs';
+import babel from 'rollup-plugin-babel';
+import { uglify } from 'rollup-plugin-uglify';
+import copy from 'rollup-plugin-copy';
 
 export default {
     input: 'src/main.js',
@@ -42,7 +45,15 @@ export default {
         commonJS({
             includes: 'node_modules/**'
         }),
-        json()
+        json(),
+        babel({
+            exclude: 'node_modules/**'
+        }),
+        uglify(),
+        copy({
+            tarjets: ['src/assets', './index.html'],
+            outputFolder: 'build'
+        })
     ]
 }
 
@@ -54,6 +65,12 @@ Run: npm install @babel/core @babel/preset-env rollup-plugin-babel
 ## Code minification
 
 npm install rollup-plugin-uglify --save-dev
+
+## Static files
+
+npm i rollup-plugin-copy --save-dev
+
+
 
 
 

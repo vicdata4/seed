@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonJS from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
+import copy from 'rollup-plugin-copy';
 
 export default {
     input: 'src/main.js',
@@ -19,6 +20,10 @@ export default {
         babel({
             exclude: 'node_modules/**'
         }),
-        uglify()
+        uglify(),
+        copy({
+            tarjets: ['src/assets', './index.html'],
+            outputFolder: 'build'
+        })
     ]
 }
