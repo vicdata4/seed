@@ -1,7 +1,7 @@
 # RollUp_Proyect
 
 
-# RollUp installation
+## RollUp installation
 
 
 npm install -g rollup
@@ -16,10 +16,13 @@ Then run
 
 rollup main.js --o bundle.js -f cjs (bundle.js will be generated (output))
 
-# RollUp plugins installation
+## RollUp Plugins
 
 npm i -S -D rollup-plugin-json
 
+npm i -S -D rollup-plugin-node-resolve
+
+npm i -S -D rollup-plugin-commonjs
 
 
 
