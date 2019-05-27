@@ -24,8 +24,8 @@ const files = {
 const rollupConfig = ({
     input,
     output = {},
-    pligins = [],
-    config = {} 
+    plugins = [],
+    config = {}
 } = {}) => ({
     input: input ? input : files.main,
     output: {
