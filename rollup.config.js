@@ -4,6 +4,7 @@ import commonJS from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import { uglify } from 'rollup-plugin-uglify';
 import copy from 'rollup-plugin-copy';
+import serve from 'rollup-plugin-serve';
 
 export default {
     input: 'src/main.js',
@@ -24,6 +25,12 @@ export default {
         copy({
             tarjets: ['src/assets', './index.html'],
             outputFolder: 'build'
+        }),
+        serve({
+            open: true,
+            contentBase: 'build',
+            host: ['127.0.0.1'],
+            port: 3700
         })
     ]
 }

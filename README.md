@@ -70,6 +70,10 @@ npm install rollup-plugin-uglify --save-dev
 
 npm i rollup-plugin-copy --save-dev
 
+## Dev server
+
+npm install rollup-plugin-serve --save-dev
+
 
 
 
