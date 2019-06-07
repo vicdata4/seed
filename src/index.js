@@ -1,1 +1,1 @@
-console.log('**');
+import './app-shell'

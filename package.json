@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "node ./scripts/dev.js"
-    }, 
+    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
@@ -25,6 +25,7 @@
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
         "ip": "^1.1.5",
-        "rollup-plugin-babel": "^4.3.2"
+        "rollup-plugin-babel": "^4.3.2",
+        "lit-element": "^2.0.1"
     }
 }
