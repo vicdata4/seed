@@ -17,8 +17,9 @@ class NavLinks extends LitElement {
   render() {
     return html`
      <div>
-      <a href="#1">Link 1</a>
-      <a href="#2">Link 2</a>
+      <a href="/">HOME</a>
+      <a href="/users">User list</a>
+      <a href="/users/kim">Kim link</a>
       <a href="#3">Link 3</a>
       <a href="#4">Link 4</a>
      </div>
