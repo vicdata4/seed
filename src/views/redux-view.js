@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { GlobalStyles } from '../utils/global-styles';
 
-class UsersView extends LitElement {
+class ReduxView extends LitElement {
 
   static get styles() {
     return [
@@ -16,9 +16,9 @@ class UsersView extends LitElement {
 
   render() {
     return html`
-      <div>Users View</div>
+      <div>User profile: </div>
     `;
   }
 }
 
-window.customElements.define('users-view', UsersView);
+window.customElements.define('redux-view', ReduxView);

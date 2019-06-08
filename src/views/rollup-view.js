@@ -1,12 +1,16 @@
 import { LitElement, html, css } from 'lit-element';
 import { GlobalStyles } from '../utils/global-styles';
 
-class NotFound extends LitElement {
+class RollupView extends LitElement {
 
   static get styles() {
     return [
       GlobalStyles,
-      css``,
+      css`
+      :host {
+        background-color: purple;
+      }
+      `,
     ];
   }
 
@@ -16,9 +20,9 @@ class NotFound extends LitElement {
 
   render() {
     return html`
-      <div>Not found</div>
+      <div>Users View</div>
     `;
   }
 }
 
-window.customElements.define('not-found', NotFound);
+window.customElements.define('rollup-view', RollupView);

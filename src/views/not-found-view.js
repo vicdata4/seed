@@ -1,12 +1,16 @@
 import { LitElement, html, css } from 'lit-element';
 import { GlobalStyles } from '../utils/global-styles';
 
-class UserProfile extends LitElement {
+class NotFoundView extends LitElement {
 
   static get styles() {
     return [
       GlobalStyles,
-      css``,
+      css`
+        :host {
+          background-color: red;
+        }
+      `,
     ];
   }
 
@@ -16,10 +20,9 @@ class UserProfile extends LitElement {
 
   render() {
     return html`
-      <div>User profile: </div>
-      <p>ID: ${location.params.id}</p>
+      <div>Not found</div>
     `;
   }
 }
 
-window.customElements.define('user-profile', UserProfile);
+window.customElements.define('not-found-view', NotFoundView);
