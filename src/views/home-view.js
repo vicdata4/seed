@@ -8,8 +8,7 @@ class HomeView extends LitElement {
       CustomStyles,
       css`
         :host{
-          background-image: url('assets/wall.jpg');
-          background-size: cover;
+          background-image: url('assets/backgrounds/wall.jpg');
         }
       `,
     ];
@@ -22,9 +21,9 @@ class HomeView extends LitElement {
   render() {
     return html`
       <section>
-          <h1>Build your first project, step by step</h1>
-          <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
-          <a href="/rollup" class="custom-link">Quick start</a>
+        <h1>Build your first project, step by step</h1>
+        <p>Lorem ipsum with RollUp custom configuraiton</p>
+        <a href="/rollup" class="custom-link">Quick start</a>
       </section>
     `;
   }

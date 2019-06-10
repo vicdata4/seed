@@ -1,46 +1,38 @@
 import { css } from 'lit-element';
 
 export const CustomStyles = css`
-  :host {
+  :host{
+    display: grid;
+    background-image: none;
+    background-size: cover;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  section {
     display: flex;
+    position: relative;
     justify-content: center;
-    position: relative;
-    overflow: hidden;
+    flex-direction: column;
+    color: white;
     height: 100%;
-
-    --app-title-color: white;
-    --app-header-height: 100px;
-    --app-color-blue-light: #21bfbf;
-
-    color: var(--app-title-color, white);
-
-    
-  }
-
-  :host section {
-    position: relative;
-    overflow: auto;
-    height: 100%;
-  }
-
-  :host section div{
     padding: 50px;
+    box-sizing: border-box;
   }
 
-  :host section p{
-    line-height: 1.5;
-    
+  section > * {
+    position: relative;
   }
 
-  :host::before {
+  section::before {
     content: "";
     position: absolute;
-    
+    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,.6);
   }
-
 
   .custom-link {
     display: inline-block;
@@ -48,6 +40,7 @@ export const CustomStyles = css`
     border: none;
     padding: 10px;
     font-size: 15px;
+    width: fit-content;
     color: white;
     border-radius: 7px;
     text-decoration: none;
@@ -62,13 +55,25 @@ export const CustomStyles = css`
     color: red;
   }
 
+  .center {
+    display: flex;
+    align-items: center;
+  }
+
+  hr {
+    width: 100%;
+    position: relative;
+  }
 
   @media (min-width: 768px) {
     :host:before {
-      
       left: unset;
       top: 0;
       right: 0;
+    }
+
+    :host section div{
+      padding: 70px;
     }
   }
 `;

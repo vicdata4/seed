@@ -9,8 +9,7 @@ class LitElementView extends LitElement {
       CustomStyles,
       css`
         :host{
-          background-image: url('assets/mac.jpg');
-          background-size: cover;
+          background-image: url('assets/backgrounds/mac.jpg');
         }
       `,
     ];

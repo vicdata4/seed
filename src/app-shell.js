@@ -18,7 +18,9 @@ class AppShell extends LitElement {
             display: grid;
             grid-template-rows: 100px 1fr;
             background-color: black;
+            width: 100%;
             height: 100%;
+            
         }
 
         div {
@@ -27,7 +29,7 @@ class AppShell extends LitElement {
 
         @media (min-width: 768px) {
             :host {
-                grid-template-rows: unset;
+                grid-template-rows: 1fr;
                 grid-template-columns: 30% 1fr;
             }
         }

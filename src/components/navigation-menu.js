@@ -5,10 +5,14 @@ class NavigationMenu extends LitElement {
   /* eslint-disable require-jsdoc */
   static get styles() {
     return [
-      CustomStyles,
       css`
         :host {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: black;
+          border-right: 1px solid #212121;
+          --app-color-blue-light: #21bfbf;
         }
 
         :host section {
@@ -34,15 +38,12 @@ class NavigationMenu extends LitElement {
           color: var(--app-color-blue-light);
         }
 
-        
-
         .active {
           border-bottom: 1px solid #929191;
           border-top-right-radius: 10px;
           color: var(--app-color-blue-light);
           animation: all 1s;
         }
-
 
         @media (min-width: 768px) {
           .nav-list {
