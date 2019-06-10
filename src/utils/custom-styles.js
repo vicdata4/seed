@@ -61,8 +61,9 @@ export const CustomStyles = css`
   }
 
   hr {
-    width: 100%;
     position: relative;
+    border-color: rgba(255,255,255,.4);
+    width: 100%;
   }
 
   @media (min-width: 768px) {

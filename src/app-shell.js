@@ -16,21 +16,35 @@ class AppShell extends LitElement {
       css`
         :host {
             display: grid;
-            grid-template-rows: 100px 1fr;
+            grid-template-rows: 80px 1fr;
             background-color: black;
             width: 100%;
             height: 100%;
-            
         }
 
-        div {
+        .header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-right: 1px solid #212121;
+        }
+
+        div#root {
           overflow: hidden;
+        }
+
+        div navigation-menu {
+          display: none;
         }
 
         @media (min-width: 768px) {
             :host {
                 grid-template-rows: 1fr;
                 grid-template-columns: 30% 1fr;
+            }
+
+            div navigation-menu {
+              display: block;
             }
         }
       `,
@@ -57,7 +71,9 @@ class AppShell extends LitElement {
 
   render() {
     return html`
-        <navigation-menu></navigation-menu>
+        <div class="header">
+          <navigation-menu></navigation-menu>
+        </div>
         <div id="root"></div>
     `;
   }

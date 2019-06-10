@@ -11,27 +11,32 @@ class NavigationMenu extends LitElement {
           align-items: center;
           justify-content: center;
           background-color: black;
-          border-right: 1px solid #212121;
           --app-color-blue-light: #21bfbf;
         }
 
-        :host section {
-          padding: 0;
-        }
-
-        .nav-list {
+        section {
           display: flex;
           align-items: center;
           flex-flow: row wrap;
           justify-content: center;
+          padding: 0;
         }
 
         a {
-          padding:10px;
+          padding: 10px;
           text-decoration: none;
           color: white;
           transform: all 1s;
           cursor: pointer;
+        }
+
+        ul {
+          padding: 0;
+        }
+
+        li {
+          padding:20px;
+          text-align: center;
         }
 
         a:hover {
@@ -43,16 +48,6 @@ class NavigationMenu extends LitElement {
           border-top-right-radius: 10px;
           color: var(--app-color-blue-light);
           animation: all 1s;
-        }
-
-        @media (min-width: 768px) {
-          .nav-list {
-            flex-direction: column;
-          }
-
-          a {
-            padding:20px;
-          }
         }
       `,
     ];
@@ -91,10 +86,12 @@ class NavigationMenu extends LitElement {
 
   render() {
     return html`
-     <section class="nav-list">
+     <section>
+       <ul>
         ${this.navList.map((x, i) => html `
-          <a href="${x.route}" @click="${() => this.setActive(i)}">${x.name}</a>
+          <li><a href="${x.route}" @click="${() => this.setActive(i)}">${x.name}</a></li>
         `)}
+        </ul>
      </section>
     `;
   }
