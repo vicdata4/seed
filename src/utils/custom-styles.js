@@ -1,10 +1,10 @@
 import { css } from 'lit-element';
 
-export const GlobalStyles = css`
+export const CustomStyles = css`
   :host {
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: relative;
     height: 100%;
 
     --app-title-color: white;
@@ -12,22 +12,29 @@ export const GlobalStyles = css`
     --app-color-blue-light: #21bfbf;
 
     color: var(--app-title-color, white);
+
+    
   }
 
   :host div {
     position: relative;
-    padding: 70px;
+    padding: 50px;
+    overflow: auto;
+    height: 100%;
+  }
+
+  :host div p{
+    line-height: 1.5;
     
   }
 
-  :host:before {
+  :host::before {
     content: "";
-    height: 100%;
     position: absolute;
-    top: var(--app-header-height);
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,.5);
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
   }
 
 
@@ -47,12 +54,14 @@ export const GlobalStyles = css`
     background-color: rgb(166, 108, 10);
   }
 
-
+  .npm-command {
+    color: red;
+  }
 
 
   @media (min-width: 768px) {
     :host:before {
-      width: 70%;
+      
       left: unset;
       top: 0;
       right: 0;

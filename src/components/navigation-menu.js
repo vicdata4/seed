@@ -1,17 +1,20 @@
 import { LitElement, html, css } from 'lit-element';
-import { GlobalStyles } from '../utils/global-styles';
+import { CustomStyles } from '../utils/custom-styles';
 
-class NavView extends LitElement {
+class NavigationMenu extends LitElement {
   /* eslint-disable require-jsdoc */
   static get styles() {
     return [
-      GlobalStyles,
+      CustomStyles,
       css`
         :host {
-          display: flex;
-          justify-content: center;
           background-color: black;
         }
+
+        :host div {
+          padding: 0;
+        }
+
         .nav-list {
           display: flex;
           align-items: center;
@@ -67,11 +70,11 @@ class NavView extends LitElement {
         name: 'RollUp'
       },
       {
-        route: '/123',
+        route: '/litelement',
         name: 'Lit-Element'
       },
       {
-        route: '/123',
+        route: '/vaadin',
         name: 'Vaadin'
       },
       {
@@ -110,4 +113,4 @@ class NavView extends LitElement {
   } 
 }
 
-window.customElements.define('nav-view', NavView);
+window.customElements.define('navigation-menu', NavigationMenu);

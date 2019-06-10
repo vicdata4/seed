@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles } from '../utils/custom-styles';
 
 
-class ReduxView extends LitElement {
+class VaadinView extends LitElement {
 
   static get styles() {
     return [
@@ -23,7 +23,7 @@ class ReduxView extends LitElement {
   render() {
     return html`
       <div>
-        <h1>Redux</h1>
+        <h1>VaadinView</h1>
         <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
         <a href="/rollup" class="custom-link">Quick start</a>
       </div>
@@ -31,4 +31,4 @@ class ReduxView extends LitElement {
   }
 }
 
-window.customElements.define('redux-view', ReduxView);
+window.customElements.define('vaadin-view', VaadinView);

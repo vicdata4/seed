@@ -1,16 +1,14 @@
 import { LitElement, html, css } from 'lit-element';
-import '../components/my-component';
-import { GlobalStyles } from '../utils/global-styles';
-
+import { CustomStyles } from '../utils/custom-styles';
 
 class HomeView extends LitElement {
 
   static get styles() {
     return [
-      GlobalStyles,
+      CustomStyles,
       css`
         :host{
-          background-image: url('assets/design.jpg');
+          background-image: url('assets/wall.jpg');
           background-size: cover;
         }
       `,

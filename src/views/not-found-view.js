@@ -1,11 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
-import { GlobalStyles } from '../utils/global-styles';
+import { CustomStyles } from '../utils/custom-styles';
 
 class NotFoundView extends LitElement {
 
   static get styles() {
     return [
-      GlobalStyles,
+      CustomStyles,
       css`
         :host {
           background-color: red;

@@ -1,10 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
 import { Router } from '@vaadin/router';
 
-import './views/nav-view';
+import './components/navigation-menu';
 import './views/home-view';
+import './views/litelement-view';
 import './views/rollup-view';
 import './views/redux-view';
+import './views/vaadin-view';
 import './views/not-found-view';
 
 class AppShell extends LitElement {
@@ -15,7 +17,12 @@ class AppShell extends LitElement {
         :host {
             display: grid;
             grid-template-rows: 100px 1fr;
+            background-color: black;
             height: 100%;
+        }
+
+        div {
+          overflow: hidden;
         }
 
         @media (min-width: 768px) {
@@ -40,13 +47,15 @@ class AppShell extends LitElement {
         {path: '/',   component: 'home-view'},
         {path: '/rollup',  component: 'rollup-view'},
         {path: '/redux',  component: 'redux-view'},
+        {path: '/litelement',  component: 'litelement-view'},
+        {path: '/vaadin',  component: 'vaadin-view'},
         {path: '(.*)', component: 'not-found-view'},
       ]);
   }
 
   render() {
     return html`
-        <nav-view></nav-view>
+        <navigation-menu></navigation-menu>
         <div id="root"></div>
     `;
   }
