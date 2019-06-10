@@ -5,6 +5,7 @@ export const CustomStyles = css`
     display: flex;
     justify-content: center;
     position: relative;
+    overflow: hidden;
     height: 100%;
 
     --app-title-color: white;
@@ -16,14 +17,17 @@ export const CustomStyles = css`
     
   }
 
-  :host div {
+  :host section {
     position: relative;
-    padding: 50px;
     overflow: auto;
     height: 100%;
   }
 
-  :host div p{
+  :host section div{
+    padding: 50px;
+  }
+
+  :host section p{
     line-height: 1.5;
     
   }

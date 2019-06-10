@@ -20,7 +20,7 @@ class NotFoundView extends LitElement {
 
   render() {
     return html`
-      <div>Not found</div>
+      <section>Not found</section>
     `;
   }
 }

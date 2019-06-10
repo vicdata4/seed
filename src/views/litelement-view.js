@@ -22,10 +22,10 @@ class LitElementView extends LitElement {
 
   render() {
     return html`
-      <div>
+      <section>
         <h1>LitElement</h1>
         <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
-      </div>
+      </section>
     `;
   }
 }

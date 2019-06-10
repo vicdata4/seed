@@ -11,7 +11,7 @@ class NavigationMenu extends LitElement {
           background-color: black;
         }
 
-        :host div {
+        :host section {
           padding: 0;
         }
 
@@ -90,11 +90,11 @@ class NavigationMenu extends LitElement {
 
   render() {
     return html`
-     <div class="nav-list">
+     <section class="nav-list">
         ${this.navList.map((x, i) => html `
           <a href="${x.route}" @click="${() => this.setActive(i)}">${x.name}</a>
         `)}
-     </div>
+     </section>
     `;
   }
 

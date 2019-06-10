@@ -21,11 +21,11 @@ class HomeView extends LitElement {
 
   render() {
     return html`
-      <div>
-        <h1>Build your first project, step by step</h1>
-        <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
-        <a href="/rollup" class="custom-link">Quick start</a>
-      </div>
+      <section>
+          <h1>Build your first project, step by step</h1>
+          <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
+          <a href="/rollup" class="custom-link">Quick start</a>
+      </section>
     `;
   }
 }

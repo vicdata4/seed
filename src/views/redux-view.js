@@ -22,11 +22,11 @@ class ReduxView extends LitElement {
 
   render() {
     return html`
-      <div>
+      <section>
         <h1>Redux</h1>
         <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
         <a href="/rollup" class="custom-link">Quick start</a>
-      </div>
+      </section>
     `;
   }
 }
