@@ -55,7 +55,7 @@ class NavigationMenu extends LitElement {
 
   constructor() {
     super();
-
+    
     this.navList = [
       {
         route: '/',
@@ -91,7 +91,7 @@ class NavigationMenu extends LitElement {
         ${this.navList.map((x, i) => html `
           <li><a href="${x.route}" @click="${() => this.setActive(i)}">${x.name}</a></li>
         `)}
-        </ul>
+      </ul>
      </section>
     `;
   }
@@ -104,11 +104,10 @@ class NavigationMenu extends LitElement {
 
   setActive(index){
     const navList = this.shadowRoot.querySelectorAll('a');
-
     navList.forEach((x, i) => {
       x.className = (x.className === 'active' && i !== index) ? '' : (i == index) ? 'active' : '';
     }); 
-  } 
+  }
 }
 
 window.customElements.define('navigation-menu', NavigationMenu);
