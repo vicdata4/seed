@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { CustomStyles } from '../utils/custom-styles';
+import { close } from '../utils/svg-icons';
 
 class NavigationMenu extends LitElement {
   /* eslint-disable require-jsdoc */
@@ -10,8 +10,9 @@ class NavigationMenu extends LitElement {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: black;
+          background-color: rgba(0,0,0,.8);
           --app-color-blue-light: #21bfbf;
+          
         }
 
         section {
@@ -20,6 +21,7 @@ class NavigationMenu extends LitElement {
           flex-flow: row wrap;
           justify-content: center;
           padding: 0;
+          height: 100%;
         }
 
         a {
@@ -32,6 +34,9 @@ class NavigationMenu extends LitElement {
 
         ul {
           padding: 0;
+          list-style: none;
+          white-space: nowrap;
+          font-size: 20px;
         }
 
         li {
@@ -49,6 +54,26 @@ class NavigationMenu extends LitElement {
           color: var(--app-color-blue-light);
           animation: all 1s;
         }
+
+        .close {
+          position: absolute;
+          border: none;
+          top: 0;
+          left: 0;
+          padding: 20px;
+          background: unset;
+          cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+          .close {
+            display: none;  
+          }
+
+          ul {
+            font-size: 15px;
+          }
+        }
       `,
     ];
   }
@@ -58,23 +83,23 @@ class NavigationMenu extends LitElement {
 
     this.navList = [
       {
-        route: '/',
+        path: '/',
         name: 'Home'
       },
       {
-        route: '/rollup',
+        path: '/rollup',
         name: 'RollUp'
       },
       {
-        route: '/litelement',
+        path: '/litelement',
         name: 'Lit-Element'
       },
       {
-        route: '/vaadin',
+        path: '/vaadin',
         name: 'Vaadin'
       },
       {
-        route: '/redux',
+        path: '/redux',
         name: 'Redux'
       },
     ];
@@ -87,22 +112,28 @@ class NavigationMenu extends LitElement {
   render() {
     return html`
      <section>
+     <button class="close" @click="${this.closeMobileMenu}">${close}</button>
        <ul>
         ${this.navList.map((x, i) => html `
-          <li><a href="${x.route}" @click="${() => this.setActive(i)}">${x.name}</a></li>
+          <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
         `)}
       </ul>
      </section>
     `;
   }
 
+  closeMobileMenu() {
+    this.style.left = '100%';
+  }
+
   setActiveViaPath() {
-    this.setActive(this.navList.findIndex((i) => i.route === location.pathname));
+    this.setActive(this.navList.findIndex((i) => i.path === location.pathname));
   }
 
   setActive(index){
     const navList = this.shadowRoot.querySelectorAll('a');
-    
+    this.closeMobileMenu();
+
     navList.forEach((x, i) => {
       x.className = (i == index) ? 'active' : '';
     }); 
