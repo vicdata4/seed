@@ -12,7 +12,7 @@ class NavigationMenu extends LitElement {
           justify-content: center;
           background-color: rgba(0,0,0,.8);
           --app-color-blue-light: #21bfbf;
-          
+          min-width: min-content;
         }
 
         section {
