@@ -54,8 +54,6 @@ class AppShell extends LitElement {
   constructor() {
     super();
     
-    this.path = '';
-
     window.addEventListener('set-active-button', (e) => {
         const navigator = this.shadowRoot.querySelector('navigation-menu');
         navigator.setActive(navigator.navList.findIndex((i) => i.route === e.detail.path));

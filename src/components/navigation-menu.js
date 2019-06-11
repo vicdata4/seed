@@ -55,7 +55,7 @@ class NavigationMenu extends LitElement {
 
   constructor() {
     super();
-    
+
     this.navList = [
       {
         route: '/',
@@ -97,15 +97,14 @@ class NavigationMenu extends LitElement {
   }
 
   setActiveViaPath() {
-    this.navList.forEach((x, i) => {
-      if (x.route === location.pathname) this.setActive(i);
-    }); 
+    this.setActive(this.navList.findIndex((i) => i.route === location.pathname));
   }
 
   setActive(index){
     const navList = this.shadowRoot.querySelectorAll('a');
+    
     navList.forEach((x, i) => {
-      x.className = (x.className === 'active' && i !== index) ? '' : (i == index) ? 'active' : '';
+      x.className = (i == index) ? 'active' : '';
     }); 
   }
 }
