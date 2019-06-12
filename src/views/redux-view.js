@@ -23,8 +23,7 @@ class ReduxView extends LitElement {
     return html`
       <section>
         <h1>Redux</h1>
-        <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
-        <a href="/rollup" class="custom-link">Quick start</a>
+        <p>A simple base class for creating fast, lightweight web components.</p>
       </section>
     `;
   }

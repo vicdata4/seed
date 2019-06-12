@@ -24,9 +24,17 @@ class VaadinView extends LitElement {
       <section>
         <h1>VaadinView</h1>
         <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
-        <a href="/rollup" class="custom-link">Quick start</a>
+        <a href="/redux" class="custom-link" @click="${this.setActiveButton}">Quick start</a>
       </section>
     `;
+  }
+
+  setActiveButton(e) {
+    this.dispatchEvent(new CustomEvent('set-active-button', {
+      bubbles: true,
+      composed: true,
+      detail: { path: '/redux' },
+    }));
   }
 }
 

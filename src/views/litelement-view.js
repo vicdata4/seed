@@ -23,7 +23,10 @@ class LitElementView extends LitElement {
     return html`
       <section>
         <h1>LitElement</h1>
-        <p>Lorem ipsum with RollUp custom configuraiton, LitElement library, Vaadin Routing and Redux</p>
+        <hr>
+        <h3>Easily Create Fast, Lightweight Web Components</h3>
+        <p>LitElement makes it easy to define Web Components – ideal for sharing elements across your organization or building a UI design system.
+Use your components anywhere you use HTML: in your main document, a CMS, Markdown, or a framework like React or Vue.</p>
       </section>
     `;
   }

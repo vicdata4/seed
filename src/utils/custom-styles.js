@@ -34,6 +34,18 @@ export const CustomStyles = css`
     background-color: rgba(0,0,0,.6);
   }
 
+  section p {
+    line-height: 1.8;
+  }
+
+  section h3 {
+    margin: 0;
+  }
+
+  section h1 {
+    margin: 0;
+  }
+
   .custom-link {
     display: inline-block;
     background-color: #e29512;

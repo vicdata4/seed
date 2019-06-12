@@ -22,6 +22,9 @@ class AppShell extends LitElement {
           background-color: black;
           width: 100%;
           height: 100%;
+
+          overflow: hidden;
+          position: relative;
         }
 
         .header {
@@ -47,7 +50,6 @@ class AppShell extends LitElement {
 
         .mobile-menu {
           position: absolute;
-          overflow: hidden;
           top: 0;
           left: 100%;
           right: 0;
@@ -71,6 +73,7 @@ class AppShell extends LitElement {
             }
 
             .header {
+              display: none;
               justify-content: center;
             }
 
@@ -112,11 +115,13 @@ class AppShell extends LitElement {
 
   render() {
     return html`
+        <navigation-menu class="mobile-menu"></navigation-menu>
         <div class="header">
-          <navigation-menu class="mobile-menu"></navigation-menu>
           <button class="menu-icon" @click="${this.openMobileMenu}">${menu}</button>
         </div>
+        
         <div id="root"></div>
+        
     `;
   }
 }
