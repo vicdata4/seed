@@ -15,6 +15,10 @@ export const CustomStyles = css`
     font-size: 30px;
   }
 
+  section h1 span {
+    color: #c7b788;
+  }
+
   .custom-link {
     display: inline-block;
     background-color: #e29512;

@@ -10,7 +10,7 @@ class NavigationMenu extends LitElement {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: rgba(0,0,0,.8);
+          background-color: rgba(0,0,0,.9);
           --app-color-blue-light: #21bfbf;
           min-width: min-content;
         }
@@ -42,6 +42,10 @@ class NavigationMenu extends LitElement {
         li {
           padding:20px;
           text-align: center;
+        }
+
+        li img {
+          width: 100px;
         }
 
         a:hover {
@@ -114,6 +118,7 @@ class NavigationMenu extends LitElement {
      <nav>
         <button class="close" @click="${this.closeMobileMenu}">${close}</button>
         <ul>
+        <li><img src="assets/logo.png"></li>
           ${this.navList.map((x, i) => html `
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}

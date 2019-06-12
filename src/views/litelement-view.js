@@ -10,7 +10,7 @@ class LitElementView extends LitElement {
       ViewStyle,
       css`
         :host{
-          background-image: url('assets/backgrounds/mac.jpg');
+          background-image: url('assets/backgrounds/cloud.jpg');
         }
       `,
     ];

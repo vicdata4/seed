@@ -22,9 +22,9 @@ class HomeView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>Build your first project, step by step</h1>
+        <h1>SmartUp<span>Xperience</span> Offboarding project</h1>
         <hr>
-        <p>Lorem ipsum with RollUp custom configuraiton</p>
+        <p>Learn about RollUp, LitElement, Redux and Vaadin</p>
         <div>
           <a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank">github repository</a>
           <a href="/rollup" class="custom-link red" @click="${this.setActiveButton}">Quick start</a>
