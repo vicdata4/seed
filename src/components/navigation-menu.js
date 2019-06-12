@@ -13,6 +13,7 @@ class NavigationMenu extends LitElement {
           background-color: rgba(0,0,0,.9);
           --app-color-blue-light: #21bfbf;
           min-width: min-content;
+          font-family: 'Ubuntu', sans-serif;
         }
 
         nav {
@@ -36,7 +37,7 @@ class NavigationMenu extends LitElement {
           padding: 0;
           list-style: none;
           white-space: nowrap;
-          font-size: 20px;
+          font-size: 22px;
         }
 
         li {
@@ -67,6 +68,10 @@ class NavigationMenu extends LitElement {
           padding: 20px;
           background: unset;
           cursor: pointer;
+        }
+
+        nav button svg {
+          fill: #43cdc5;
         }
 
         @media (min-width: 768px) {

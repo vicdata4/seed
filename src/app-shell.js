@@ -24,7 +24,7 @@ class AppShell extends LitElement {
           width: 100%;
           height: 100%;
           overflow: hidden;
-          
+          font-family: 'Ubuntu', sans-serif;
         }
 
         header {
