@@ -1,11 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
-import { CustomStyles } from '../utils/custom-styles';
+import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
 class HomeView extends LitElement {
 
   static get styles() {
     return [
       CustomStyles,
+      ViewStyle,
       css`
         :host{
           background-image: url('assets/backgrounds/wall.jpg');

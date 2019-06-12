@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { CustomStyles } from '../utils/custom-styles';
+import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
 
 class ReduxView extends LitElement {
@@ -7,6 +7,7 @@ class ReduxView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
+      ViewStyle,
       css`
         :host{
           background-image: url('assets/backgrounds/keyboard.jpg');
@@ -23,7 +24,11 @@ class ReduxView extends LitElement {
     return html`
       <section>
         <h1>Redux</h1>
-        <p>A simple base class for creating fast, lightweight web components.</p>
+        <hr>
+        <h3>A predictable state container for JavaScript apps.</h3>
+        <p>Redux is a predictable state container for JavaScript apps.It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
+        You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.</p>
+        <a href="https://redux.js.org/" class="custom-link" @click="${this.setActiveButton}" target="_blank">Learn more about Redux</a>
       </section>
     `;
   }

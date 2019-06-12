@@ -1,38 +1,6 @@
 import { css } from 'lit-element';
 
 export const CustomStyles = css`
-  :host{
-    display: grid;
-    background-image: none;
-    background-size: cover;
-    overflow-y: auto;
-    height: 100%;
-  }
-
-  section {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    height: 100%;
-    padding: 50px;
-    box-sizing: border-box;
-  }
-
-  section > * {
-    position: relative;
-  }
-
-  section::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.6);
-  }
 
   section p {
     line-height: 1.8;
@@ -76,6 +44,43 @@ export const CustomStyles = css`
     position: relative;
     border-color: rgba(255,255,255,.4);
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+`;
+
+export const ViewStyle = css`
+  :host{
+    display: grid;
+    background-image: none;
+    background-size: cover;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  section {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  section > * {
+    position: relative;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
   }
 
   @media (min-width: 768px) {
@@ -83,10 +88,6 @@ export const CustomStyles = css`
       left: unset;
       top: 0;
       right: 0;
-    }
-
-    :host section div{
-      padding: 70px;
     }
   }
 `;

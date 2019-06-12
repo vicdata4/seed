@@ -18,37 +18,34 @@ class AppShell extends LitElement {
       css`
         :host {
           display: grid;
+          position: relative;
           grid-template-rows: 80px 1fr;
           background-color: black;
           width: 100%;
           height: 100%;
-
           overflow: hidden;
-          position: relative;
+          
         }
 
         .header {
           display: flex;
-          justify-content: flex-end;
+          justify-content: space-between;
           align-items: center;
           border-right: 1px solid #212121;
+        }
+
+        .header button {
+          background: unset;
+          border: none;
+          cursor: pointer;
         }
 
         div#root {
           overflow: hidden;
         }
 
-        .menu-icon {
-          background: unset;
-          border: none;
-          cursor: pointer;
-        }
-
-        div navigation-menu {
+        navigation-menu {
           display: block;
-        }
-
-        .mobile-menu {
           position: absolute;
           top: 0;
           left: 100%;
@@ -58,28 +55,25 @@ class AppShell extends LitElement {
           transition: left 1s;
         }
 
+        img {
+          width: 120px;
+          padding: 10px;
+        }
+
         @media (min-width: 768px) {
-            :host {
-              grid-template-rows: 1fr;
-              grid-template-columns: 30% 1fr;
-            }
+          :host {
+            grid-template-rows: 1fr;
+            grid-template-columns: 30% 1fr;
+          }
 
-            div navigation-menu {
-              display: block;
-            }
+          .header {
+            display: none;
+            justify-content: center;
+          }
 
-            .menu-icon{
-              display: none;
-            }
-
-            .header {
-              display: none;
-              justify-content: center;
-            }
-
-            .mobile-menu {
-              all: unset;
-            }
+          navigation-menu {
+            all: unset;
+          }
         }
       `,
     ];
@@ -100,13 +94,13 @@ class AppShell extends LitElement {
     const router = new Router(outlet);
 
     router.setRoutes([
-        {path: '/',   component: 'home-view'},
-        {path: '/rollup',  component: 'rollup-view'},
-        {path: '/redux',  component: 'redux-view'},
-        {path: '/litelement',  component: 'litelement-view'},
-        {path: '/vaadin',  component: 'vaadin-view'},
-        {path: '(.*)', component: 'not-found-view'},
-      ]);
+      {path: '/',   component: 'home-view'},
+      {path: '/rollup',  component: 'rollup-view'},
+      {path: '/redux',  component: 'redux-view'},
+      {path: '/litelement',  component: 'litelement-view'},
+      {path: '/vaadin',  component: 'vaadin-view'},
+      {path: '(.*)', component: 'not-found-view'},
+    ]);
   }
 
   openMobileMenu() {
@@ -115,11 +109,11 @@ class AppShell extends LitElement {
 
   render() {
     return html`
-        <navigation-menu class="mobile-menu"></navigation-menu>
+        <navigation-menu></navigation-menu>
         <div class="header">
-          <button class="menu-icon" @click="${this.openMobileMenu}">${menu}</button>
+          <img src="assets/logo.png">
+          <button @click="${this.openMobileMenu}">${menu}</button>
         </div>
-        
         <div id="root"></div>
         
     `;
