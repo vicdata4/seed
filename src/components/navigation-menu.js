@@ -15,7 +15,7 @@ class NavigationMenu extends LitElement {
           min-width: min-content;
         }
 
-        section {
+        nav {
           display: flex;
           align-items: center;
           flex-flow: row wrap;
@@ -111,14 +111,14 @@ class NavigationMenu extends LitElement {
 
   render() {
     return html`
-     <section>
-      <button class="close" @click="${this.closeMobileMenu}">${close}</button>
-       <ul>
-        ${this.navList.map((x, i) => html `
-          <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
-        `)}
-      </ul>
-     </section>
+     <nav>
+        <button class="close" @click="${this.closeMobileMenu}">${close}</button>
+        <ul>
+          ${this.navList.map((x, i) => html `
+            <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
+          `)}
+        </ul>
+     </nav>
     `;
   }
 

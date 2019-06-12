@@ -27,14 +27,14 @@ class AppShell extends LitElement {
           
         }
 
-        .header {
+        header {
           display: flex;
           justify-content: space-between;
           align-items: center;
           border-right: 1px solid #212121;
         }
 
-        .header button {
+        header button {
           background: unset;
           border: none;
           cursor: pointer;
@@ -66,7 +66,7 @@ class AppShell extends LitElement {
             grid-template-columns: 30% 1fr;
           }
 
-          .header {
+          header {
             display: none;
             justify-content: center;
           }
@@ -83,9 +83,8 @@ class AppShell extends LitElement {
     super();
 
     window.addEventListener('set-active-button', (e) => {
-        const navigator = this.shadowRoot.querySelector('navigation-menu');
-        navigator.setActive(navigator.navList.findIndex((i) => i.path === e.detail.path));
-
+      const navigator = this.shadowRoot.querySelector('navigation-menu');
+      navigator.setActive(navigator.navList.findIndex((i) => i.path === e.detail.path));
     });
   }
 
@@ -110,10 +109,10 @@ class AppShell extends LitElement {
   render() {
     return html`
         <navigation-menu></navigation-menu>
-        <div class="header">
+        <header>
           <img src="assets/logo.png">
           <button @click="${this.openMobileMenu}">${menu}</button>
-        </div>
+        </header>
         <div id="root"></div>
         
     `;
