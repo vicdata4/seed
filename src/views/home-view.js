@@ -9,7 +9,7 @@ class HomeView extends LitElement {
       ViewStyle,
       css`
         :host{
-          background-image: url('assets/backgrounds/wall.jpg');
+          background-image: url('assets/backgrounds/lamp.jpg');
         }
       `,
     ];
@@ -23,8 +23,12 @@ class HomeView extends LitElement {
     return html`
       <section>
         <h1>Build your first project, step by step</h1>
+        <hr>
         <p>Lorem ipsum with RollUp custom configuraiton</p>
-        <a href="/rollup" class="custom-link" @click="${this.setActiveButton}">Quick start</a>
+        <div>
+          <a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank">github repository</a>
+          <a href="/rollup" class="custom-link red" @click="${this.setActiveButton}">Quick start</a>
+        </div>
       </section>
     `;
   }

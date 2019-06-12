@@ -12,6 +12,7 @@ export const CustomStyles = css`
 
   section h1 {
     margin: 0;
+    font-size: 30px;
   }
 
   .custom-link {
@@ -46,6 +47,10 @@ export const CustomStyles = css`
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .red {
+    background-color: #bf4545;
   }
 `;
 
