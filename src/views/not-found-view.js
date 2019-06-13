@@ -8,21 +8,33 @@ class NotFoundView extends LitElement {
       CustomStyles,
       ViewStyle,
       css`
-        :host {
-          background-color: red;
+        :host{
+          background-image: url('assets/backgrounds/lamp.jpg');
         }
       `,
     ];
   }
 
   constructor() {
-    super();
+    super();  
   }
 
   render() {
     return html`
-      <section>Not found</section>
+      <section>
+        <h1>Page not found</h1>
+        <hr>
+        <a href="/" class="custom-link red" @click="${this.setActiveButton}">Go to Home page</a>
+      </section>
     `;
+  }
+
+  setActiveButton() {
+    this.dispatchEvent(new CustomEvent('set-active-button', {
+      bubbles: true,
+      composed: true,
+      detail: { path: '/' },
+    }));
   }
 }
 

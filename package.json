@@ -10,6 +10,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "redux": "^4.0.1",
         "rollup": "^1.12.4",
         "rollup-plugin-commonjs": "^10.0.0",
         "rollup-plugin-copy": "^2.0.1",
