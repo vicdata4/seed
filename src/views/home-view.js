@@ -33,14 +33,13 @@ class HomeView extends LitElement {
     `;
   }
 
-  setActiveButton(e) {
+  setActiveButton() {
     this.dispatchEvent(new CustomEvent('set-active-button', {
       bubbles: true,
       composed: true,
       detail: { path: '/rollup' },
     }));
   }
-  
 }
 
 window.customElements.define('home-view', HomeView);

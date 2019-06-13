@@ -26,8 +26,7 @@ class LitElementView extends LitElement {
         <h1>LitElement</h1>
         <hr>
         <h3>Easily Create Fast, Lightweight Web Components</h3>
-        <p>LitElement makes it easy to define Web Components – ideal for sharing elements across your organization or building a UI design system.
-Use your components anywhere you use HTML: in your main document, a CMS, Markdown, or a framework like React or Vue.</p>
+        <p>LitElement makes it easy to define Web Components – ideal for sharing elements across your organization or building a UI design system. Use your components anywhere you use HTML: in your main document, a CMS, Markdown, or a framework like React or Vue.</p>
       </section>
     `;
   }

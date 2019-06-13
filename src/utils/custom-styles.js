@@ -33,7 +33,7 @@ export const CustomStyles = css`
   }
 
   .custom-link:hover {
-    background-color: rgb(166, 108, 10);
+    background-color: rgb(197, 136, 31);
   }
 
   .npm-command {
@@ -55,6 +55,10 @@ export const CustomStyles = css`
 
   .red {
     background-color: #bf4545;
+  }
+
+  .red:hover {
+    background-color: rgb(142, 55, 55);
   }
 `;
 
