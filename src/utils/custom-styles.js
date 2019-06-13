@@ -15,19 +15,17 @@ export const CustomStyles = css`
     font-size: 30px;
   }
 
-  section div {
-    
-  }
-
   section div input {
     border: 1px solid #473d3d;
-    padding: 4px;
+    margin-left: 0;
     border-radius: 5px;
     background-color: black;
-    width: auto;
     height: 30px;
-    font-size: 20px;
     color: white;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 0;
   }
 
   section h1 span {
@@ -82,6 +80,12 @@ export const CustomStyles = css`
 
   .blue:hover {
       background-color: rgb(53, 98, 149);
+  }
+
+  @media (min-width: 768px) {
+    section div input {
+    width: 30%;
+  }
   }
 `;
 
