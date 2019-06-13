@@ -39,7 +39,7 @@ class ReduxView extends connect(store)(LitElement) {
         <a href="https://redux.js.org/" class="custom-link red" target="_blank">Learn more about Redux</a>
         <h5>Basic Redux example</h5>
         <div>
-          <input type="text" placeholder="note..">
+          <input type="text" placeholder="write a note..">
           <button @click="${this.updateStore}" class="custom-link blue">Add note</button>
         </div>
         <redux-example></redux-example>

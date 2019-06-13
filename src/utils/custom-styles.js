@@ -28,6 +28,10 @@ export const CustomStyles = css`
     margin-left: 0;
   }
 
+  input[type='text']{
+    font-size:20px;
+  }
+
   section h1 span {
     color: #c7b788;
   }
