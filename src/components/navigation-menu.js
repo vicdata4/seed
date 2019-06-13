@@ -68,6 +68,7 @@ class NavigationMenu extends LitElement {
           padding: 20px;
           background: unset;
           cursor: pointer;
+          outline: none;
         }
 
         nav button svg {

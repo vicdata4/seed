@@ -28,7 +28,7 @@ class ReduxView extends LitElement {
         <h3>A predictable state container for JavaScript apps.</h3>
         <p>Redux is a predictable state container for JavaScript apps.It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
         You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.</p>
-        <a href="https://redux.js.org/" class="custom-link" @click="${this.setActiveButton}" target="_blank">Learn more about Redux</a>
+        <a href="https://redux.js.org/" class="custom-link red" target="_blank">Learn more about Redux</a>
       </section>
     `;
   }
