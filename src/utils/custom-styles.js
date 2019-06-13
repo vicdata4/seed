@@ -15,6 +15,21 @@ export const CustomStyles = css`
     font-size: 30px;
   }
 
+  section div {
+    
+  }
+
+  section div input {
+    border: 1px solid #473d3d;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: black;
+    width: auto;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+  }
+
   section h1 span {
     color: #c7b788;
   }
@@ -60,6 +75,14 @@ export const CustomStyles = css`
   .red:hover {
     background-color: rgb(142, 55, 55);
   }
+
+  .blue {
+    background-color: rgb(69, 126, 191);
+  }
+
+  .blue:hover {
+      background-color: rgb(53, 98, 149);
+  }
 `;
 
 export const ViewStyle = css`
@@ -95,6 +118,7 @@ export const ViewStyle = css`
     height: 100%;
     background-color: rgba(0,0,0,.6);
   }
+
 
   @media (min-width: 768px) {
     :host:before {
