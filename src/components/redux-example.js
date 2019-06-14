@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
-import { store } from '../../store/store';
-import { deleteNote } from '../../store/actions';
+import { store } from '../store/store';
+import { deleteNote } from '../store/actions';
 import { close } from '../utils/svg-icons';
 
 class ReduxExample extends connect(store)(LitElement) {

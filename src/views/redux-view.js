@@ -1,10 +1,10 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import '../components/redux-example';
-import { store } from '../../store/store';
+import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
 
-import { addNote } from '../../store/actions';
+import { addNote } from '../store/actions';
 
 class ReduxView extends connect(store)(LitElement) {
 

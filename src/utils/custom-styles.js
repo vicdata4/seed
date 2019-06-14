@@ -43,6 +43,7 @@ export const CustomStyles = css`
     padding: 10px;
     font-size: 15px;
     width: fit-content;
+    width: -moz-fit-content;
     color: white;
     border-radius: 7px;
     text-decoration: none;
