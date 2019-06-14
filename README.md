@@ -1,53 +1,20 @@
-# RollUp_Proyect
+## Seed project
 
+Dependencies: 
+    · Rollup
+    · LitElement
+    · Redux
+    · Vaadin
 
-## RollUp installation
+Demo link: https://seed-19f53.firebaseapp.com/
 
+## Project installation
 
-npm install -g rollup
+git clone https://github.com/vicdata4/Roll_Lit_Redux_Seed.git
 
-npm install --save-dev rollup
+npm install
 
-Create main file manually
-
-main.js file 
-
-Then run
-
-rollup main.js --o bundle.js -f cjs (bundle.js will be generated (output))
-
-## RollUp Plugins
-
-npm i -S -D rollup-plugin-json
-
-npm i -S -D rollup-plugin-node-resolve
-
-npm i -S -D rollup-plugin-commonjs
-
-npm i -S -D rollup-plugin-progress
-
-npm i -S -D rollup-plugin-delete
-
-npm i -S -D rollup-plugin-livereload
-
-npm i ip
-
-## Babel installation
-
-Run: npm install @babel/core @babel/preset-env rollup-plugin-babel
-
-
-## Code minification
-
-npm install rollup-plugin-uglify --save-dev
-
-## Static files
-
-npm i rollup-plugin-copy --save-dev
-
-## Dev server
-
-npm install rollup-plugin-serve --save-dev
+npm run dev
 
 
 
