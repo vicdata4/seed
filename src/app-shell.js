@@ -68,7 +68,6 @@ class AppShell extends LitElement {
 
           header {
             display: none;
-            justify-content: center;
           }
 
           navigation-menu {
@@ -114,7 +113,6 @@ class AppShell extends LitElement {
           <button @click="${this.openMobileMenu}">${menu}</button>
         </header>
         <div id="root"></div>
-        
     `;
   }
 }
