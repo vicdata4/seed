@@ -31,7 +31,6 @@ class AppShell extends LitElement {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border-right: 1px solid #212121;
         }
 
         header button {
