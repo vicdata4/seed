@@ -4,7 +4,6 @@ export const CustomStyles = css`
 
   section p {
     line-height: 1.8;
-    margin-top: 0;
   }
 
   section h3 {

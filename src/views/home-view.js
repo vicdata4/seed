@@ -11,6 +11,10 @@ class HomeView extends LitElement {
         :host{
           background-image: url('assets/backgrounds/lamp.jpg');
         }
+
+        p {
+          margin-top: 0;
+        }
       `,
     ];
   }
