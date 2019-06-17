@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { close } from '../utils/svg-icons';
+import { navigator } from '../routing';
 
 class NavigationMenu extends LitElement {
   /* eslint-disable require-jsdoc */
@@ -90,29 +91,6 @@ class NavigationMenu extends LitElement {
 
   constructor() {
     super();
-
-    this.navList = [
-      {
-        path: '/',
-        name: 'Home'
-      },
-      {
-        path: '/rollup',
-        name: 'RollUp'
-      },
-      {
-        path: '/litelement',
-        name: 'Lit-Element'
-      },
-      {
-        path: '/vaadin',
-        name: 'Vaadin'
-      },
-      {
-        path: '/redux',
-        name: 'Redux'
-      },
-    ];
   }
 
   firstUpdated(){
@@ -125,7 +103,7 @@ class NavigationMenu extends LitElement {
         <button class="close" @click="${this.closeMobileMenu}">${close}</button>
         <ul>
         <li><img src="assets/logo.png"></li>
-          ${this.navList.map((x, i) => html `
+          ${navigator.map((x, i) => html `
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
         </ul>
@@ -138,7 +116,7 @@ class NavigationMenu extends LitElement {
   }
 
   setActiveViaPath() {
-    this.setActive(this.navList.findIndex((i) => i.path === location.pathname));
+    this.setActive(navigator.findIndex((i) => i.path === location.pathname));
   }
 
   setActive(index){

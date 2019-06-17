@@ -9,6 +9,8 @@ import './views/redux-view';
 import './views/vaadin-view';
 import './views/not-found-view';
 
+
+import { routing, navigator } from './routing';
 import { menu } from './utils/svg-icons';
 
 class AppShell extends LitElement {
@@ -81,23 +83,13 @@ class AppShell extends LitElement {
     super();
 
     window.addEventListener('set-active-button', (e) => {
-      const navigator = this.shadowRoot.querySelector('navigation-menu');
-      navigator.setActive(navigator.navList.findIndex((i) => i.path === e.detail.path));
+      const nav = this.shadowRoot.querySelector('navigation-menu');
+      nav.setActive(navigator.findIndex((i) => i.path === e.detail.path));
     });
   }
 
   firstUpdated() {
-    const outlet = this.shadowRoot.getElementById('root');
-    const router = new Router(outlet);
-
-    router.setRoutes([
-      {path: '/',   component: 'home-view'},
-      {path: '/rollup',  component: 'rollup-view'},
-      {path: '/redux',  component: 'redux-view'},
-      {path: '/litelement',  component: 'litelement-view'},
-      {path: '/vaadin',  component: 'vaadin-view'},
-      {path: '(.*)', component: 'not-found-view'},
-    ]);
+    routing.call(this);
   }
 
   openMobileMenu() {
