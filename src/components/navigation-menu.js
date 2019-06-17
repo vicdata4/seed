@@ -3,7 +3,7 @@ import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
 
 class NavigationMenu extends LitElement {
-  /* eslint-disable require-jsdoc */
+
   static get styles() {
     return [
       css`
@@ -99,7 +99,7 @@ class NavigationMenu extends LitElement {
 
   render() {
     return html`
-     <nav>
+      <nav>
         <button class="close" @click="${this.closeMobileMenu}">${close}</button>
         <ul>
         <li><img src="assets/logo.png"></li>
@@ -107,7 +107,7 @@ class NavigationMenu extends LitElement {
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
         </ul>
-     </nav>
+      </nav>
     `;
   }
 

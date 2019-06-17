@@ -11,9 +11,6 @@ class ReduxExample extends connect(store)(LitElement) {
     return [
       CustomStyles,
       css`
-        :host{
-        }
-
         li {
           display: flex;
           align-items: center;
@@ -45,9 +42,6 @@ class ReduxExample extends connect(store)(LitElement) {
   constructor() {
     super();
     this.books = [];
-  }
-
-  firstUpdated(){
   }
 
   stateChanged(state) {
