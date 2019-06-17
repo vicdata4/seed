@@ -1,7 +1,6 @@
 import { Router } from '@vaadin/router';
-  
-  
-export var routing = function() {
+
+export const routing = function() {
     const outlet = this.shadowRoot.getElementById('root');
     const router = new Router(outlet);
 
@@ -14,7 +13,6 @@ export var routing = function() {
         {path: '(.*)', component: 'not-found-view'},
     ]);
 };
-
 
 export const navigator = [
     {
