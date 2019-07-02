@@ -100,9 +100,9 @@ class NavigationMenu extends LitElement {
   render() {
     return html`
       <nav>
-        <button class="close" @click="${this.closeMobileMenu}">${close}</button>
+        <button class="close" aria-label="Close" @click="${this.closeMobileMenu}">${close}</button>
         <ul>
-        <li><img src="assets/logo.png"></li>
+        <li><img src="assets/logo.png" alt="Logo Mobile"></li>
           ${navigator.map((x, i) => html `
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}

@@ -1,5 +1,4 @@
 import { LitElement, html, css } from 'lit-element';
-import { Router } from '@vaadin/router';
 
 import './components/navigation-menu';
 import './views/home-view';
@@ -8,7 +7,6 @@ import './views/rollup-view';
 import './views/redux-view';
 import './views/vaadin-view';
 import './views/not-found-view';
-
 
 import { routing, navigator } from './routing';
 import { menu } from './utils/svg-icons';
@@ -100,8 +98,8 @@ class AppShell extends LitElement {
     return html`
         <navigation-menu></navigation-menu>
         <header>
-          <img src="assets/logo.png">
-          <button @click="${this.openMobileMenu}">${menu}</button>
+          <img src="assets/logo.png" alt="Logo">
+          <button @click="${this.openMobileMenu}" aria-label="Open menu">${menu}</button>
         </header>
         <div id="root"></div>
     `;
