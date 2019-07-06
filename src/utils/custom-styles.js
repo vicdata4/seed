@@ -52,7 +52,7 @@ export const CustomStyles = css`
   }
 
   .custom-link:hover {
-    background-color: rgb(197, 136, 31);
+    background-color: rgb(51, 121, 120);
   }
 
   .npm-command {
