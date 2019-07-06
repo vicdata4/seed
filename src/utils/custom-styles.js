@@ -38,7 +38,8 @@ export const CustomStyles = css`
 
   .custom-link {
     display: inline-block;
-    background-color: #e29512;
+    /*background-color: #e29512;*/
+    background-color: #1C8281;
     border: none;
     padding: 10px;
     font-size: 15px;
@@ -80,7 +81,7 @@ export const CustomStyles = css`
   }
 
   .blue {
-    background-color: rgb(69, 126, 191);
+    background-color: rgb(63, 118, 182);
   }
 
   .blue:hover {
