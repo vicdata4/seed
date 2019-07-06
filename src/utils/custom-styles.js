@@ -77,7 +77,7 @@ export const CustomStyles = css`
   }
 
   .red:hover {
-    background-color: rgb(142, 55, 55);
+    background-color: rgb(176, 63, 63);
   }
 
   .blue {
