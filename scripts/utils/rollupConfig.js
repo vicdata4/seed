@@ -25,7 +25,7 @@ const rollupConfig = ({
   plugins = [],
   config = {}
 } = {}) => ({
-  input: input ? input : files.main,
+  input: input || files.main,
   output: {
     dir: folders.build,
     sourcemap: true,
