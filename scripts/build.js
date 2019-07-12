@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
 const { rollup } = require('rollup');
 const babel = require('rollup-plugin-babel');
-const { folders, rollupConfig } = require('./utils/rollupConfig.js');
+const { rollupConfig } = require('./utils/rollupConfig.js');
 const { output, ...config } = rollupConfig({
   output: {
     entryFileNames: 'main-es5.js'
@@ -11,10 +12,10 @@ const { output, ...config } = rollupConfig({
       comments: true,
       sourceMap: true,
       presets: [
-        ["@babel/preset-env", {
+        ['@babel/preset-env', {
           modules: false,
-          loose: true,
-        }],
+          loose: true
+        }]
       ],
       exclude: 'node_modules/**'
     })
@@ -22,7 +23,7 @@ const { output, ...config } = rollupConfig({
 });
 
 rollup(config)
-.then((bundle) => bundle.write(output))
-.finally(() => {
-  console.log('Build correct');
-}).catch((error) => console.log(error));
+  .then((bundle) => bundle.write(output))
+  .finally(() => {
+    console.log('Build correct');
+  }).catch((error) => console.log(error));
