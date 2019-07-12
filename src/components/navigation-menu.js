@@ -3,8 +3,7 @@ import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
 
 class NavigationMenu extends LitElement {
-
-  static get styles() {
+  static get styles () {
     return [
       css`
         :host {
@@ -85,25 +84,21 @@ class NavigationMenu extends LitElement {
             font-size: 15px;
           }
         }
-      `,
+      `
     ];
   }
 
-  constructor() {
-    super();
-  }
-
-  firstUpdated(){
+  firstUpdated () {
     this.setActiveViaPath();
   }
 
-  render() {
+  render () {
     return html`
       <nav>
         <button class="close" aria-label="Close" @click="${this.closeMobileMenu}">${close}</button>
         <ul>
         <li><img src="assets/logo.png" alt="Logo Mobile"></li>
-          ${navigator.map((x, i) => html `
+          ${navigator.map((x, i) => html`
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
         </ul>
@@ -111,21 +106,21 @@ class NavigationMenu extends LitElement {
     `;
   }
 
-  closeMobileMenu() {
+  closeMobileMenu () {
     this.style.left = '100%';
   }
 
-  setActiveViaPath() {
+  setActiveViaPath () {
     this.setActive(navigator.findIndex((i) => i.path === location.pathname));
   }
 
-  setActive(index){
+  setActive (index) {
     const navList = this.shadowRoot.querySelectorAll('a');
     this.closeMobileMenu();
 
     navList.forEach((x, i) => {
-      x.className = (i == index) ? 'active' : '';
-    }); 
+      x.className = (i === index) ? 'active' : '';
+    });
   }
 }
 

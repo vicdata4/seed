@@ -5,11 +5,18 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "node ./scripts/dev.js"
+        "dev": "node ./scripts/dev.js",
+        "lint": "eslint"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "eslint": "^6.0.1",
+        "eslint-config-standard": "^13.0.1",
+        "eslint-plugin-import": "^2.18.0",
+        "eslint-plugin-node": "^9.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.0",
         "pwa-helpers": "^0.9.1",
         "redux": "^4.0.1",
         "rollup": "^1.12.4",
@@ -17,7 +24,7 @@
         "rollup-plugin-copy": "^2.0.1",
         "rollup-plugin-delete": "^1.0.0",
         "rollup-plugin-json": "^4.0.0",
-        "rollup-plugin-livereload": "^1.0.0",
+        "rollup-plugin-livereload": "^1.0.1",
         "rollup-plugin-node-resolve": "^5.0.0",
         "rollup-plugin-progress": "^1.1.1",
         "rollup-plugin-serve": "^1.0.1",

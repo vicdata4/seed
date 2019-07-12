@@ -12,6 +12,7 @@
 /build
 
 /.firebase
+/.vscode
 
 # misc
 .DS_Store

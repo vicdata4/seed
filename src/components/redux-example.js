@@ -1,13 +1,12 @@
 import { LitElement, html, css } from 'lit-element';
-import { CustomStyles, ViewStyle } from '../utils/custom-styles';
+import { CustomStyles } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
 import { deleteNote } from '../store/actions';
 import { close } from '../utils/svg-icons';
 
 class ReduxExample extends connect(store)(LitElement) {
-
-  static get styles() {
+  static get styles () {
     return [
       CustomStyles,
       css`
@@ -29,26 +28,26 @@ class ReduxExample extends connect(store)(LitElement) {
           height: 30px;
           fill: #21bfbf;
         }
-      `,
+      `
     ];
   }
 
-  static get properties() {
-      return {
+  static get properties () {
+    return {
       books: { type: Array }
-    }
+    };
   }
 
-  constructor() {
+  constructor () {
     super();
     this.books = [];
   }
 
-  stateChanged(state) {
+  stateChanged (state) {
     this.books = state;
   }
-  
-  render() {
+
+  render () {
     return html`
      <ul>
         ${this.books.map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(i)}">${close}</button>${x}</li>`; })}
@@ -56,7 +55,7 @@ class ReduxExample extends connect(store)(LitElement) {
     `;
   }
 
-  deleteElement(i){
+  deleteElement (i) {
     store.dispatch(deleteNote(i));
   }
 }

@@ -2,8 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
 class NotFoundView extends LitElement {
-
-  static get styles() {
+  static get styles () {
     return [
       CustomStyles,
       ViewStyle,
@@ -11,15 +10,11 @@ class NotFoundView extends LitElement {
         :host{
           background-image: url('assets/backgrounds/lamp.jpg');
         }
-      `,
+      `
     ];
   }
 
-  constructor() {
-    super();  
-  }
-
-  render() {
+  render () {
     return html`
       <section>
         <h1>Page not found</h1>
@@ -29,11 +24,11 @@ class NotFoundView extends LitElement {
     `;
   }
 
-  setActiveButton() {
+  setActiveButton () {
     this.dispatchEvent(new CustomEvent('set-active-button', {
       bubbles: true,
       composed: true,
-      detail: { path: '/' },
+      detail: { path: '/' }
     }));
   }
 }

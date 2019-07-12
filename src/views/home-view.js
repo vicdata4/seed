@@ -2,8 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
 class HomeView extends LitElement {
-
-  static get styles() {
+  static get styles () {
     return [
       CustomStyles,
       ViewStyle,
@@ -15,15 +14,11 @@ class HomeView extends LitElement {
         p {
           margin-top: 0;
         }
-      `,
+      `
     ];
   }
 
-  constructor() {
-    super();  
-  }
-
-  render() {
+  render () {
     return html`
       <section>
         <h1>SmartUp<span>Xperience</span> Offboarding project</h1>
@@ -37,11 +32,11 @@ class HomeView extends LitElement {
     `;
   }
 
-  setActiveButton() {
+  setActiveButton () {
     this.dispatchEvent(new CustomEvent('set-active-button', {
       bubbles: true,
       composed: true,
-      detail: { path: '/rollup' },
+      detail: { path: '/rollup' }
     }));
   }
 }
