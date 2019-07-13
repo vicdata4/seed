@@ -1,10 +1,11 @@
 ## Seed project
 
-Dependencies: 
-    · Rollup
-    · LitElement
-    · Redux
-    · Vaadin
+Dependencies:\
+    · Rollup\
+    · LitElement\
+    · Redux\
+    · Vaadin\
+    · Eslint
 
 Demo link: https://seed-19f53.firebaseapp.com/
 
