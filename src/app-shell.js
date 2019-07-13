@@ -12,7 +12,7 @@ import { routing, navigator } from './routing';
 import { menu } from './utils/svg-icons';
 
 class AppShell extends LitElement {
-  static get styles () {
+  static get styles() {
     return [
       css`
         :host {
@@ -76,7 +76,7 @@ class AppShell extends LitElement {
     ];
   }
 
-  constructor () {
+  constructor() {
     super();
 
     window.addEventListener('set-active-button', (e) => {
@@ -85,15 +85,15 @@ class AppShell extends LitElement {
     });
   }
 
-  firstUpdated () {
+  firstUpdated() {
     routing.call(this);
   }
 
-  openMobileMenu () {
+  openMobileMenu() {
     this.shadowRoot.querySelector('navigation-menu').style.left = '0';
   }
 
-  render () {
+  render() {
     return html`
         <navigation-menu></navigation-menu>
         <header>

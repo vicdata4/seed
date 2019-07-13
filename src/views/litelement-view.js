@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
 class LitElementView extends LitElement {
-  static get styles () {
+  static get styles() {
     return [
       CustomStyles,
       ViewStyle,
@@ -14,7 +14,7 @@ class LitElementView extends LitElement {
     ];
   }
 
-  render () {
+  render() {
     return html`
       <section>
         <h1>LitElement</h1>

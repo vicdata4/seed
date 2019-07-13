@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
 class VaadinView extends LitElement {
-  static get styles () {
+  static get styles() {
     return [
       CustomStyles,
       ViewStyle,
@@ -14,7 +14,7 @@ class VaadinView extends LitElement {
     ];
   }
 
-  render () {
+  render() {
     return html`
       <section>
         <h1>Vaadin</h1>
@@ -26,7 +26,7 @@ class VaadinView extends LitElement {
     `;
   }
 
-  setActiveButton (e) {
+  setActiveButton(e) {
     this.dispatchEvent(new CustomEvent('set-active-button', {
       bubbles: true,
       composed: true,

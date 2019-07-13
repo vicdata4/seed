@@ -15,6 +15,7 @@ module.exports = {
     'object-curly-spacing': [1, 'always'],
     'lines-between-class-members': ['error', 'always'],
     'semi': [2, 'always'],
+    'space-before-function-paren': ['error', 'never'],
     'quote-props': ['error', 'as-needed']
   },
 };

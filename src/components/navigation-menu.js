@@ -3,7 +3,7 @@ import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
 
 class NavigationMenu extends LitElement {
-  static get styles () {
+  static get styles() {
     return [
       css`
         :host {
@@ -88,11 +88,11 @@ class NavigationMenu extends LitElement {
     ];
   }
 
-  firstUpdated () {
+  firstUpdated() {
     this.setActiveViaPath();
   }
 
-  render () {
+  render() {
     return html`
       <nav>
         <button class="close" aria-label="Close" @click="${this.closeMobileMenu}">${close}</button>
@@ -106,15 +106,15 @@ class NavigationMenu extends LitElement {
     `;
   }
 
-  closeMobileMenu () {
+  closeMobileMenu() {
     this.style.left = '100%';
   }
 
-  setActiveViaPath () {
+  setActiveViaPath() {
     this.setActive(navigator.findIndex((i) => i.path === location.pathname));
   }
 
-  setActive (index) {
+  setActive(index) {
     const navList = this.shadowRoot.querySelectorAll('a');
     this.closeMobileMenu();
 

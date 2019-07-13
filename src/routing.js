@@ -1,6 +1,6 @@
 import { Router } from '@vaadin/router';
 
-export const routing = function () {
+export const routing = function() {
   const outlet = this.shadowRoot.getElementById('root');
   const router = new Router(outlet);
 

@@ -7,7 +7,7 @@ import { connect } from 'pwa-helpers';
 import { addNote } from '../store/actions';
 
 class ReduxView extends connect(store)(LitElement) {
-  static get styles () {
+  static get styles() {
     return [
       CustomStyles,
       ViewStyle,
@@ -23,7 +23,7 @@ class ReduxView extends connect(store)(LitElement) {
     ];
   }
 
-  render () {
+  render() {
     return html`
       <section>
         <h1>Redux</h1>
@@ -42,7 +42,7 @@ class ReduxView extends connect(store)(LitElement) {
     `;
   }
 
-  updateStore () {
+  updateStore() {
     const inputValue = this.shadowRoot.querySelector('input').value;
 
     if (inputValue) store.dispatch(addNote(inputValue));
