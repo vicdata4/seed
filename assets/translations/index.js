@@ -1,9 +1,18 @@
+/*
+ * Configuration (after creating .js and .png file)
+ * 1 import new country .js file as below
+ * 2 add reference into => const countries = {...}
+ */
+
 import * as es from './es';
 import * as en from './en';
 import * as fr from './fr';
 
-// Include new country reference to this constant after creating .js and .png file
 export const countries = { en, es, fr };
+
+/*
+ * End configuration
+ */
 
 const path = location.pathname.substring(1);
 
