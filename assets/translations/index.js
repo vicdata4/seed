@@ -9,7 +9,7 @@ import * as es from './es';
 import * as en from './en';
 import * as fr from './fr';
 
-export const countries = { en, es, fr };
+export const countries = { en, fr, es };
 
 /*
  * End
