@@ -19,7 +19,7 @@ const path = location.pathname.substring(1);
 
 export const countryPath = countries[path] && location.pathname.length === 3;
 
-const get = () => {
+export const currentCountry = () => {
   let country = sessionStorage.getItem('language') || navigator.language.slice(0, 2) || 'en';
 
   if (countryPath) {
@@ -27,7 +27,7 @@ const get = () => {
     sessionStorage.setItem('language', country);
   }
 
-  return countries[country].default;
+  return country;
 };
 
-export const locales = get();
+export const locales = countries[currentCountry()].default;

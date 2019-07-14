@@ -18,9 +18,11 @@ class HomeView extends LitElement {
         }
 
         language-selector {
+          display: flex;
+          align-items: center;
           position: absolute;
-          bottom: 0;
-          right: 0;
+          bottom: 20px;
+          right: 20px;
         }
       `
     ];
@@ -29,7 +31,8 @@ class HomeView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>SmartUp<span>Xperience</span> Offboarding project</h1>
+        <h1>Lightweight <span>Seed</span></h1>
+        <h1>based on web components</h1>
         <hr>
         <p>${locales.subtitle}</p>
         <div>

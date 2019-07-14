@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { countries } from '../../assets/translations';
+import { countries, currentCountry } from '../../assets/translations';
 
 class LanguageSelector extends LitElement {
   static get styles() {
@@ -7,6 +7,7 @@ class LanguageSelector extends LitElement {
         button {
             background: none;
             border: none;
+            opacity: .4;
             cursor: pointer;
         }
 
@@ -14,13 +15,24 @@ class LanguageSelector extends LitElement {
             width: 30px;
             height: 30px;
         }
+
+        span {
+          font-size: 16px;
+          color: #c2bba3;
+          padding-right: 15px;
+        }
+
+        .active {
+          opacity: 1;
+        }
       `;
   }
 
   render() {
     return html`
+        <span>Language</span>
         ${Object.keys(countries).map(x => html`
-            <button type="button" @click="${() => this.setLanguage(x)}">
+            <button type="button" class="${x === currentCountry() ? 'active' : ''}" @click="${() => this.setLanguage(x)}">
               <img src="assets/translations/flags/${x}.png">
             </button>
         `)}
