@@ -1,15 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
-
-import './components/navigation-menu';
-import './views/home-view';
-import './views/litelement-view';
-import './views/rollup-view';
-import './views/redux-view';
-import './views/vaadin-view';
-import './views/not-found-view';
-
 import { routing, navigator } from './routing';
 import { menu } from './utils/svg-icons';
+import './components/navigation-menu';
 
 class AppShell extends LitElement {
   static get styles() {

@@ -31,8 +31,8 @@ class HomeView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>Lightweight <span>Seed</span></h1>
-        <h1>based on web components</h1>
+        <h1>${locales.home_title[0]} <span>${locales.home_title[1]}</span></h1>
+        <h1>${locales.home_title_sub}</h1>
         <hr>
         <p>${locales.subtitle}</p>
         <div>

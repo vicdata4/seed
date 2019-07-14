@@ -1,6 +1,13 @@
 import { Router } from '@vaadin/router';
 import { countryPath } from '../assets/translations';
 
+import './views/home-view';
+import './views/litelement-view';
+import './views/rollup-view';
+import './views/redux-view';
+import './views/vaadin-view';
+import './views/not-found-view';
+
 export const routing = function() {
   const outlet = this.shadowRoot.getElementById('root');
   const router = new Router(outlet);

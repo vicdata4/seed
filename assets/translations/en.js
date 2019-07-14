@@ -1,7 +1,8 @@
 export default {
-  name: 'england',
+  home_title: ['Lightweight', 'seed'],
+  home_title_sub: 'based on web components',
+  language: 'Language',
   github: 'GitHub repository',
   quick_start: 'Quick start',
-  surname: 'english',
   subtitle: 'Learn about RollUp, LitElement, Redux and Vaadin'
 };
