@@ -7,7 +7,7 @@ class LanguageSelector extends LitElement {
         button {
             background: none;
             border: none;
-            opacity: .4;
+            opacity: .6;
             cursor: pointer;
         }
 
@@ -40,8 +40,10 @@ class LanguageSelector extends LitElement {
   }
 
   setLanguage(lang) {
-    sessionStorage.setItem('language', lang);
-    location.pathname = lang;
+    if (navigator.cookieEnabled) {
+      sessionStorage.setItem('language', lang);
+      location.pathname = lang;
+    }
   }
 }
 

@@ -11,20 +11,24 @@ import * as fr from './fr';
 
 export const countries = { en, fr, es };
 
-/*
- * End
- */
+/** **/
 
 const path = location.pathname.substring(1);
 
 export const countryPath = countries[path] && location.pathname.length === 3;
 
 export const currentCountry = () => {
-  let country = sessionStorage.getItem('language') || navigator.language.slice(0, 2) || 'en';
+  // navigator preference (default)
+  let country = navigator.language.slice(0, 2) || 'en';
 
+  // overwrite session preference
+  if (navigator.cookieEnabled && sessionStorage.getItem('language')) {
+    country = sessionStorage.getItem('language');
+  }
+  // overwrite route/path preference
   if (countryPath) {
     country = path;
-    sessionStorage.setItem('language', country);
+    if (navigator.cookieEnabled) sessionStorage.setItem('language', country);
   }
 
   return country;
