@@ -1,7 +1,8 @@
 /*
- * Configuration (after creating .js and .png file)
- * 1 import new country .js file as below
- * 2 add reference into => const countries = {...}
+ * Configuration (add country)
+ *   1 create .js and .png file with the same reference
+ *   2 import new country .js file as below
+ *   3 add reference into => const countries = {...}
  */
 
 import * as es from './es';
@@ -11,7 +12,7 @@ import * as fr from './fr';
 export const countries = { en, es, fr };
 
 /*
- * End configuration
+ * End
  */
 
 const path = location.pathname.substring(1);
