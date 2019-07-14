@@ -1,5 +1,5 @@
 import { Router } from '@vaadin/router';
-import { countryPath } from '../assets/translations';
+import { countryPath, locales } from '../assets/translations';
 
 import './views/home-view';
 import './views/litelement-view';
@@ -28,7 +28,7 @@ export const routing = function() {
 
 export const navigator = [{
   path: '/',
-  name: 'Home'
+  name: locales.nav_home
 },
 {
   path: '/rollup',
