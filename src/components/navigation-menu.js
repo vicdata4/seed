@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
+import { countryPath } from '../../assets/translations';
 import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
 
@@ -111,7 +112,7 @@ class NavigationMenu extends LitElement {
   }
 
   setActiveViaPath() {
-    this.setActive(navigator.findIndex((i) => i.path === location.pathname));
+    this.setActive(!countryPath ? navigator.findIndex((i) => i.path === location.pathname) : 0);
   }
 
   setActive(index) {

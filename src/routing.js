@@ -1,17 +1,22 @@
 import { Router } from '@vaadin/router';
+import { countryPath } from '../assets/translations';
 
 export const routing = function() {
   const outlet = this.shadowRoot.getElementById('root');
   const router = new Router(outlet);
 
-  router.setRoutes([
+  var routes = [
     { path: '/', component: 'home-view' },
     { path: '/rollup', component: 'rollup-view' },
     { path: '/redux', component: 'redux-view' },
     { path: '/litelement', component: 'litelement-view' },
     { path: '/vaadin', component: 'vaadin-view' },
     { path: '(.*)', component: 'not-found-view' }
-  ]);
+  ];
+
+  if (countryPath) routes.unshift({ path: window.location.pathname, redirect: '/' });
+
+  router.setRoutes(routes);
 };
 
 export const navigator = [{

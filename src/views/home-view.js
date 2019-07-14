@@ -1,5 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
+import { locales } from '../../assets/translations';
+import '../components/language-selector';
 
 class HomeView extends LitElement {
   static get styles() {
@@ -14,6 +16,12 @@ class HomeView extends LitElement {
         p {
           margin-top: 0;
         }
+
+        language-selector {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       `
     ];
   }
@@ -23,11 +31,12 @@ class HomeView extends LitElement {
       <section>
         <h1>SmartUp<span>Xperience</span> Offboarding project</h1>
         <hr>
-        <p>Learn about RollUp, LitElement, Redux and Vaadin</p>
+        <p>${locales.subtitle}</p>
         <div>
-          <a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank" rel="noopener">GitHub repository</a>
-          <a href="/rollup" class="custom-link red" @click="${this.setActiveButton}">Quick start</a>
+          <a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank" rel="noopener">${locales.github}</a>
+          <a href="/rollup" class="custom-link red" @click="${this.setActiveButton}">${locales.quick_start}</a>
         </div>
+        <language-selector></language-selector>
       </section>
     `;
   }
