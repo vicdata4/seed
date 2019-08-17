@@ -37,15 +37,54 @@ class ReduxView extends connect(store)(LitElement) {
           <input type="text" placeholder="write a note..">
           <button @click="${this.updateStore}" aria-label="Add note" class="custom-link blue">Add note</button>
         </div>
+        <button @click="${this.addNotex}">addx</button>
         <redux-example></redux-example>
       </section>
     `;
+  }
+
+  constructor() {
+    super();
+    const url = 'http://localhost:3000/notes';
+    fetch(url, {
+      method: 'GET', // or 'PUT'
+      mode: 'cors', // no-cors, cors, *same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      // redirect: 'follow', // manual, *follow, error
+      referrer: 'no-referrer', // no-referrer, *client
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(response => console.log('Success:', JSON.stringify(response)))
+      .catch(error => console.error('Error:', error));
   }
 
   updateStore() {
     const inputValue = this.shadowRoot.querySelector('input').value;
 
     if (inputValue) store.dispatch(addNote(inputValue));
+  }
+
+  addNotex() {
+    const url = 'http://localhost:3000/notes';
+    const data = { title: 'DOT', content: 'this is LUPA' };
+
+    fetch(url, {
+      method: 'POST', // or 'PUT'
+      mode: 'cors', // no-cors, cors, *same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      // redirect: 'follow', // manual, *follow, error
+      referrer: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify(data), // data can be `string` or {object}!
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(response => console.log('Success:', JSON.stringify(response)))
+      .catch(error => console.error('Error:', error));
   }
 }
 
