@@ -33,11 +33,11 @@ class ReduxView extends connect(store)(LitElement) {
         You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.</p>
         <a href="https://redux.js.org/" class="custom-link red" target="_blank" rel="noopener">Learn more about Redux</a>
         <h5>Basic Redux example</h5>
-        <div>
+        <form id="my-form" onsubmit="${this.setForm}">
           <input type="text" placeholder="write a note..">
           <button @click="${this.updateStore}" aria-label="Add note" class="custom-link blue">Add note</button>
-        </div>
-        <button @click="${this.addNotex}">addx</button>
+        </form>
+        <button @click="${this.addNotex}" class="custom-link blue">Http Post</button>
         <redux-example></redux-example>
       </section>
     `;
@@ -61,6 +61,11 @@ class ReduxView extends connect(store)(LitElement) {
       .catch(error => console.error('Error:', error));
   }
 
+
+  submit() {
+    console.log('lang****');
+  }
+
   updateStore() {
     const inputValue = this.shadowRoot.querySelector('input').value;
 
@@ -69,7 +74,7 @@ class ReduxView extends connect(store)(LitElement) {
 
   addNotex() {
     const url = 'http://localhost:3000/notes';
-    const data = { title: 'DOT', content: 'this is LUPA' };
+    const data = { title: 'DOTVV', content: 'this is LUPA' };
 
     fetch(url, {
       method: 'POST', // or 'PUT'
