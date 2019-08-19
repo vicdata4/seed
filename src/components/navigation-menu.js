@@ -1,9 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
-import { countryPath } from '../../assets/translations';
+import { LocalMixin } from '../localize';
 import { close } from '../utils/svg-icons';
-import { navigator } from '../routing';
 
-class NavigationMenu extends LitElement {
+class NavigationMenu extends LocalMixin(LitElement) {
   static get styles() {
     return [
       css`
@@ -99,7 +98,7 @@ class NavigationMenu extends LitElement {
         <button class="close" aria-label="Close" @click="${this.closeMobileMenu}">${close}</button>
         <ul>
         <li><img src="assets/logo.png" alt="Logo Mobile"></li>
-          ${navigator.map((x, i) => html`
+          ${super.navigator.map((x, i) => html`
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
         </ul>
@@ -112,7 +111,7 @@ class NavigationMenu extends LitElement {
   }
 
   setActiveViaPath() {
-    this.setActive(!countryPath ? navigator.findIndex((i) => i.path === location.pathname) : 0);
+    this.setActive(!super.countryPath ? super.navigator.findIndex((i) => i.path === location.pathname) : 0);
   }
 
   setActive(index) {

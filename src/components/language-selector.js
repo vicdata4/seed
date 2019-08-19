@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
-import { countries, currentCountry, locales } from '../../assets/translations';
+import { LocalMixin } from '../localize';
 
-class LanguageSelector extends LitElement {
+class LanguageSelector extends LocalMixin(LitElement) {
   static get styles() {
     return css`
         button {
@@ -30,9 +30,9 @@ class LanguageSelector extends LitElement {
 
   render() {
     return html`
-      <span>${locales.language}</span>
-      ${Object.keys(countries).map(x => html`
-          <button type="button" class="${x === currentCountry() ? 'active' : ''}" @click="${() => this.setLanguage(x)}">
+      <span>${super.locales.language}</span>
+      ${super.paises.map(x => html`
+          <button type="button" class="${x === super.currentCountry() ? 'active' : ''}" @click="${() => this.setLanguage(x)}">
             <img src="assets/translations/flags/${x}.png">
           </button>
       `)}

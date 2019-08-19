@@ -1,9 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
-import { locales } from '../../assets/translations';
 import '../components/language-selector';
+import { LocalMixin } from '../localize';
 
-class HomeView extends LitElement {
+class HomeView extends LocalMixin(LitElement) {
   static get styles() {
     return [
       CustomStyles,
@@ -31,13 +31,13 @@ class HomeView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>${locales.home_title[0]} <span>${locales.home_title[1]}</span></h1>
-        <h1>${locales.home_title_sub}</h1>
+        <h1>${super.locales.home_title[0]} <span>${super.locales.home_title[1]}</span></h1>
+        <h1>${super.locales.home_title_sub}</h1>
         <hr>
-        <p>${locales.subtitle}</p>
+        <p>${super.locales.subtitle}</p>
         <div>
-          <a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank" rel="noopener">${locales.github}</a>
-          <a href="/rollup" class="custom-link red" @click="${this.setActiveButton}">${locales.quick_start}</a>
+          <a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank" rel="noopener">${super.locales.github}</a>
+          <a href="/rollup" class="custom-link red" @click="${this.setActiveButton}">${super.locales.quick_start}</a>
         </div>
         <language-selector></language-selector>
       </section>
