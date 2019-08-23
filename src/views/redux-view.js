@@ -4,7 +4,7 @@ import '../components/redux-example';
 import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
 
-import { addNoteX_, getNotes } from '../store/actions';
+import { addNote, getNotes } from '../store/actions';
 
 class ReduxView extends connect(store)(LitElement) {
   static get styles() {
@@ -47,7 +47,7 @@ class ReduxView extends connect(store)(LitElement) {
 
   addNotex() {
     const inputValue = this.shadowRoot.querySelector('input').value;
-    if (inputValue) store.dispatch(addNoteX_(inputValue));
+    if (inputValue) store.dispatch(addNote({ title: inputValue, content: 'lol' }));
   }
 }
 

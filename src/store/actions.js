@@ -1,4 +1,4 @@
-import { delete_, post_, get_} from './fetch.config';
+import { delete_, post_, get_ } from './fetch.config';
 const url = 'http://localhost:3000/notes';
 
 export const deleteNote = (action) => {
@@ -11,9 +11,9 @@ export const deleteNote = (action) => {
   };
 };
 
-export const addNoteX_ = (action) => {
+export const addNote = (action) => {
   return (dispatch) => {
-    fetch(url, post_({ title: action, content: 'lol' }))
+    fetch(url, post_(action))
       .then(res => res.json())
       .then(response => {
         dispatch({ type: 'ADD_NOTEX', payload: response });
