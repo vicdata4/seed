@@ -47,16 +47,22 @@ class ReduxExample extends connect(store)(LitElement) {
     this.books = state;
   }
 
+  sort(a, b) {
+    if (a.title.toLowerCase() < b.title.toLowerCase()) return -1;
+    if (a.title.toLowerCase() > b.title.toLowerCase()) return 1;
+    return 0;
+  }
+
   render() {
     return html`
      <ul>
-        ${this.books.map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(i)}">${close}</button>${x.title}</li>`; })}
+        ${this.books.sort(this.sort).map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(x)}">${close}</button>${x.title}</li>`; })}
       </ul>
     `;
   }
 
-  deleteElement(i) {
-    store.dispatch(deleteNote(i));
+  deleteElement(x) {
+    store.dispatch(deleteNote(x._id));
   }
 }
 

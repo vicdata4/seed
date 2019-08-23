@@ -1,44 +1,32 @@
-export const addNote = (action) => {
-  return {
-    type: 'ADD_NOTE',
-    payload: action
-  };
-};
+import { delete_, post_, get_} from './fetch.config';
+const url = 'http://localhost:3000/notes';
 
 export const deleteNote = (action) => {
-  return {
-    type: 'DELETE_NOTE',
-    payload: action
+  return (dispatch) => {
+    fetch(`${url}/${action}`, delete_())
+      .then(res => res.json())
+      .then(response => {
+        dispatch({ type: 'DELETE_NOTE', payload: response.id });
+      }).catch(error => console.error('Error:', error));
   };
 };
 
 export const addNoteX_ = (action) => {
-  return globalFetch('POST', 'ADD_NOTEX', { title: action, content: 'lol' });
+  return (dispatch) => {
+    fetch(url, post_({ title: action, content: 'lol' }))
+      .then(res => res.json())
+      .then(response => {
+        dispatch({ type: 'ADD_NOTEX', payload: response });
+      }).catch(error => console.error('Error:', error));
+  };
 };
 
 export const getNotes = () => {
-  return globalFetch('GET', 'ADD_ALL');
-};
-
-export const globalFetch = (type, action, body = undefined) => {
   return (dispatch) => {
-    const url = 'http://localhost:3000/notes';
-    fetch(url, {
-      method: type,
-      mode: 'cors',
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      referrer: 'no-referrer',
-      body: JSON.stringify(body) || undefined,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
+    fetch(url, get_())
+      .then(res => res.json())
       .then(response => {
-        dispatch({
-          type: action,
-          payload: response
-        });
+        dispatch({ type: 'ADD_ALL', payload: response });
       }).catch(error => console.error('Error:', error));
   };
 };
