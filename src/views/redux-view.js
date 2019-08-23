@@ -4,7 +4,7 @@ import '../components/redux-example';
 import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
 
-import { addNote } from '../store/actions';
+import { addNoteX_, getNotes } from '../store/actions';
 
 class ReduxView extends connect(store)(LitElement) {
   static get styles() {
@@ -33,11 +33,8 @@ class ReduxView extends connect(store)(LitElement) {
         You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.</p>
         <a href="https://redux.js.org/" class="custom-link red" target="_blank" rel="noopener">Learn more about Redux</a>
         <h5>Basic Redux example</h5>
-        <form id="my-form" onsubmit="${this.setForm}">
           <input type="text" placeholder="write a note..">
-          <button @click="${this.updateStore}" aria-label="Add note" class="custom-link blue">Add note</button>
-        </form>
-        <button @click="${this.addNotex}" class="custom-link blue">Http Post</button>
+          <button @click="${this.addNotex}" aria-label="Add note" class="custom-link blue">Add note</button>
         <redux-example></redux-example>
       </section>
     `;
@@ -45,51 +42,12 @@ class ReduxView extends connect(store)(LitElement) {
 
   constructor() {
     super();
-    const url = 'http://localhost:3000/notes';
-    fetch(url, {
-      method: 'GET', // or 'PUT'
-      mode: 'cors', // no-cors, cors, *same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
-      // redirect: 'follow', // manual, *follow, error
-      referrer: 'no-referrer', // no-referrer, *client
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-      .then(response => console.log('Success:', JSON.stringify(response)))
-      .catch(error => console.error('Error:', error));
-  }
-
-
-  submit() {
-    console.log('lang****');
-  }
-
-  updateStore() {
-    const inputValue = this.shadowRoot.querySelector('input').value;
-
-    if (inputValue) store.dispatch(addNote(inputValue));
+    store.dispatch(getNotes());
   }
 
   addNotex() {
-    const url = 'http://localhost:3000/notes';
-    const data = { title: 'DOTVV', content: 'this is LUPA' };
-
-    fetch(url, {
-      method: 'POST', // or 'PUT'
-      mode: 'cors', // no-cors, cors, *same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
-      // redirect: 'follow', // manual, *follow, error
-      referrer: 'no-referrer', // no-referrer, *client
-      body: JSON.stringify(data), // data can be `string` or {object}!
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-      .then(response => console.log('Success:', JSON.stringify(response)))
-      .catch(error => console.error('Error:', error));
+    const inputValue = this.shadowRoot.querySelector('input').value;
+    if (inputValue) store.dispatch(addNoteX_(inputValue));
   }
 }
 

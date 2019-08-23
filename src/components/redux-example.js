@@ -50,7 +50,7 @@ class ReduxExample extends connect(store)(LitElement) {
   render() {
     return html`
      <ul>
-        ${this.books.map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(i)}">${close}</button>${x}</li>`; })}
+        ${this.books.map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(i)}">${close}</button>${x.title}</li>`; })}
       </ul>
     `;
   }
