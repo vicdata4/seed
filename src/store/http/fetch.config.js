@@ -1,3 +1,5 @@
+export const url = 'http://localhost:3000/notes';
+
 const options = {
   mode: 'cors',
   cache: 'no-cache',
@@ -8,23 +10,23 @@ const options = {
   }
 };
 
-export const get_ = () => {
+export const get = () => {
   options.method = 'GET';
   return options;
 };
 
-export const post_ = (body) => {
+export const post = (body) => {
   options.method = 'POST';
   options.body = JSON.stringify(body);
   return options;
 };
 
-export const delete_ = () => {
+export const del = () => {
   options.method = 'DELETE';
   return options;
 };
 
-export const put_ = () => {
+export const put = () => {
   options.method = 'PUT';
   return options;
 };

@@ -1,32 +1,13 @@
-import { delete_, post_, get_ } from './fetch.config';
-const url = 'http://localhost:3000/notes';
+import * as request from './http/requests';
 
 export const deleteNote = (action) => {
-  return (dispatch) => {
-    fetch(`${url}/${action}`, delete_())
-      .then(res => res.json())
-      .then(response => {
-        dispatch({ type: 'DELETE_NOTE', payload: response.id });
-      }).catch(error => console.error('Error:', error));
-  };
+  return (dispatch) => request.deleteNoteRequest(dispatch, action);
 };
 
 export const addNote = (action) => {
-  return (dispatch) => {
-    fetch(url, post_(action))
-      .then(res => res.json())
-      .then(response => {
-        dispatch({ type: 'ADD_NOTEX', payload: response });
-      }).catch(error => console.error('Error:', error));
-  };
+  return (dispatch) => request.addNoteRequest(dispatch, action);
 };
 
 export const getNotes = () => {
-  return (dispatch) => {
-    fetch(url, get_())
-      .then(res => res.json())
-      .then(response => {
-        dispatch({ type: 'ADD_ALL', payload: response });
-      }).catch(error => console.error('Error:', error));
-  };
+  return (dispatch) => request.getNotesRequest(dispatch);
 };
