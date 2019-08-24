@@ -55,6 +55,7 @@ class ReduxView extends connect(store)(LitElement) {
   addNotex() {
     const inputValue = this.shadowRoot.querySelector('input').value;
     if (inputValue) store.dispatch(addNote({ title: inputValue, content: 'lol' }));
+    this.shadowRoot.querySelector('input').value = '';
   }
 }
 
