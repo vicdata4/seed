@@ -10,6 +10,24 @@ const options = {
   }
 };
 
+const errorHandler = (response) => {
+  if (!response.ok) {
+    return { error: response.statusText, errorCode: response.status };
+  }
+  return response.json();
+};
+
+export default async(type, url_ = url) => {
+  try {
+    return await fetch(url_, type)
+      .then(errorHandler)
+      .then(response => { return response; })
+      .catch(error => { return { error }; });
+  } catch (error) {
+    return { error };
+  }
+};
+
 export const get = () => {
   options.method = 'GET';
   return options;
