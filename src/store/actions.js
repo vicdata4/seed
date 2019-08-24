@@ -5,9 +5,9 @@ export const addNote = (body) => {
   return async(dispatch) => {
     const response = await fetch(request.post(body));
     if (!response.error) {
-      dispatch({ type: 'ADD_NOTEX', payload: response });
+      dispatch({ type: 'ADD_NOTE', payload: response });
     } else {
-      console.log('capturado', response);
+      dispatch({ type: 'CATCH_ERROR', payload: response });
     }
   };
 };
@@ -16,9 +16,9 @@ export const getNotes = () => {
   return async(dispatch) => {
     const response = await fetch(request.get());
     if (!response.error) {
-      dispatch({ type: 'ADD_ALL', payload: response });
+      dispatch({ type: 'GET_ALL', payload: response });
     } else {
-      console.log('capturado', response);
+      dispatch({ type: 'CATCH_ERROR', payload: response });
     }
   };
 };
@@ -29,7 +29,7 @@ export const deleteNote = (noteId) => {
     if (!response.error) {
       dispatch({ type: 'DELETE_NOTE', payload: response.id });
     } else {
-      console.log('capturado', response);
+      dispatch({ type: 'CATCH_ERROR', payload: response });
     }
   };
 };
