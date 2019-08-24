@@ -7,7 +7,7 @@ Dependencies:\
 &nbsp;· Vaadin\
 &nbsp;· Eslint
 
-Demo link: https://seed-19f53.firebaseapp.com/
+Link (master branch): https://seed-19f53.web.app/
 
 ## Project installation
 
