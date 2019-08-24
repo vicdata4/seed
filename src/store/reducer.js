@@ -12,6 +12,7 @@ export const reducer = (state = [], action) => {
     }
     case 'CATCH_ERROR': {
       const string = `error: ${action.payload.error} errorCode: ${action.payload.errorCode}`;
+      // eslint-disable-next-line no-console
       console.log('****CATCHED:', string);
       break;
     }
