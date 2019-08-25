@@ -29,6 +29,6 @@ const options = {
   }
 };
 
-export const del = () => Object.assign(options, { method: 'DELETE' });
-export const get = () => Object.assign(options, { method: 'GET' });
+export const del = () => Object.assign(options, { method: 'DELETE', body: undefined });
+export const get = () => Object.assign(options, { method: 'GET', body: undefined });
 export const post = (body) => Object.assign(options, { method: 'POST', body: JSON.stringify(body) });
