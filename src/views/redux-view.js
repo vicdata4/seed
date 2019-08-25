@@ -34,7 +34,8 @@ class ReduxView extends connect(store)(LitElement) {
         <a href="https://redux.js.org/" class="custom-link red" target="_blank" rel="noopener">Learn more about Redux</a>
         <h5>Basic Redux example</h5>
         <form onsubmit="return false">
-          <input type="text" placeholder="write a note..">
+          <input id="mail" type="text" placeholder="mail">
+          <input id="password" type="password" placeholder="password">
           <button type="submit" @click="${this.addNotex}" aria-label="Add note" class="custom-link blue">Add note</button>
         </form>
         <redux-example></redux-example>
@@ -47,15 +48,14 @@ class ReduxView extends connect(store)(LitElement) {
     store.dispatch(getNotes());
   }
 
-  sendInfo() {
-    this.addNotex();
-    return false;
-  }
-
   addNotex() {
-    const inputValue = this.shadowRoot.querySelector('input').value;
-    if (inputValue) store.dispatch(addNote({ title: inputValue, content: 'lol' }));
-    this.shadowRoot.querySelector('input').value = '';
+    const inputTitle = this.shadowRoot.querySelector('#mail').value;
+    const contentValue = this.shadowRoot.querySelector('#password').value;
+    if (inputTitle && contentValue) {
+      store.dispatch(addNote({ title: inputTitle, content: contentValue }));
+      this.shadowRoot.querySelector('#mail').value = '';
+      this.shadowRoot.querySelector('#password').value = '';
+    }
   }
 }
 
