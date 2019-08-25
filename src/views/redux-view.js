@@ -4,7 +4,7 @@ import '../components/redux-example';
 import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
 
-import { addNote } from '../store/actions';
+import { addNote, getNotes } from '../store/actions';
 
 class ReduxView extends connect(store)(LitElement) {
   static get styles() {
@@ -33,19 +33,29 @@ class ReduxView extends connect(store)(LitElement) {
         You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.</p>
         <a href="https://redux.js.org/" class="custom-link red" target="_blank" rel="noopener">Learn more about Redux</a>
         <h5>Basic Redux example</h5>
-        <div>
+        <form onsubmit="return false">
           <input type="text" placeholder="write a note..">
-          <button @click="${this.updateStore}" aria-label="Add note" class="custom-link blue">Add note</button>
-        </div>
+          <button type="submit" @click="${this.addNotex}" aria-label="Add note" class="custom-link blue">Add note</button>
+        </form>
         <redux-example></redux-example>
       </section>
     `;
   }
 
-  updateStore() {
-    const inputValue = this.shadowRoot.querySelector('input').value;
+  constructor() {
+    super();
+    store.dispatch(getNotes());
+  }
 
-    if (inputValue) store.dispatch(addNote(inputValue));
+  sendInfo() {
+    this.addNotex();
+    return false;
+  }
+
+  addNotex() {
+    const inputValue = this.shadowRoot.querySelector('input').value;
+    if (inputValue) store.dispatch(addNote({ title: inputValue, content: 'lol' }));
+    this.shadowRoot.querySelector('input').value = '';
   }
 }
 

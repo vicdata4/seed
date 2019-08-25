@@ -15,7 +15,7 @@ export const CustomStyles = css`
     font-size: 30px;
   }
 
-  section div input {
+  form input {
     border: 1px solid #473d3d;
     margin-left: 0;
     border-radius: 5px;
@@ -89,9 +89,9 @@ export const CustomStyles = css`
   }
 
   @media (min-width: 768px) {
-    section div input {
-    width: 30%;
-  }
+    form input {
+      width: 30%;
+    }
   }
 `;
 
