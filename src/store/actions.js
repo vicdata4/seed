@@ -1,4 +1,4 @@
-import fetch, * as request from './fetch.config';
+import fetch, { request, url } from './fetch.config';
 
 export const getNotes = () => {
   return async(dispatch) => {
@@ -24,7 +24,7 @@ export const addNote = (body) => {
 
 export const deleteNote = (noteId) => {
   return async(dispatch) => {
-    const response = await fetch(request.del(), `${request.url}/${noteId}`);
+    const response = await fetch(request.delete(), `${url}/${noteId}`);
     if (!response.error) {
       dispatch({ type: 'DELETE_NOTE', payload: response.id });
     } else {
