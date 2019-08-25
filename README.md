@@ -11,7 +11,7 @@ Link (master branch): https://seed-19f53.web.app/
 
 ## Project installation
 
-git clone https://github.com/vicdata4/Roll_Lit_Redux_Seed.git
+git clone https://github.com/vicdata4/open-seed-project.git
 
 npm install
 
