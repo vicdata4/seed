@@ -1,8 +1,8 @@
-import fetch, { request, url } from './fetch.config';
+import fetch, { http, url } from './fetch.config';
 
 export const getNotes = () => {
   return async(dispatch) => {
-    const response = await fetch(request.get());
+    const response = await fetch(http.get());
     if (!response.error) {
       dispatch({ type: 'GET_ALL', payload: response });
     } else {
@@ -13,7 +13,7 @@ export const getNotes = () => {
 
 export const addNote = (body) => {
   return async(dispatch) => {
-    const response = await fetch(request.post(body));
+    const response = await fetch(http.post(body));
     if (!response.error) {
       dispatch({ type: 'ADD_NOTE', payload: response });
     } else {
@@ -24,7 +24,7 @@ export const addNote = (body) => {
 
 export const deleteNote = (noteId) => {
   return async(dispatch) => {
-    const response = await fetch(request.delete(), `${url}/${noteId}`);
+    const response = await fetch(http.delete(), `${url}/${noteId}`);
     if (!response.error) {
       dispatch({ type: 'DELETE_NOTE', payload: response.id });
     } else {

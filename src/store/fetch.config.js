@@ -29,8 +29,9 @@ const options = {
   }
 };
 
-export const request = {
+export const http = {
   get: () => Object.assign(options, { method: 'GET', body: undefined }),
   post: (body) => Object.assign(options, { method: 'POST', body: JSON.stringify(body) }),
-  delete: () => Object.assign(options, { method: 'DELETE', body: undefined })
+  delete: () => Object.assign(options, { method: 'DELETE', body: undefined }),
+  put: (body) => Object.assign(options, { method: 'PUT', body: JSON.stringify(body) })
 };
