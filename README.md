@@ -7,7 +7,7 @@ Dependencies:\
 &nbsp;· Vaadin\
 &nbsp;· Eslint
 
-Link (master branch): https://seed-19f53.web.app/
+Link: https://seed-19f53.web.app/
 
 ## Project installation
 
