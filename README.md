@@ -1,4 +1,4 @@
-![](assets/logo_md.png | width=100)
+![](assets/logo_md.png&s=100)
 
 ## Seed project
 
