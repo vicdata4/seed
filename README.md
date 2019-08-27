@@ -1,3 +1,5 @@
+![](assets/logo_md.png)
+
 ## Seed project
 
 Dependencies:\
@@ -11,7 +13,7 @@ Link (master branch): https://seed-19f53.web.app/
 
 ## Project installation
 
-git clone https://github.com/vicdata4/open-seed-project.git
+git clone https://github.com/vicdata4/seed-project.git
 
 npm install
 
