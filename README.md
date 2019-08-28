@@ -1,7 +1,5 @@
 ![](assets/logo_md.png?v=4&s=100)
 
-## Seed project
-
 Dependencies:\
 &nbsp;· Rollup\
 &nbsp;· LitElement\
