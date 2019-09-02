@@ -1,7 +1,5 @@
 ![](assets/logo_md.png?v=4&s=100)
 
-## Seed project
-
 Dependencies:\
 &nbsp;· Rollup\
 &nbsp;· LitElement\
@@ -19,7 +17,14 @@ npm install
 
 npm run dev
 
-## Node Server
+## Fetch configuration:
+
+Edit `url` constant from `src/store/fetch.config` file.
+```
+Example: 
+const url = 'https://<host>:<port>/dbname';
+```
+#### Node Server
 
 https://github.com/vicdata4/node_server.git
 
