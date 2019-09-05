@@ -44,7 +44,7 @@ class ReduxExample extends connect(store)(LitElement) {
   }
 
   stateChanged(state) {
-    this.books = state;
+    this.books = state || [];
   }
 
   sort(a, b) {

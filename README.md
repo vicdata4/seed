@@ -11,7 +11,7 @@ Link: https://seed-19f53.web.app/
 
 ## Project installation
 
-git clone https://github.com/vicdata4/seed-project.git
+`git clone https://github.com/vicdata4/seed-project.git`
 
 npm install
 
