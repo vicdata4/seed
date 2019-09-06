@@ -4,6 +4,7 @@ import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
 import { deleteNote } from '../store/actions';
 import { close } from '../utils/svg-icons';
+import { sortBy } from '../utils/functions';
 
 class ReduxExample extends connect(store)(LitElement) {
   static get styles() {
@@ -47,14 +48,10 @@ class ReduxExample extends connect(store)(LitElement) {
     this.books = state || [];
   }
 
-  sort(a, b) {
-    return (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0;
-  }
-
   render() {
     return html`
      <ul>
-        ${this.books.sort(this.sort).map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(x)}">${close}</button>${x.title} - ${x.content}</li>`; })}
+        ${this.books.sort(sortBy).map((x, i) => { return html`<li><button aria-label="Remove note" @click="${() => this.deleteElement(x)}">${close}</button>${x.title} - ${x.content}</li>`; })}
       </ul>
     `;
   }
