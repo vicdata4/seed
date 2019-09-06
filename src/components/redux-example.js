@@ -48,9 +48,7 @@ class ReduxExample extends connect(store)(LitElement) {
   }
 
   sort(a, b) {
-    if (a.date > b.date) return -1;
-    if (a.date < b.date) return 1;
-    return 0;
+    return (a.date > b.date) ? -1 : (a.date < b.date) ? 1 : 0;
   }
 
   render() {
