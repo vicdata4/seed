@@ -45,20 +45,18 @@ Link: https://seed-19f53.web.app/
 git clone https://github.com/vicdata4/seed.git
 ```
 
-```css
-Create src/store/host.js file to specify your host address.
-```
+ * Create `src/store/host.js` file to specify your host address and add the next code.
+
 ```js
-// Add next line in your host.js file: 
 export default 'http://localhost:3000/notes';
 ```
 
 ```
-3 npm install
+npm install
 ```
 
 ```
-4 npm run dev
+npm run dev
 ```
 
 ## Seed Utilities
