@@ -41,11 +41,17 @@ Link: https://seed-19f53.web.app/
 
 ## Project installation
 
-`git clone https://github.com/vicdata4/seed-project.git`
+```
+git clone https://github.com/vicdata4/seed-project.git
+```
 
-`npm install`
+```
+npm install
+```
 
-`npm run dev`
+```
+npm run dev
+```
 
 ## Host configuration:
 
@@ -63,16 +69,14 @@ export default 'http://<host>:<port>/notes';
 ```js
 // Import fetch.config file for a better performance in your requests.
 import fetch, { http } from './fetch.config';
-import url from './host.js';
 
-// examples GET, POST, DELETE
-const response = await fetch(http.get());
-const response = await fetch(http.post(body));
-const response = await fetch(http.delete(), url);
+// GET example
+const getDocuments = async() => {
+    return fetch(http.get());
+};
 
 ```
-
-Check `src/store/fetch.config.js` file to configure your requests.
+Go to `src/store/actions/notes.js` to see more examples with POST and DELETE on redux and check `src/store/fetch.config.js` file to configure your requests.
 
 #### `dateFormatter()`
 
