@@ -9,13 +9,17 @@ Dependencies:\
 
 Link: https://seed-19f53.web.app/
 
-## Project installation
+```diff
+- Project installation
+```
 
-`git clone https://github.com/vicdata4/seed-project.git`
+<span style="color: #248692;">
+    git clone https://github.com/vicdata4/seed-project.git
+</span>
 
-npm install
+<span style="color: #248692">npm install</span>
 
-npm run dev
+<span style="color: #248692">npm run dev</span>
 
 ## Fetch configuration:
 
