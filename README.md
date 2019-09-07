@@ -2,6 +2,47 @@
 
 Seed is a Web-Components based project, which follows to build a lightweight seed, flexible and scalable for web applications.
 
+### tree
+
+&nbsp;&nbsp;
+[assets](./)\
+&nbsp;&nbsp;
+[build](./)\
+&nbsp;&nbsp;
+[node_modules](./)\
+&nbsp;&nbsp;
+[scripts](./)\
+&nbsp;&nbsp;
+[src](./dir)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [components](./)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ ...\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ web-component.js\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ web-component-b.js\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [store](./)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ ...\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ store.js\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ fetch.config.js\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [utils](./)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [views](./)\
+index.html\
+package-lock.json\
+package.json
 
 Dependencies:
 - [Rollup.js](https://rollupjs.org) Module bundler
@@ -22,7 +63,7 @@ Link: https://seed-19f53.web.app/
 
 ## Host configuration:
 
-Create `host.js` file to specify your host address.
+Create `src/store/host.js` file to specify your host address.
 ```js
 // Add next line in your host.js file: 
 export default 'http://<host>:<port>/notes';
@@ -55,13 +96,12 @@ As default you already have declared different types as `default`, `short` and o
  ```js
 import { dateFormatter } from 'src/utils/functions';
 
-const date = dateFormatter(Date.now);
+const date = dateFormatter(Date.now());
 
-// Outputs
-date.default; // "September 7, 2019"
-date.short; // "Sep 7"
-date.day; // "Sunday"
-date.hour; // "15:53"
+console.log(date.default); // "September 7, 2019"
+console.log(date.short); // "Sep 7"
+console.log(date.day); // "Sunday"
+console.log(date.hour); // "15:53"
  ```
 
 
