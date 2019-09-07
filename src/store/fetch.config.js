@@ -1,3 +1,4 @@
+import url from './host.js';
 
 export default async(type, url_ = url) => {
   try {
@@ -16,8 +17,6 @@ const errorHandler = (response) => {
   }
   return response.json();
 };
-
-export const url = 'http://localhost:3000/notes';
 
 const options = {
   mode: 'cors',

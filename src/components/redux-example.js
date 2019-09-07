@@ -58,8 +58,13 @@ class ReduxExample extends connect(store)(LitElement) {
             ${x.title} - ${x.content}
             <br>
             ${dateFormatter(x.createdAt).default}
+            <br>
+            ${dateFormatter(x.createdAt).short}
+            <br>
             ${dateFormatter(x.createdAt).day}
+            <br>
             ${dateFormatter(x.createdAt).hour}
+            
           </li>`;
         })}
       </ul>
