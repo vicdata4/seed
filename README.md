@@ -4,44 +4,55 @@ Seed is a Web-Components based project, which follows to build a lightweight see
 
 ### tree
 
-&nbsp;&nbsp;
-[assets](./)\
-&nbsp;&nbsp;
-[build](./)\
-&nbsp;&nbsp;
-[node_modules](./)\
-&nbsp;&nbsp;
-[scripts](./)\
-&nbsp;&nbsp;
-[src](./dir)\
+&nbsp;&nbsp; [assets]()\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [components](./)\
+|____  [backgrounds]()\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  [translations]()\
+&nbsp;&nbsp; [build]()\
+&nbsp;&nbsp; [node_modules]()\
+&nbsp;&nbsp; [scripts]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  [utils]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ rollupConfig.js\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  build.js\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  dev.js\
+&nbsp;&nbsp; [src]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  [components]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |____ ...\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |____ web-component.js\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ web-component-b.js\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [store](./)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [store]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [actions]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [reducers]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |____ ...\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ store.js\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |____ fetch.config.js\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [utils](./)\
+|____ [utils]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ ...\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ styles\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ constants.js\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [views](./)\
+|____ [views]()\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ ...\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ app-shell.js\
+...\
 index.html\
-package-lock.json\
 package.json
 
 Dependencies:
