@@ -4,38 +4,35 @@ Seed is a Web-Components based project, which follows to build a lightweight see
 
 ### tree
 
-&nbsp;&nbsp; [assets]()\
+_____  [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  [images]()\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [backgrounds]()\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  [translations](https://github.com/vicdata4/seed-project/tree/master/assets/translations)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____ [flags](https://github.com/vicdata4/seed-project/tree/master/assets/translations/flags)\
+|____ [build](https://github.com/vicdata4/seed-project)\
+|____ [node_modules](https://github.com/vicdata4/seed-project)\
+|____ [scripts](https://github.com/vicdata4/seed-project/tree/master/scripts)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|____  [utils](https://github.com/vicdata4/seed-project/tree/master/scripts/utils)\
+|____ [src](https://github.com/vicdata4/seed-project/tree/master/src)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [backgrounds]()\
+|____  [components](https://github.com/vicdata4/seed-project/tree/master/src/components)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [translations]()\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [flags]()\
-&nbsp;&nbsp; [build]()\
-&nbsp;&nbsp; [node_modules]()\
-&nbsp;&nbsp; [scripts]()\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [utils]()\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  ...\
-&nbsp;&nbsp; [src]()\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [components]()\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [store]()\
+|____ [store](https://github.com/vicdata4/seed-project/tree/master/src/store)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [actions]()\
+|____ [actions](https://github.com/vicdata4/seed-project)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [reducers]()\
+|____ [reducers](https://github.com/vicdata4/seed-project)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [utils]()\
+|____ [utils](https://github.com/vicdata4/seed-project/tree/master/src/utils)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [views]()\
-...\
-index.html\
-package.json
+|____ [views](https://github.com/vicdata4/seed-project/tree/master/src/views)
 
-Dependencies:
+## Dependencies:
 - [Rollup.js](https://rollupjs.org) Module bundler
 - [LitElement](https://lit-element.polymer-project.org) WebComponents
 - [Redux](https://redux.js.org) Store
