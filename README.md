@@ -4,33 +4,31 @@ Seed is a Web-Components based project, which follows to build a lightweight see
 
 ### tree
 
-_____  [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [images]()\
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [backgrounds]()\
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [translations](https://github.com/vicdata4/seed-project/tree/master/assets/translations)\
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [flags](https://github.com/vicdata4/seed-project/tree/master/assets/translations/flags)\
-|____ [build](https://github.com/vicdata4/seed-project)\
-|____ [node_modules](https://github.com/vicdata4/seed-project)\
-|____ [scripts](https://github.com/vicdata4/seed-project/tree/master/scripts)\
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [utils](https://github.com/vicdata4/seed-project/tree/master/scripts/utils)\
-|____ [src](https://github.com/vicdata4/seed-project/tree/master/src)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____  [components](https://github.com/vicdata4/seed-project/tree/master/src/components)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [store](https://github.com/vicdata4/seed-project/tree/master/src/store)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [actions](https://github.com/vicdata4/seed-project)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [reducers](https://github.com/vicdata4/seed-project)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [utils](https://github.com/vicdata4/seed-project/tree/master/src/utils)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|____ [views](https://github.com/vicdata4/seed-project/tree/master/src/views)
+____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___  [images]()\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [backgrounds]()\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___  [translations](https://github.com/vicdata4/seed-project/tree/master/assets/translations)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [flags](https://github.com/vicdata4/seed-project/tree/master/assets/translations/flags)\
+|___ [scripts](https://github.com/vicdata4/seed-project/tree/master/scripts)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___  [utils](https://github.com/vicdata4/seed-project/tree/master/scripts/utils)\
+|___ [src](https://github.com/vicdata4/seed-project/tree/master/src)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___  [components](https://github.com/vicdata4/seed-project/tree/master/src/components)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [store](https://github.com/vicdata4/seed-project/tree/master/src/store)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [actions](https://github.com/vicdata4/seed-project)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [reducers](https://github.com/vicdata4/seed-project)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [utils](https://github.com/vicdata4/seed-project/tree/master/src/utils)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___ [views](https://github.com/vicdata4/seed-project/tree/master/src/views)
 
 ## Dependencies:
 - [Rollup.js](https://rollupjs.org) Module bundler
