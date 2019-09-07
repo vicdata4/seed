@@ -1,6 +1,6 @@
 ![](assets/logo_md.png?v=4&s=100)
 
-Seed is a Web-Components based project, which follows to build a lightweight seed, flexible and scalable for web applications.
+Lightweight and flexible web application based on web-components.
 
 ### folder tree
 
@@ -39,13 +39,13 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 
 Link: https://seed-19f53.web.app/
 
-## Quick start
+## Run project
 
 ```
 git clone https://github.com/vicdata4/seed.git
 ```
 
- * Create `src/store/host.js` file to specify your host address and add the next code.
+ * Create src/store/`host.js` file to specify your `host address` as below.
 
 ```js
 export default 'http://localhost:3000/notes';
@@ -59,7 +59,27 @@ npm install
 npm run dev
 ```
 
-## Seed Utilities
+## Routing
+
+#### src/routing.js
+
+```js
+import { Router } from '@vaadin/router';
+
+export const routing = function() {
+  const outlet = this.shadowRoot.getElementById('root');
+  const router = new Router(outlet);
+
+  var routes = [
+    { path: '/', component: 'home-view' },
+    { path: '/vaadin', component: 'vaadin-view' },
+    { path: '(.*)', component: 'not-found-view' }
+  ];
+};
+```
+
+
+## Utilities
 
 #### `custom fetch()`
 
@@ -73,7 +93,7 @@ const getDocuments = async() => {
 };
 
 ```
-Go to `src/store/actions/notes.js` to see more examples with POST and DELETE on redux and check `src/store/fetch.config.js` file to configure your requests.
+Go to [src/store/actions/notes.js](https://github.com/vicdata4/seed/blob/master) to see more examples with POST and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your requests.
 
 #### `dateFormatter()`
 
