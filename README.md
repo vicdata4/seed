@@ -2,13 +2,13 @@
 
 Seed is a Web-Components based project, which follows to build a lightweight seed, flexible and scalable for web applications.
 
-### tree
+### folder tree
 
 ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|___  [images]()\
+|___  [images](https://github.com/vicdata4/seed-project/tree/master/assets/images)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|___ [backgrounds]()\
+|___ [backgrounds](https://github.com/vicdata4/seed-project/tree/master/assets/images/backgrounds)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___  [translations](https://github.com/vicdata4/seed-project/tree/master/assets/translations)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -22,9 +22,9 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___ [store](https://github.com/vicdata4/seed-project/tree/master/src/store)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|___ [actions](https://github.com/vicdata4/seed-project)\
+|___ [actions](https://github.com/vicdata4/seed-project/tree/master/src/store/actions)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|___ [reducers](https://github.com/vicdata4/seed-project)\
+|___ [reducers](https://github.com/vicdata4/seed-project/tree/master/src/store/reducers)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___ [utils](https://github.com/vicdata4/seed-project/tree/master/src/utils)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -39,28 +39,27 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 
 Link: https://seed-19f53.web.app/
 
-## Project installation
+## Quick start
 
 ```
-git clone https://github.com/vicdata4/seed-project.git
+git clone https://github.com/vicdata4/seed.git
 ```
 
+```css
+Create src/store/host.js file to specify your host address.
 ```
-npm install
-```
-
-```
-npm run dev
-```
-
-## Host configuration:
-
-Create `src/store/host.js` file to specify your host address.
 ```js
 // Add next line in your host.js file: 
-export default 'http://<host>:<port>/notes';
+export default 'http://localhost:3000/notes';
 ```
 
+```
+3 npm install
+```
+
+```
+4 npm run dev
+```
 
 ## Seed Utilities
 
