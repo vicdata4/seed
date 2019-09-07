@@ -8,7 +8,7 @@ class LitElementView extends LitElement {
       ViewStyle,
       css`
         :host{
-          background-image: url('assets/backgrounds/cloud.jpg');
+          background-image: url('assets/images/backgrounds/cloud.jpg');
         }
       `
     ];

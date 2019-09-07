@@ -26,5 +26,4 @@ yarn-debug.log*
 yarn-error.log*
 firebase.json
 .firebaserc
-src/store/api/host.js
 src/store/host.js

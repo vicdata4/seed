@@ -8,7 +8,7 @@ class RollUpView extends LitElement {
       ViewStyle,
       css`
         :host {
-          background-image: url('assets/backgrounds/keyboard.jpg');
+          background-image: url('assets/images/backgrounds/keyboard.jpg');
         }
       `
     ];

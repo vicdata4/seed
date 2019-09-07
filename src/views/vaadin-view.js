@@ -8,7 +8,7 @@ class VaadinView extends LitElement {
       ViewStyle,
       css`
         :host{
-          background-image: url('assets/backgrounds/mac.jpg');
+          background-image: url('assets/images/backgrounds/mac.jpg');
         }
       `
     ];
