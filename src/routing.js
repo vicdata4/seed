@@ -7,6 +7,7 @@ import './views/rollup-view';
 import './views/redux-view';
 import './views/vaadin-view';
 import './views/not-found-view';
+import './views/login-view';
 
 export const routing = function() {
   const outlet = this.shadowRoot.getElementById('root');
@@ -18,6 +19,7 @@ export const routing = function() {
     { path: '/redux', component: 'redux-view' },
     { path: '/litelement', component: 'litelement-view' },
     { path: '/vaadin', component: 'vaadin-view' },
+    { path: '/login', component: 'login-view' },
     { path: '(.*)', component: 'not-found-view' }
   ];
 
@@ -45,5 +47,9 @@ export const navigator = [{
 {
   path: '/redux',
   name: 'Redux'
+},
+{
+  path: '/login',
+  name: 'Login'
 }
 ];
