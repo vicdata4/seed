@@ -104,7 +104,7 @@ export const addNote = (body) => {
 };
 ```
 
-Go to [src/store/actions/notes.js](https://github.com/vicdata4/seed/blob/master) to see more examples with GET and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your requests options.
+Go to [src/store/actions/notes-actions.js](https://github.com/vicdata4/seed/blob/master/src/store/actions/notes-actions.js) to see more examples with GET and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your fetch options.
 
 #### `dateFormatter()` 
 
