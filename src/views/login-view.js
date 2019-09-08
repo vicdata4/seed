@@ -11,7 +11,16 @@ class LoginView extends LitElement {
       ViewStyle,
       css`
         :host {
-          background-image: url('assets/images/backgrounds/keyboard.jpg');
+          background-image: url('assets/images/backgrounds/cloud.jpg');
+        }
+
+        section {
+          justify-content: center;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
         }
       `
     ];
@@ -24,7 +33,7 @@ class LoginView extends LitElement {
         <form onsubmit="return false">
           <input id="mail" type="text" placeholder="mail">
           <input id="password" type="password" placeholder="password">
-          <button type="submit" @click="${this.login}" aria-label="Add note" class="custom-link blue">Add note</button>
+          <button type="submit" @click="${this.login}" aria-label="Add note" class="custom-link">Login</button>
         </form>
       </section>
     `;

@@ -6,6 +6,8 @@ export const login = (body) => {
     if (!response.error) {
       dispatch({ type: 'LOGIN_AUTH', payload: response });
     } else {
+      // eslint-disable-next-line no-console
+      console.log(response);
       dispatch({ type: 'LOGIN_FAILED', payload: response });
     }
   };

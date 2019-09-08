@@ -10,6 +10,12 @@ export const reducer = (state = [], action) => {
       const deleteNote = state.filter(x => x._id !== action.payload);
       return deleteNote;
     }
+    case 'LOGIN_AUTH': {
+      return;
+    }
+    case 'LOGIN_FAILED': {
+      return;
+    }
     case 'CATCH_ERROR': {
       const string = `error: ${action.payload.error} errorCode: ${action.payload.errorCode}`;
       // eslint-disable-next-line no-console
