@@ -61,7 +61,7 @@ npm run dev
 
 ## Routing
 
-#### src/routing.js
+#### [src/routing.js](https://github.com/vicdata4/seed/blob/master/src/routing.js)
 
 ```js
 import { Router } from '@vaadin/router';
@@ -85,7 +85,7 @@ export const routing = function() {
 
 ## Redux Actions
 
-#### src/store/actions/notes-actions.js
+#### [src/store/actions/notes-actions.js](https://github.com/vicdata4/seed/blob/master/src/store/actions/notes-actions.js)
 
 ```js
 // Import fetch.config file to improve your performance.
@@ -106,10 +106,13 @@ export const addNote = (body) => {
 
 Go to [src/store/actions/notes-actions.js](https://github.com/vicdata4/seed/blob/master/src/store/actions/notes-actions.js) to see more examples with GET and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your fetch options.
 
+
 #### `dateFormatter()` 
 
 Date-formatter allows to customize your own date-formats.
-As default you already have declared different types as `default`, `short` and others.
+By default some presets are already defined such as `default`, `short` and others.
+
+#### How to use
 
  ```js
 import { dateFormatter } from 'src/utils/functions';
@@ -121,7 +124,7 @@ console.log(date.short); // "Sep 7"
 console.log(date.day); // "Sunday"
 console.log(date.hour); // "15:53"
  ```
-
+#### [src/utils/functions.js](https://github.com/vicdata4/seed/blob/master/src/utils/functions.js)
 
 
 #### Node Server

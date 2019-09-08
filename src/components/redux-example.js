@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
@@ -52,20 +53,18 @@ class ReduxExample extends connect(store)(LitElement) {
     return html`
       <ul>
         ${this.books.sort(sortBy).map((x, i) => {
-          return html`
-            <li>
-            <button aria-label="Remove note" @click="${() => this.deleteElement(x)}">${close}</button>
-            ${x.title} - ${x.content}
-            <br>
-            ${dateFormatter(x.createdAt).default}
-            <br>
-            ${dateFormatter(x.createdAt).short}
-            <br>
-            ${dateFormatter(x.createdAt).day}
-            <br>
-            ${dateFormatter(x.createdAt).hour}
-            
-          </li>`;
+            return html`
+              <li>
+                <button aria-label="Remove note" @click="${() => this.deleteElement(x)}">
+                  ${close}
+                </button>
+                ${x.title} - ${x.content}<br>
+                ${dateFormatter(x.createdAt).default}<br>
+                ${dateFormatter(x.createdAt).short}<br>
+                ${dateFormatter(x.createdAt).day}<br>
+                ${dateFormatter(x.createdAt).hour}
+              </li>
+            `;
         })}
       </ul>
     `;
