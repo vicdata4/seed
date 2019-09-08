@@ -4,7 +4,7 @@ import '../components/redux-example';
 import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
 
-import { addNote, getNotes } from '../store/actions';
+import { addNote, getNotes } from '../store/actions/notes-actions';
 
 class ReduxView extends connect(store)(LitElement) {
   static get styles() {

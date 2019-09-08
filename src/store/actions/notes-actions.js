@@ -1,5 +1,5 @@
-import fetch, { http } from './fetch.config';
-import url from './host.js';
+import fetch, { http } from '../fetch.config';
+import url from '../host.js';
 
 export const getNotes = () => {
   return async(dispatch) => {

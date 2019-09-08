@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
-import { deleteNote } from '../store/actions';
+import { deleteNote } from '../store/actions/notes-actions';
 import { close } from '../utils/svg-icons';
 import { sortBy, dateFormatter } from '../utils/functions';
 

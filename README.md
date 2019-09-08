@@ -65,6 +65,9 @@ npm run dev
 
 ```js
 import { Router } from '@vaadin/router';
+import './views/home-view';
+import './views/vaadin-view';
+import './views/not-found-view';
 
 export const routing = function() {
   const outlet = this.shadowRoot.getElementById('root');
@@ -74,28 +77,36 @@ export const routing = function() {
     { path: '/', component: 'home-view' },
     { path: '/vaadin', component: 'vaadin-view' },
     { path: '(.*)', component: 'not-found-view' }
+    // ...
   ];
 };
 ```
 
 
-## Utilities
+## Redux Actions
 
-#### `custom fetch()`
+#### src/store/actions/notes-actions.js
 
 ```js
-// Import fetch.config file for a better performance in your requests.
-import fetch, { http } from './fetch.config';
+// Import fetch.config file to improve your performance.
 
-// GET example
-const getDocuments = async() => {
-    return fetch(http.get());
+import fetch, { http } from '../fetch.config';
+
+export const addNote = (body) => {
+  return async(dispatch) => {
+    const response = await fetch(http.post(body));
+    if (!response.error) {
+      dispatch({ type: 'ADD_NOTE', payload: response });
+    } else {
+      dispatch({ type: 'CATCH_ERROR', payload: response });
+    }
+  };
 };
-
 ```
-Go to [src/store/actions/notes.js](https://github.com/vicdata4/seed/blob/master) to see more examples with POST and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your requests.
 
-#### `dateFormatter()`
+Go to [src/store/actions/notes.js](https://github.com/vicdata4/seed/blob/master) to see more examples with GET and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your requests options.
+
+#### `dateFormatter()` 
 
 Date-formatter allows to customize your own date-formats.
 As default you already have declared different types as `default`, `short` and others.
