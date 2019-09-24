@@ -10,10 +10,6 @@ class LoginForm extends LitElement {
       CustomStyles,
       ViewStyle,
       css`
-        :host {
-          background-image: url('assets/images/backgrounds/cloud.jpg');
-        }
-
         section {
           justify-content: center;
         }
