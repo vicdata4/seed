@@ -20,6 +20,8 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___  [components](https://github.com/vicdata4/seed-project/tree/master/src/components)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___  [middleware](https://github.com/vicdata4/seed/tree/master/src/middleware)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___ [store](https://github.com/vicdata4/seed-project/tree/master/src/store)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___ [actions](https://github.com/vicdata4/seed-project/tree/master/src/store/actions)\
