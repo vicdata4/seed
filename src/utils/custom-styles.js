@@ -129,7 +129,6 @@ export const ViewStyle = css`
     background-color: rgba(0,0,0,.6);
   }
 
-
   @media (min-width: 768px) {
     :host:before {
       left: unset;

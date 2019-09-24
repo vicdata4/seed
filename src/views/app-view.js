@@ -3,6 +3,7 @@ import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { auth } from '../middleware/auth';
 import '../components/login-form';
 import '../components/notes-manager';
+import '../components/seed-spinner';
 
 class AppView extends LitElement {
   static get styles() {
@@ -41,7 +42,9 @@ class AppView extends LitElement {
       ? html`<notes-manager></notes-manager>`
       : html`<login-form></login-form>`;
 
-    return this.spinner ? html`<h1>spinner</h1>` : showApp;
+    return this.spinner
+      ? html`<seed-spinner></seed-spinner>`
+      : showApp;
   }
 }
 

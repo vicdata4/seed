@@ -12,10 +12,6 @@ class NotesManager extends connect(store)(LitElement) {
       CustomStyles,
       ViewStyle,
       css`
-        :host{
-          background-image: url('assets/images/backgrounds/cloud.jpg');
-        }
-
         h5 {
           margin-top: 50px;
         }
@@ -33,8 +29,8 @@ class NotesManager extends connect(store)(LitElement) {
       <section>
         <h5>Notes manager</h5>
         <form onsubmit="return false">
-          <input id="mail" type="text" placeholder="mail">
-          <input id="password" type="password" placeholder="password">
+          <input id="title" type="text" placeholder="title">
+          <input id="content" type="text" placeholder="content">
           <button type="submit" @click="${this.addNote}" aria-label="Add note" class="custom-link blue">Add note</button>
         </form>
         <button type="button" @click="${() => logout()}" aria-label="Log out" class="custom-link red">Logout</button>
@@ -44,12 +40,12 @@ class NotesManager extends connect(store)(LitElement) {
   }
 
   addNote() {
-    const inputTitle = this.shadowRoot.querySelector('#mail').value;
-    const contentValue = this.shadowRoot.querySelector('#password').value;
+    const inputTitle = this.shadowRoot.querySelector('#title').value;
+    const contentValue = this.shadowRoot.querySelector('#content').value;
     if (inputTitle && contentValue) {
       store.dispatch(addNote({ title: inputTitle, content: contentValue }));
-      this.shadowRoot.querySelector('#mail').value = '';
-      this.shadowRoot.querySelector('#password').value = '';
+      this.shadowRoot.querySelector('#title').value = '';
+      this.shadowRoot.querySelector('#content').value = '';
     }
   }
 }
