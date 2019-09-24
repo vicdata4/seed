@@ -33,7 +33,7 @@ class LanguageSelector extends LitElement {
       <span>${locales.language}</span>
       ${Object.keys(countries).map(x => html`
           <button type="button" class="${x === currentCountry() ? 'active' : ''}" @click="${() => this.setLanguage(x)}">
-            <img src="assets/translations/flags/${x}.png">
+            <img src="assets/translations/flags/${x}.png" alt="${x}">
           </button>
       `)}
     `;

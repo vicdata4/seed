@@ -1,4 +1,4 @@
-import url from './host.js';
+import { url, prefix } from '../../config.js';
 
 export default async(type, url_ = url) => {
   try {
@@ -18,19 +18,28 @@ const errorHandler = (response) => {
   return response.json();
 };
 
-const options = {
-  mode: 'cors',
-  cache: 'no-cache',
-  credentials: 'same-origin',
-  referrer: 'no-referrer',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-};
-
 export const http = {
   get: () => Object.assign(options, { method: 'GET', body: undefined }),
   post: (body) => Object.assign(options, { method: 'POST', body: JSON.stringify(body) }),
   delete: () => Object.assign(options, { method: 'DELETE', body: undefined }),
   put: (body) => Object.assign(options, { method: 'PUT', body: JSON.stringify(body) })
+};
+
+const getCookie = (name) => {
+  const matches = document.cookie.match(new RegExp(
+    '(?:^|; )' + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + '=([^;]*)'
+  ));
+
+  return matches && matches !== 'null' ? decodeURIComponent(matches[1]) : undefined;
+};
+
+const options = {
+  mode: 'cors',
+  cache: 'no-cache',
+  credentials: 'same-origin',
+  referrer: 'no-referrer',
+  headers: new Headers({
+    'Content-Type': 'application/json',
+    authorization: getCookie('token') ? prefix + getCookie('token') : undefined
+  })
 };
