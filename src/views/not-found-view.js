@@ -8,7 +8,7 @@ class NotFoundView extends LitElement {
       ViewStyle,
       css`
         :host{
-          background-image: url('assets/backgrounds/lamp.jpg');
+          background-image: url('assets/images/backgrounds/lamp.jpg');
         }
       `
     ];

@@ -2,9 +2,9 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { locales } from '../../assets/translations';
 import { store } from '../store/store';
-import { login } from '../middleware/auth';
+import { login } from '../store/actions/auth-actions';
 
-class LoginView extends LitElement {
+class LoginForm extends LitElement {
   static get styles() {
     return [
       CustomStyles,
@@ -31,9 +31,9 @@ class LoginView extends LitElement {
       <section>
         <h2>${locales.login_title}</h2>
         <form onsubmit="return false">
-          <input id="mail" type="text" placeholder="mail">
-          <input id="password" type="password" placeholder="password">
-          <button type="submit" @click="${this.login}" aria-label="Add note" class="custom-link">Login</button>
+          <input id="mail" type="text" placeholder="mail" required>
+          <input id="password" type="password" placeholder="password" required>
+          <button type="submit" @click="${this.login}" aria-label="Add note" class="custom-link blue">Login</button>
         </form>
       </section>
     `;
@@ -48,4 +48,4 @@ class LoginView extends LitElement {
   }
 }
 
-window.customElements.define('login-view', LoginView);
+window.customElements.define('login-form', LoginForm);

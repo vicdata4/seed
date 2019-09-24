@@ -45,10 +45,11 @@ Link: https://seed-19f53.web.app/
 git clone https://github.com/vicdata4/seed.git
 ```
 
- * Create src/store/`host.js` file to specify your `host address` as below.
+ * Create `config.js` file from root to specify your `host address` and `token prefix` as below.
 
 ```js
-export default 'http://localhost:3000/notes';
+export const prefix = 'prefix-string';
+export const url = 'http://your-host-adress';
 ```
 
 ```

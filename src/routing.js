@@ -7,7 +7,7 @@ import './views/rollup-view';
 import './views/redux-view';
 import './views/vaadin-view';
 import './views/not-found-view';
-import './views/login-view';
+import './views/app-view';
 
 export const routing = function() {
   const outlet = this.shadowRoot.getElementById('root');
@@ -19,7 +19,7 @@ export const routing = function() {
     { path: '/redux', component: 'redux-view' },
     { path: '/litelement', component: 'litelement-view' },
     { path: '/vaadin', component: 'vaadin-view' },
-    { path: '/login', component: 'login-view' },
+    { path: '/appx', component: 'app-view' },
     { path: '(.*)', component: 'not-found-view' }
   ];
 
@@ -28,28 +28,29 @@ export const routing = function() {
   router.setRoutes(routes);
 };
 
-export const navigator = [{
-  path: '/',
-  name: locales.nav_home
-},
-{
-  path: '/rollup',
-  name: 'RollUp'
-},
-{
-  path: '/litelement',
-  name: 'Lit-Element'
-},
-{
-  path: '/vaadin',
-  name: 'Vaadin'
-},
-{
-  path: '/redux',
-  name: 'Redux'
-},
-{
-  path: '/login',
-  name: 'Login'
-}
+export const navigator = [
+  {
+    path: '/',
+    name: locales.nav_home
+  },
+  {
+    path: '/rollup',
+    name: 'RollUp'
+  },
+  {
+    path: '/litelement',
+    name: 'Lit-Element'
+  },
+  {
+    path: '/vaadin',
+    name: 'Vaadin'
+  },
+  {
+    path: '/redux',
+    name: 'Redux'
+  },
+  {
+    path: '/appx',
+    name: 'Token-auth'
+  }
 ];
