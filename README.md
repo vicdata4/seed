@@ -39,7 +39,7 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 - [Vaadin](https://www.npmjs.com/package/@vaadin/router) Routing
 - [ESLint](https://eslint.org) Coding style
 
-Link: https://seed-19f53.web.app/
+Link: https://seed-project.dev/
 
 ## Run project
 
@@ -51,7 +51,7 @@ git clone https://github.com/vicdata4/seed.git
 
 ```js
 export const prefix = 'prefix-string';
-export const url = 'http://your-host-adress';
+export const url = 'http://your-host-address';
 ```
 
 ```
@@ -109,8 +109,10 @@ export const addNote = (body) => {
 
 Go to [src/store/actions/notes-actions.js](https://github.com/vicdata4/seed/blob/master/src/store/actions/notes-actions.js) to see more examples with GET and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your fetch options.
 
+## Utils
 
 #### `dateFormatter()` 
+#### [src/utils/functions.js](https://github.com/vicdata4/seed/blob/master/src/utils/functions.js)
 
 Date-formatter allows to customize your own date-formats.
 By default some presets are already defined such as `default`, `short` and others.
@@ -127,8 +129,28 @@ console.log(date.short); // "Sep 7"
 console.log(date.day); // "Sunday"
 console.log(date.hour); // "15:53"
  ```
-#### [src/utils/functions.js](https://github.com/vicdata4/seed/blob/master/src/utils/functions.js)
 
+#### `fetch()` 
+#### [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js)
+Configure your fetch options and error codes from `fetch.config.js` file.
+
+
+```js
+// Import fetch.config file to improve your performance.
+
+import fetch, { http } from 'src/store/fetch.config';
+import { url } from 'config.js';
+
+const body = {};
+
+// get request 
+const getExample = await fetch(http.get());
+// get request - optional param (api path)
+const getExample = await fetch(http.get(), `${url}/notes`);
+
+const postExample = await fetch(http.post(body));
+const deleteExample = await fetch(http.delete());
+```
 
 #### Node Server
 
