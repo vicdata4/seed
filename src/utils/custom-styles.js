@@ -45,6 +45,10 @@ export const CustomStyles = css`
     font-size:20px;
   }
 
+  input[type='submit'] {
+    height: fit-content;
+  }
+
   section h1 span {
     color: #c7b788;
   }

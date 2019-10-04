@@ -51,7 +51,7 @@ class LoginForm extends LitElement {
           onsubmit="return false">
           <input type="text" id="email" placeholder="email@address.com" required>
           <input type="password" id="pass" placeholder="password" required>
-          <button type="submit" @click="${this.login}" aria-label="Add note" class="custom-link form-button">Login</button>
+          <input type="submit" value="Login" @click="${this.login}" aria-label="Add note" class="custom-link form-button">
           <h5>${this.alertMsg}</h5>
         </form>
       </section>
