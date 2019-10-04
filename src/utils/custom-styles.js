@@ -15,17 +15,31 @@ export const CustomStyles = css`
     font-size: 30px;
   }
 
+  form {
+    display: flex;
+    flex-direction:column;
+    align-self: center;
+    width: 100%;
+  }
+
   form input {
+    font-size: 18px;
     border: 1px solid #473d3d;
     margin-left: 0;
+    border: none;
+    border-bottom: 1px solid rgb(70, 150, 135);
     border-radius: 5px;
-    background-color: black;
+    background-color: transparent;
     height: 30px;
     color: white;
-    width: 100%;
     padding: 5px;
-    margin: 10px;
+    margin-bottom: 20px;
     margin-left: 0;
+  }
+
+  ::placeholder {
+    color: #00dce6;
+    opacity: 1; /* Firefox */
   }
 
   input[type='text']{
@@ -88,9 +102,18 @@ export const CustomStyles = css`
       background-color: rgb(53, 98, 149);
   }
 
+  .form-button {
+    align-self: flex-end;
+  }
+
   @media (min-width: 768px) {
-    form input {
-      width: 30%;
+
+    form {
+      width: 50%;
+    }
+
+    .form-button {
+      width: auto;
     }
   }
 `;
