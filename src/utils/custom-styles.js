@@ -47,6 +47,7 @@ export const CustomStyles = css`
 
   input[type='submit'] {
     height: fit-content;
+    margin: 0;
   }
 
   section h1 span {
@@ -55,7 +56,6 @@ export const CustomStyles = css`
 
   .custom-link {
     display: inline-block;
-    /*background-color: #e29512;*/
     background-color: #1C8281;
     border: none;
     padding: 10px;

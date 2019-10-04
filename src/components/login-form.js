@@ -3,7 +3,7 @@ import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { locales } from '../../assets/translations';
 import { store } from '../store/store';
 import { login } from '../store/actions/auth-actions';
-import { emailValidator } from '../utils/functions.js';
+import { loginValidator } from '../utils/functions.js';
 
 class LoginForm extends LitElement {
   static get styles() {
@@ -32,13 +32,13 @@ class LoginForm extends LitElement {
 
   static get properties() {
     return {
-      alertMsg: { type: String }
+      alert: { type: String }
     };
   }
 
   constructor() {
     super();
-    this.alertMsg = '';
+    this.alert = '';
   }
 
   render() {
@@ -52,29 +52,28 @@ class LoginForm extends LitElement {
           <input type="text" id="email" placeholder="email@address.com" required>
           <input type="password" id="pass" placeholder="password" required>
           <input type="submit" value="Login" @click="${this.login}" aria-label="Add note" class="custom-link form-button">
-          <h5>${this.alertMsg}</h5>
+          <h5>${this.alert}</h5>
         </form>
       </section>
     `;
   }
 
+  /**
+    *
+    * login function validates form data in order to dispatch a login-action.
+    * Get email and password via querySelector(), call to loginValidator() and dispatch if validation === true.
+    */
   login() {
     const mail = this.shadowRoot.querySelector('#email').value;
     const password = this.shadowRoot.querySelector('#pass').value;
 
-    if (mail && password) {
-      if (emailValidator(mail)) {
-        if (password.length > 5) {
-          store.dispatch(login({ mail, password }));
-          this.alertMsg = '';
-        } else {
-          this.alertMsg = 'Password too short';
-        }
-      } else {
-        this.alertMsg = 'Invalid email format';
-      }
+    const validation = loginValidator(mail, password);
+
+    if (validation === true) {
+      store.dispatch(login({ mail, password }));
+      this.alert = '';
     } else {
-      this.alertMsg = 'Complete all fields';
+      this.alert = validation;
     }
   }
 }

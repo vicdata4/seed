@@ -22,7 +22,23 @@ export const dateFormatter = (date_) => {
   };
 };
 
-export const emailValidator = (email) => {
+const emailValidator = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
+};
+
+export const loginValidator = (mail, password) => {
+  if (mail && password) {
+    if (emailValidator(mail)) {
+      if (password.length > 5) {
+        return true;
+      } else {
+        return 'Password too short';
+      }
+    } else {
+      return 'Invalid email format';
+    }
+  } else {
+    return 'Complete all fields';
+  }
 };
