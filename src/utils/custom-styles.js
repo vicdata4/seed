@@ -19,7 +19,6 @@ export const CustomStyles = css`
     display: flex;
     flex-direction:column;
     align-self: center;
-    width: 100%;
   }
 
   form input {

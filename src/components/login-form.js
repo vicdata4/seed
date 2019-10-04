@@ -13,7 +13,7 @@ class LoginForm extends LitElement {
       css`
         section {
           background-color: rgba(0,0,0, .6);
-          justify-content: center;
+          padding: 0;
         }
 
         h5 {
@@ -59,13 +59,13 @@ class LoginForm extends LitElement {
   }
 
   login() {
-    const email = this.shadowRoot.querySelector('#email').value;
-    const pass = this.shadowRoot.querySelector('#pass').value;
+    const mail = this.shadowRoot.querySelector('#email').value;
+    const password = this.shadowRoot.querySelector('#pass').value;
 
-    if (email && pass) {
-      if (emailValidator(email)) {
-        if (pass.length > 5) {
-          store.dispatch(login({ email, pass }));
+    if (mail && password) {
+      if (emailValidator(mail)) {
+        if (password.length > 5) {
+          store.dispatch(login({ mail, password }));
           this.alertMsg = '';
         } else {
           this.alertMsg = 'Password too short';
