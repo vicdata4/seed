@@ -62,6 +62,20 @@ npm install
 npm run dev
 ```
 
+## Documentation
+
+[· Routing configuration](#routing)
+
+[· Redux actions](#redux-actions)
+
+[· Utils](#utils)
+
+[· Utils dateFormatter()](#dateFormatter)
+
+[· Utils fetch()](#fetch)
+
+[· Utils validation](#validation)
+
 ## Routing
 
 #### [src/routing.js](https://github.com/vicdata4/seed/blob/master/src/routing.js)
@@ -151,6 +165,14 @@ const getExample = await fetch(http.get(), `${url}/notes`);
 const postExample = await fetch(http.post(body));
 const deleteExample = await fetch(http.delete());
 ```
+
+## Validation
+
+#### [src/utils/functions.js](https://github.com/vicdata4/seed/blob/master/src/utils/functions.js)
+
+#### `loginValidator()` 
+#### `emailValidator()` 
+
 
 #### Node Server
 
