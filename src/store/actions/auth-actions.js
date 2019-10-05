@@ -14,8 +14,7 @@ import { loginValidator } from '../../utils/functions.js';
 
 export const login = (body) => {
   return async(dispatch) => {
-    const { mail, password } = body;
-    const validation = loginValidator(mail, password);
+    const validation = loginValidator(body);
 
     if (validation === true) {
       const response = await fetch(http.post(body), `${url}/login`);
@@ -29,6 +28,11 @@ export const login = (body) => {
     }
   };
 };
+
+/**
+  * logout() function
+  * Remove token cookie and redirects to home-page
+  */
 
 export const logout = () => {
   document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';

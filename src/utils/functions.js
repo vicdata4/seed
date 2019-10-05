@@ -27,7 +27,8 @@ const emailValidator = (email) => {
   return re.test(String(email).toLowerCase());
 };
 
-export const loginValidator = (mail, password) => {
+export const loginValidator = (data) => {
+  const { mail, password } = data;
   if (mail && password) {
     if (emailValidator(mail)) {
       if (password.length > 5) {
