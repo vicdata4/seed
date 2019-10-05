@@ -1,15 +1,14 @@
-export const reducer = (state = [], action) => {
+export const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_NOTE': {
-      // console.log(action.payload);
-      return [...state, action.payload];
+      return { notes: [...state.notes, action.payload] };
     }
     case 'GET_ALL': {
-      return action.payload;
+      return { notes: action.payload };
     }
     case 'DELETE_NOTE': {
-      const deleteNote = state.filter(x => x._id !== action.payload);
-      return deleteNote;
+      const deleteNote = state.notes.filter(x => x._id !== action.payload);
+      return { notes: deleteNote };
     }
     case 'LOGIN_AUTH': {
       document.cookie = `token=${action.payload.token};`;
@@ -17,9 +16,7 @@ export const reducer = (state = [], action) => {
       break;
     }
     case 'LOGIN_FAILED': {
-      // eslint-disable-next-line no-console
-      console.log(action.payload);
-      break;
+      return { loginError: action.payload };
     }
     case 'CATCH_ERROR': {
       const string = `error: ${action.payload.error} errorCode: ${action.payload.errorCode}`;

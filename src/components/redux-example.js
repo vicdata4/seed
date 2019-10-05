@@ -46,7 +46,7 @@ class ReduxExample extends connect(store)(LitElement) {
   }
 
   stateChanged(state) {
-    this.books = state || [];
+    this.books = state.notes || [];
   }
 
   render() {

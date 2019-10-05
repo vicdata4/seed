@@ -2,10 +2,10 @@ import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { locales } from '../../assets/translations';
 import { store } from '../store/store';
+import { connect } from 'pwa-helpers';
 import { login } from '../store/actions/auth-actions';
-import { loginValidator } from '../utils/functions.js';
 
-class LoginForm extends LitElement {
+class LoginForm extends connect(store)(LitElement) {
   static get styles() {
     return [
       CustomStyles,
@@ -32,13 +32,17 @@ class LoginForm extends LitElement {
 
   static get properties() {
     return {
-      alert: { type: String }
+      alert: { type: String, attribute: false }
     };
   }
 
   constructor() {
     super();
     this.alert = '';
+  }
+
+  stateChanged(state) {
+    this.alert = state.loginError || '';
   }
 
   render() {
@@ -58,22 +62,12 @@ class LoginForm extends LitElement {
     `;
   }
 
-  /**
-    *
-    * login function validates form data in order to dispatch a login-action.
-    * Get email and password via querySelector(), call to loginValidator() and dispatch if validation === true.
-    */
   login() {
     const mail = this.shadowRoot.querySelector('#email').value;
     const password = this.shadowRoot.querySelector('#pass').value;
 
-    const validation = loginValidator(mail, password);
-
-    if (validation === true) {
+    if (mail && password) {
       store.dispatch(login({ mail, password }));
-      this.alert = '';
-    } else {
-      this.alert = validation;
     }
   }
 }
