@@ -24,12 +24,11 @@ class AppView extends LitElement {
 
   constructor() {
     super();
-
-    this.showApp = false;
     this.authenticate();
   }
 
   async authenticate() {
+    this.showApp = false;
     this.showApp = await auth();
   }
 

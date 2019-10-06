@@ -12,7 +12,7 @@ export const reducer = (state = {}, action) => {
     }
     case 'LOGIN_AUTH': {
       document.cookie = `token=${action.payload.token};`;
-      window.location = '/appx';
+      window.location = '/application';
       break;
     }
     case 'LOGIN_FAILED': {

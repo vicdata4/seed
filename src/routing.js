@@ -19,7 +19,7 @@ export const routing = function() {
     { path: '/redux', component: 'redux-view' },
     { path: '/litelement', component: 'litelement-view' },
     { path: '/vaadin', component: 'vaadin-view' },
-    { path: '/appx', component: 'app-view' },
+    { path: '/application', component: 'app-view' },
     { path: '(.*)', component: 'not-found-view' }
   ];
 
@@ -50,7 +50,7 @@ export const navigator = [
     name: 'Redux'
   },
   {
-    path: '/appx',
+    path: '/application',
     name: 'Token-auth'
   }
 ];
