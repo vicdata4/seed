@@ -62,11 +62,13 @@ npm install
 npm run dev
 ```
 
-## Documentation
+## Index
 
 [· Routing configuration](#routing)
 
 [· Redux actions](#redux-actions)
+
+[· Translations](#translations)
 
 [· Utils](#utils)
 
@@ -74,7 +76,7 @@ npm run dev
 
 [· Utils fetch()](#fetch)
 
-[· Utils validation](#validation)
+[· Utils validators](#validation)
 
 ## Routing
 
@@ -122,6 +124,22 @@ export const addNote = (body) => {
 ```
 
 Go to [src/store/actions/notes-actions.js](https://github.com/vicdata4/seed/blob/master/src/store/actions/notes-actions.js) to see more examples with GET and DELETE on redux and check [src/store/fetch.config.js](https://github.com/vicdata4/seed/blob/master/src/store/fetch.config.js) file to configure your fetch options.
+
+## Translations
+
+#### Config file: [assets/translations/index.js](https://github.com/vicdata4/seed/blob/master/assets/translations/index.js)
+
+ ```js
+ // how tu use
+
+import { locales } from 'assets/translations';
+
+<div>
+  <h1>${locales.home_title}</h1>
+  <h3>${locales.home_title_sub}</h3>
+  <p>${locales.content}</p>
+</div>
+ ```
 
 ## Utils
 
