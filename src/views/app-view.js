@@ -1,8 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { auth } from '../middleware/auth';
-import '../components/login-form';
-import '../components/notes-manager';
 import '../components/seed-spinner';
 
 class AppView extends LitElement {
@@ -20,31 +18,23 @@ class AppView extends LitElement {
 
   static get properties() {
     return {
-      isAuth: { type: Boolean },
-      spinner: { type: Boolean }
+      showApp: { type: Boolean }
     };
   }
 
   constructor() {
     super();
-    this.spinner = true;
-    this.isAuth = false;
-    this.checkAuth();
+
+    this.showApp = false;
+    this.authenticate();
   }
 
-  async checkAuth() {
-    this.isAuth = await auth();
-    this.spinner = false;
+  async authenticate() {
+    this.showApp = await auth();
   }
 
   render() {
-    const showApp = this.isAuth
-      ? html`<notes-manager></notes-manager>`
-      : html`<login-form></login-form>`;
-
-    return this.spinner
-      ? html`<seed-spinner></seed-spinner>`
-      : showApp;
+    return this.showApp || html`<seed-spinner></seed-spinner>`;
   }
 }
 

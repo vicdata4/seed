@@ -21,7 +21,7 @@ export const login = (body) => {
       if (!response.error) {
         dispatch({ type: 'LOGIN_AUTH', payload: response });
       } else {
-        dispatch({ type: 'LOGIN_FAILED', payload: response.error });
+        dispatch({ type: 'LOGIN_FAILED', payload: response.message });
       }
     } else {
       dispatch({ type: 'LOGIN_FAILED', payload: validation });
