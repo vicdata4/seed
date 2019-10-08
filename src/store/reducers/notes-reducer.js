@@ -1,22 +1,14 @@
-export const reducer = (state = {}, action) => {
+export const notes = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_NOTE': {
-      return { notes: [...state.notes, action.payload] };
+      return { list: [...state.list, action.payload] };
     }
     case 'GET_ALL': {
-      return { notes: action.payload };
+      return { list: action.payload };
     }
     case 'DELETE_NOTE': {
-      const deleteNote = state.notes.filter(x => x._id !== action.payload);
-      return { notes: deleteNote };
-    }
-    case 'LOGIN_AUTH': {
-      document.cookie = `token=${action.payload.token};`;
-      window.location = '/application';
-      break;
-    }
-    case 'LOGIN_FAILED': {
-      return { loginError: action.payload };
+      const deleteNote = state.list.filter(x => x._id !== action.payload);
+      return { list: deleteNote };
     }
     case 'CATCH_ERROR': {
       const string = `error: ${action.payload.error} errorCode: ${action.payload.errorCode}`;

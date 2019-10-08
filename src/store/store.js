@@ -1,8 +1,12 @@
-import { createStore, applyMiddleware } from 'redux';
-import { reducer } from './reducers/notes-reducer';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { users } from './reducers/users-reducer';
+import { notes } from './reducers/notes-reducer';
 import thunk from 'redux-thunk';
 
 export const store = createStore(
-  reducer,
+  combineReducers({
+    users,
+    notes
+  }),
   applyMiddleware(thunk)
 );
