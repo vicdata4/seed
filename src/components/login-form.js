@@ -42,7 +42,7 @@ class LoginForm extends connect(store)(LitElement) {
   }
 
   stateChanged(state) {
-    this.alert = state.users.loginError || '';
+    this.alert = state.auth.loginError || '';
   }
 
   render() {

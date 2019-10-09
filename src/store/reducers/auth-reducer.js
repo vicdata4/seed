@@ -1,4 +1,4 @@
-export const users = (state = {}, action) => {
+export const auth = (state = {}, action) => {
   switch (action.type) {
     case 'LOGIN_AUTH': {
       document.cookie = `token=${action.payload.token};`;
