@@ -1,6 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
-import '../components/redux-example';
 
 class ReduxView extends LitElement {
   static get styles() {

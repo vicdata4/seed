@@ -5,15 +5,18 @@ import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
 import { deleteNote } from '../store/actions/notes-actions';
 import { close } from '../utils/svg-icons';
-import { sortBy, dateFormatter } from '../utils/functions';
+import { sortBy } from '../utils/functions';
 
-class ReduxExample extends connect(store)(LitElement) {
+import './note-card.js';
+
+class NotesList extends connect(store)(LitElement) {
   static get styles() {
     return [
       CustomStyles,
       css`
         li {
           display: flex;
+          justify-content: space-between;
           align-items: center;
           padding: 15px;
         }
@@ -55,14 +58,10 @@ class ReduxExample extends connect(store)(LitElement) {
         ${this.books.sort(sortBy).map((x, i) => {
             return html`
               <li>
+                <note-card .info="${x}"></note-card>
                 <button aria-label="Remove note" @click="${() => this.deleteElement(x)}">
                   ${close}
                 </button>
-                ${x.title} - ${x.content}<br>
-                ${dateFormatter(x.createdAt).default}<br>
-                ${dateFormatter(x.createdAt).short}<br>
-                ${dateFormatter(x.createdAt).day}<br>
-                ${dateFormatter(x.createdAt).hour}
               </li>
             `;
         })}
@@ -75,4 +74,4 @@ class ReduxExample extends connect(store)(LitElement) {
   }
 }
 
-window.customElements.define('redux-example', ReduxExample);
+window.customElements.define('notes-list', NotesList);
