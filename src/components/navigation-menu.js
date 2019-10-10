@@ -2,6 +2,9 @@ import { LitElement, html, css } from 'lit-element';
 import { countryPath } from '../../assets/translations';
 import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
+import { logout } from '../store/actions/auth-actions';
+
+import { auth2 } from '../middleware/auth.js';
 
 class NavigationMenu extends LitElement {
   static get styles() {
@@ -89,6 +92,21 @@ class NavigationMenu extends LitElement {
     ];
   }
 
+  static get properties() {
+    return {
+      logged: { type: Boolean }
+    };
+  }
+
+  constructor() {
+    super();
+    this.authenticate();
+  }
+
+  async authenticate() {
+    this.logged = await auth2();
+  }
+
   firstUpdated() {
     this.setActiveViaPath();
   }
@@ -102,6 +120,7 @@ class NavigationMenu extends LitElement {
           ${navigator.map((x, i) => html`
             <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
+        ${this.logged ? html`<li><a href="#" @click="${logout}" style="color: red">Logout</a></li>` : ''}
         </ul>
       </nav>
     `;

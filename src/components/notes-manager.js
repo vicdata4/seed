@@ -1,7 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { ViewStyle } from '../utils/custom-styles';
 import { store } from '../store/store';
-import { logout } from '../store/actions/auth-actions';
 import { addNote, getNotes } from '../store/actions/notes-actions';
 import { connect } from 'pwa-helpers';
 import './notes-list.js';
@@ -49,6 +48,7 @@ class NotesManager extends connect(store)(LitElement) {
           height: 30px;
           border: none;
           color: white;
+          width: fit-content;
         }
 
         h5 {
@@ -71,7 +71,6 @@ class NotesManager extends connect(store)(LitElement) {
           <textarea id="content" style="height: 200px;" type="text" placeholder="content"></textarea>
           <input type="submit" value="Add note" @click="${this.addNote}" class="submit-btn" aria-label="Add note">
         </form>
-        <!--<button type="button" @click="${() => logout()}" aria-label="Log out" class="red">Logout</button>-->
         <notes-list></notes-list>
       </section>
     `;
@@ -80,6 +79,7 @@ class NotesManager extends connect(store)(LitElement) {
   addNote() {
     const inputTitle = this.shadowRoot.querySelector('#title').value;
     const contentValue = this.shadowRoot.querySelector('#content').value;
+
     if (inputTitle && contentValue) {
       store.dispatch(addNote({ title: inputTitle, content: contentValue }));
       this.shadowRoot.querySelector('#title').value = '';

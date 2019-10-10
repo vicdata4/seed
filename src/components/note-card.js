@@ -4,7 +4,15 @@ import { dateFormatter } from '../utils/functions';
 
 class NoteCard extends LitElement {
   static get styles() {
-    return css``;
+    return css`
+        h3 {
+          color: #00dce6;
+        }
+
+        span {
+          color: grey;
+        }
+    `;
   }
 
   static get properties() {

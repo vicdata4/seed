@@ -12,3 +12,8 @@ export const auth = async() => {
     ? html`<notes-manager></notes-manager>`
     : html`<login-form></login-form>`;
 };
+
+export const auth2 = async() => {
+  const response = await fetch(http.get(), `${url}/auth`);
+  return response && response.isLogged;
+};
