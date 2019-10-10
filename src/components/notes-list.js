@@ -19,6 +19,11 @@ class NotesList extends connect(store)(LitElement) {
           justify-content: space-between;
           align-items: center;
           padding: 15px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+        }
+
+        ul {
+          padding: 0;
         }
 
         button {

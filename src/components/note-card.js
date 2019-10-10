@@ -7,10 +7,12 @@ class NoteCard extends LitElement {
     return css`
         h3 {
           color: #00dce6;
+          margin-bottom: 0;
         }
 
         span {
           color: grey;
+          font-size: 14px;
         }
     `;
   }
@@ -21,11 +23,17 @@ class NoteCard extends LitElement {
     };
   }
 
+  formatContent(string) {
+    const el = document.createElement('html');
+    el.innerHTML = string;
+    return html`<style>* {color: white;}</style>${el}`;
+  }
+
   render() {
     return html`
       <h3>${this.info.title}</h3>
-      <p>${this.info.content}</p>
-      <span>${dateFormatter(this.info.createdAt).default}</span>
+      <p>${this.formatContent(this.info.content)}</p>
+      <span>${dateFormatter(this.info.createdAt).default} at ${dateFormatter(this.info.createdAt).hour}</span>
     `;
   }
 }

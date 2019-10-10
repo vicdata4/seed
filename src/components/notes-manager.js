@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit-element';
 import { ViewStyle } from '../utils/custom-styles';
 import { store } from '../store/store';
 import { addNote, getNotes } from '../store/actions/notes-actions';
+import { textAreaFormatter } from '../utils/functions.js';
 import { connect } from 'pwa-helpers';
 import './notes-list.js';
 
@@ -81,7 +82,7 @@ class NotesManager extends connect(store)(LitElement) {
     const contentValue = this.shadowRoot.querySelector('#content').value;
 
     if (inputTitle && contentValue) {
-      store.dispatch(addNote({ title: inputTitle, content: contentValue }));
+      store.dispatch(addNote({ title: inputTitle, content: textAreaFormatter(contentValue) }));
       this.shadowRoot.querySelector('#title').value = '';
       this.shadowRoot.querySelector('#content').value = '';
     }

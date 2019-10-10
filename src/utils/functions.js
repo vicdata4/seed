@@ -1,8 +1,8 @@
 import { months, days } from './constants';
 
-export const sortBy = (a, b) => {
-  return (a.createdAt > b.createdAt) ? -1 : (a.createdAt < b.createdAt) ? 1 : 0;
-};
+/**
+  * FORMATTERS
+  */
 
 export const dateFormatter = (date_) => {
   const date = new Date(date_);
@@ -21,6 +21,16 @@ export const dateFormatter = (date_) => {
     hour: (hour < 10 ? '0' + hour : hour) + ':' + (minute < 10 ? '0' + minute : minute)
   };
 };
+
+export const textAreaFormatter = (text) => {
+  const breakLines = /\n\r?/g;
+  return text
+    .replace(breakLines, '</br>');
+};
+
+/**
+  * VALIDATORS
+  */
 
 const emailValidator = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -42,4 +52,8 @@ export const loginValidator = (data) => {
   } else {
     return 'Complete all fields';
   }
+};
+
+export const sortBy = (a, b) => {
+  return (a.createdAt > b.createdAt) ? -1 : (a.createdAt < b.createdAt) ? 1 : 0;
 };
