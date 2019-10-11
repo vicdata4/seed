@@ -7,7 +7,7 @@ class NoteCard extends LitElement {
     return css`
         h3 {
           color: #00dce6;
-          margin-bottom: 0;
+          margin: 0;
         }
 
         span {
