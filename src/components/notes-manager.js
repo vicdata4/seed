@@ -92,7 +92,7 @@ class NotesManager extends connect(store)(LitElement) {
       <section>
         <form
           autocomplete="off"
-          name="Login"
+          name="Notes"
           onsubmit="return false">
           <input id="title" type="text" placeholder="title">
           <textarea id="content" style="height: 200px;" type="text" placeholder="content"></textarea>

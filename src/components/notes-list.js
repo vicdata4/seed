@@ -4,15 +4,15 @@ import { CustomStyles } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
 import { deleteNote } from '../store/actions/notes-actions';
-import { close, edit } from '../utils/svg-icons';
 import { sortBy } from '../utils/functions';
-
+import { seedButtonStyle } from 'seed-catalog/styles.js';
 import './note-card.js';
 
 class NotesList extends connect(store)(LitElement) {
   static get styles() {
     return [
       CustomStyles,
+      seedButtonStyle,
       css`
         li {
           display: flex;
@@ -28,12 +28,6 @@ class NotesList extends connect(store)(LitElement) {
 
         .options {
           align-self: flex-start;
-        }
-
-        button {
-          padding: 0;
-          background: none;
-          border: none;
         }
 
         svg {
@@ -68,12 +62,9 @@ class NotesList extends connect(store)(LitElement) {
               <li>
                 <note-card .info="${x}"></note-card>
                 <div class="options">
-                <button aria-label="Remove note" @click="${() => this.deleteElement(x)}">
-                    ${edit}
-                  </button>
-                  <button aria-label="Remove note" @click="${() => this.deleteElement(x)}">
-                    ${close}
-                  </button>
+                  <button class="sd-btn green sm circle"><i class="material-icons">star</i></button>
+                  <button class="sd-btn blue sm circle"><i class="material-icons">edit</i></button>
+                  <button class="sd-btn red sm circle" @click="${() => this.deleteElement(x)}"><i class="material-icons">close</i></button>
                 </div>
               </li>
             `;
