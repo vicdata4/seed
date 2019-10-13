@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
-class VaadinView extends LitElement {
+class ServerView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
@@ -17,7 +17,7 @@ class VaadinView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>Vaadin</h1>
+        <h1>Server</h1>
         <hr>
         <h3>A small, powerful and framework-agnostic client-side router for Web Components</h3>
         <p>Vaadin router is a small (< 7kb) yet powerful client-side router JS library. It uses a widely adopted express.js syntax for routers (users/:id) to map URLs to views based on Web Component. It has all the features you expect from a modern router: async route resolution, animated transition, child routes, navigation guards, redirects, and more. Vaadin router works with Web Components regardless of how they are created.</p>
@@ -27,4 +27,4 @@ class VaadinView extends LitElement {
   }
 }
 
-window.customElements.define('vaadin-view', VaadinView);
+window.customElements.define('server-view', ServerView);

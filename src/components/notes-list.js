@@ -1,11 +1,11 @@
 /* eslint-disable indent */
 import { LitElement, html, css } from 'lit-element';
+import { seedButtonStyle } from 'seed-catalog/styles.js';
 import { CustomStyles } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
 import { deleteNote } from '../store/actions/notes-actions';
 import { sortBy } from '../utils/functions';
-import { seedButtonStyle } from 'seed-catalog/styles.js';
 import './note-card.js';
 
 class NotesList extends connect(store)(LitElement) {
@@ -62,9 +62,9 @@ class NotesList extends connect(store)(LitElement) {
               <li>
                 <note-card .info="${x}"></note-card>
                 <div class="options">
-                  <button class="sd-btn green sm circle"><i class="material-icons">star</i></button>
-                  <button class="sd-btn blue sm circle"><i class="material-icons">edit</i></button>
-                  <button class="sd-btn red sm circle" @click="${() => this.deleteElement(x)}"><i class="material-icons">close</i></button>
+                  <button class="sd-icon green sm circle"><i class="material-icons">star</i></button>
+                  <button class="sd-icon blue sm circle"><i class="material-icons">edit</i></button>
+                  <button class="sd-icon red sm circle" @click="${() => this.deleteElement(x)}"><i class="material-icons">close</i></button>
                 </div>
               </li>
             `;

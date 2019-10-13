@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 
-class ReduxView extends LitElement {
+class DependenciesView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
@@ -32,4 +32,4 @@ class ReduxView extends LitElement {
   }
 }
 
-window.customElements.define('redux-view', ReduxView);
+window.customElements.define('dependencies-view', DependenciesView);
