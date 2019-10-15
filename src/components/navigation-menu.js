@@ -29,10 +29,10 @@ class NavigationMenu extends LitElement {
           height: 100%;
         }
 
-        a {
+        .link {
           padding: 10px;
           text-decoration: none;
-          color: white;
+          color: rgb(255, 255, 255);
           transform: all 1s;
           cursor: pointer;
         }
@@ -118,7 +118,7 @@ class NavigationMenu extends LitElement {
         <ul>
         <li><img src="assets/logo.png" alt="Logo Mobile"></li>
           ${navigator.map((x, i) => html`
-            <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
+            <li><a class="link" href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
         ${this.logged ? html`<li><a href="#" @click="${logout}" style="color: red">Logout</a></li>` : ''}
         </ul>
@@ -139,7 +139,7 @@ class NavigationMenu extends LitElement {
     this.closeMobileMenu();
 
     navList.forEach((x, i) => {
-      x.className = (i === index) ? 'active' : '';
+      x.className = (i === index) ? 'active link' : 'link';
     });
   }
 }
