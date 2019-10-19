@@ -23,14 +23,14 @@ class CatalogView extends LitElement {
           <h1>Seed catalog</h1>
           <hr>
           <h3>Web components catalog</h3>
-          <p>Seed-catalog is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation and other interface components.</p>
+          <p>Seed-catalog is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and Web Components-based design templates for typography, forms, buttons and other interface components.</p>
           <div>
-          <a href="https://seed-catalog.web.app" target="_blank" class="sd-btn blue">StoryBook</a>
-          <seed-modal>
-          <button slot="button" class="sd-btn-mix red"><i class="material-icons">people</i>Open modal</button>
+
+        <seed-modal>
+          <button slot="button" class="sd-btn-mix red"><i class="material-icons">tv</i>Default modal</button>
           <span slot="title">Building Web Components</span>
           <button slot="close-btn" class="sd-btn-empty"><i class="material-icons blue-mate">close</i></button>
-          
+        
           <div slot="content">
             Duis sit amet sollicitudin nulla, sit amet molestie magna. Aenean interdum justo id iaculis hendrerit. Nullam sed tellus pretium, mattis dui vitae, placerat diam. <br><br>Nulla faucibus lacus sed mauris facilisis, a condimentum risus lobortis. Nunc egestas vehicula libero, non condimentum enim semper in. Donec efficitur convallis felis nec malesuada. Morbi ornare massa diam, ac ultrices magna suscipit a. Integer tempus sagittis ligula, ut fermentum magna suscipit a. Sed pellentesque consequat velit, ut convallis tellus. Mauris eget felis tortor. Aliquam sed consectetur ipsum. Praesent vel tortor consectetur sem mollis tincidunt vitae nec purus. Nullam ac scelerisque est, vitae iaculis magna. Ut pellentesque, enim lobortis pellentesque egestas, libero nibh sodales sapien, eu dignissim tortor massa id neque. Ut at dui viverra, efficitur lectus sed, sagittis risus.
           </div>
@@ -40,10 +40,10 @@ class CatalogView extends LitElement {
           </div> 
         </seed-modal>
 
-        <seed-modal>
-          <button slot="button" class="sd-btn-mix blue-mate"><i class="material-icons">lock</i>Open modal</button>
+        <seed-modal alignWindow="center">
+          <button slot="button" class="sd-btn-mix blue-mate"><i class="material-icons">info</i>Centered modal</button>
           <span slot="title">Building Web Components</span>
-          <button slot="close-btn" class="sd-btn-empty"><i class="material-icons blue-mate">close</i></button>
+          <button slot="close-btn" class="sd-btn-empty"><i class="material-icons green-mate">close</i></button>
           
           <div slot="content">
             Ut pellentesque, enim lobortis pellentesque egestas, libero nibh sodales sapien, eu dignissim tortor massa id neque. Ut at dui viverra, efficitur lectus sed, sagittis risus.
@@ -53,7 +53,8 @@ class CatalogView extends LitElement {
             <button class="sd-btn red-mate">Deny</button>
           </div> 
         </seed-modal>
-        <button class="sd-btn-mix green"><i class="material-icons">folder</i>Success</button>
+        <a href="https://seed-catalog.web.app" target="_blank" class="sd-btn-mix green"><i class="material-icons">star_border</i>Storybook</a>
+        <a href="https://github.com/vicdata4/seed-catalog" target="_blank" class="sd-btn-mix yellow"><i class="material-icons">search</i>Github</a>
         </div>
         <div>
         </div>
