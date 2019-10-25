@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
+import { seedButtonStyle } from 'seed-catalog/styles.js';
 import { locales } from '../../assets/translations';
 import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
@@ -10,6 +11,7 @@ class LoginForm extends connect(store)(LitElement) {
     return [
       CustomStyles,
       ViewStyle,
+      seedButtonStyle,
       css`
         section {
           background-color: rgba(0,0,0, .6);
@@ -25,6 +27,10 @@ class LoginForm extends connect(store)(LitElement) {
         h2 {
           text-align: center;
           margin-bottom: 40px;
+        }
+
+        input[type="submit"] {
+          align-self: flex-end;
         }
       `
     ];
@@ -42,7 +48,7 @@ class LoginForm extends connect(store)(LitElement) {
   }
 
   stateChanged(state) {
-    this.alert = state.loginError || '';
+    this.alert = state.auth.loginError || '';
   }
 
   render() {
@@ -55,7 +61,7 @@ class LoginForm extends connect(store)(LitElement) {
           onsubmit="return false">
           <input type="text" id="email" placeholder="email@address.com" required>
           <input type="password" id="pass" placeholder="password" required>
-          <input type="submit" value="Login" @click="${this.login}" aria-label="Add note" class="custom-link form-button">
+          <input type="submit" value="Login" @click="${this.login}" aria-label="Add note" class="sd-btn green-mate">
           <h5>${this.alert}</h5>
         </form>
       </section>

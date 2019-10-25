@@ -2,10 +2,9 @@ import { Router } from '@vaadin/router';
 import { countryPath, locales } from '../assets/translations';
 
 import './views/home-view';
-import './views/litelement-view';
-import './views/rollup-view';
-import './views/redux-view';
-import './views/vaadin-view';
+import './views/catalog-view';
+import './views/dependencies-view';
+import './views/server-view';
 import './views/not-found-view';
 import './views/app-view';
 
@@ -15,10 +14,9 @@ export const routing = function() {
 
   var routes = [
     { path: '/', component: 'home-view' },
-    { path: '/rollup', component: 'rollup-view' },
-    { path: '/redux', component: 'redux-view' },
-    { path: '/litelement', component: 'litelement-view' },
-    { path: '/vaadin', component: 'vaadin-view' },
+    { path: '/catalog', component: 'catalog-view' },
+    { path: '/dependencies', component: 'dependencies-view' },
+    { path: '/server', component: 'server-view' },
     { path: '/application', component: 'app-view' },
     { path: '(.*)', component: 'not-found-view' }
   ];
@@ -34,23 +32,19 @@ export const navigator = [
     name: locales.nav_home
   },
   {
-    path: '/rollup',
-    name: 'RollUp'
+    path: '/catalog',
+    name: 'Catalog'
   },
   {
-    path: '/litelement',
-    name: 'Lit-Element'
+    path: '/server',
+    name: 'Server'
   },
   {
-    path: '/vaadin',
-    name: 'Vaadin'
-  },
-  {
-    path: '/redux',
-    name: 'Redux'
+    path: '/dependencies',
+    name: 'Dependencies'
   },
   {
     path: '/application',
-    name: 'Token-auth'
+    name: 'Auth'
   }
 ];

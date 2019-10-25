@@ -68,10 +68,6 @@ export const CustomStyles = css`
     cursor: pointer;
   }
 
-  .custom-link:hover {
-    background-color: rgb(51, 121, 120);
-  }
-
   .npm-command {
     color: red;
   }
@@ -87,22 +83,6 @@ export const CustomStyles = css`
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-
-  .red {
-    background-color: #bf4545;
-  }
-
-  .red:hover {
-    background-color: rgb(176, 63, 63);
-  }
-
-  .blue {
-    background-color: rgb(63, 118, 182);
-  }
-
-  .blue:hover {
-      background-color: rgb(53, 98, 149);
   }
 
   .form-button {

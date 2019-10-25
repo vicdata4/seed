@@ -1,6 +1,6 @@
 ![](assets/logo_md.png?v=4&s=100)
 
-Lightweight and flexible web application based on web-components.
+Lightweight web application based on web-components.
 
 ### folder tree
 

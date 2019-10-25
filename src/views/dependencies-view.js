@@ -1,8 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
-import '../components/redux-example';
 
-class ReduxView extends LitElement {
+class DependenciesView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
@@ -22,7 +21,7 @@ class ReduxView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>Redux</h1>
+        <h1>Dependencies</h1>
         <hr>
         <h3>A predictable state container for JavaScript apps.</h3>
         <p>Redux is a predictable state container for JavaScript apps.It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
@@ -33,4 +32,4 @@ class ReduxView extends LitElement {
   }
 }
 
-window.customElements.define('redux-view', ReduxView);
+window.customElements.define('dependencies-view', DependenciesView);

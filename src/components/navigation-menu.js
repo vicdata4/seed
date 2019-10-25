@@ -2,6 +2,9 @@ import { LitElement, html, css } from 'lit-element';
 import { countryPath } from '../../assets/translations';
 import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
+import { logout } from '../store/actions/auth-actions';
+
+import { auth2 } from '../middleware/auth.js';
 
 class NavigationMenu extends LitElement {
   static get styles() {
@@ -26,10 +29,10 @@ class NavigationMenu extends LitElement {
           height: 100%;
         }
 
-        a {
+        .link {
           padding: 10px;
           text-decoration: none;
-          color: white;
+          color: rgb(255, 255, 255);
           transform: all 1s;
           cursor: pointer;
         }
@@ -89,6 +92,21 @@ class NavigationMenu extends LitElement {
     ];
   }
 
+  static get properties() {
+    return {
+      logged: { type: Boolean }
+    };
+  }
+
+  constructor() {
+    super();
+    this.authenticate();
+  }
+
+  async authenticate() {
+    this.logged = await auth2();
+  }
+
   firstUpdated() {
     this.setActiveViaPath();
   }
@@ -100,8 +118,9 @@ class NavigationMenu extends LitElement {
         <ul>
         <li><img src="assets/logo.png" alt="Logo Mobile"></li>
           ${navigator.map((x, i) => html`
-            <li><a href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
+            <li><a class="link" href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
+        ${this.logged ? html`<li><a href="#" @click="${logout}" style="color: red">Logout</a></li>` : ''}
         </ul>
       </nav>
     `;
@@ -120,7 +139,7 @@ class NavigationMenu extends LitElement {
     this.closeMobileMenu();
 
     navList.forEach((x, i) => {
-      x.className = (i === index) ? 'active' : '';
+      x.className = (i === index) ? 'active link' : 'link';
     });
   }
 }
