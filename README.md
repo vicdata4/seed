@@ -194,7 +194,7 @@ const deleteExample = await fetch(http.delete());
 
 #### Node Server
 
-https://github.com/vicdata4/node_server.git
+https://github.com/vicdata4/seed-server.git
 
 
 
