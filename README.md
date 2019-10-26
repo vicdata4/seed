@@ -38,6 +38,8 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 - [Redux](https://redux.js.org) Store
 - [Vaadin](https://www.npmjs.com/package/@vaadin/router) Routing
 - [ESLint](https://eslint.org) Coding style
+- [Seed Server](https://github.com/vicdata4/seed-server) Node API
+- [Seed Catalog](https://github.com/vicdata4/seed-catalog) Web Components Catalog
 
 Link: https://seed-project.dev/
 
