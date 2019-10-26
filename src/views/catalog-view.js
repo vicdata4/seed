@@ -13,6 +13,10 @@ class CatalogView extends LitElement {
         :host {
           background-image: url('assets/images/backgrounds/keyboard.jpg');
         }
+
+        button {
+          margin-bottom: 7px;
+        }
       `
     ];
   }
