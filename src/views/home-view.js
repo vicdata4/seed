@@ -48,10 +48,19 @@ class HomeView extends LitElement {
         <hr>
         <p>${locales.subtitle}</p>
         <div class="links">
-          <a href="/dependencies" @click="${() => this.setActiveButton('/dependencies')}" class="sd-btn blue-mate" rel="noopener">Dependencies</a>
-          <a href="/catalog" @click="${() => this.setActiveButton('/catalog')}" class="sd-btn-mix blue" rel="noopener"><i class="material-icons">import_contacts</i>Catalog</a>
-          <a href="/application" @click="${() => this.setActiveButton('/application')}" class="sd-btn red-mate" rel="noopener">Auth</a>
-          <a href="https://github.com/vicdata4/seed" class="sd-btn-mix purple" rel="noopener"><i class="material-icons">cloud_queue</i>Github</a>
+          <a href="/dependencies" @click="${() => this.setActiveButton('/dependencies')}" class="sd-btn blue-mate" rel="noopener">
+            ${locales.home_link_dependencies}
+          </a>
+          <a href="/catalog" @click="${() => this.setActiveButton('/catalog')}" class="sd-btn-mix blue" rel="noopener">
+            <i class="material-icons">import_contacts</i>
+            ${locales.home_link_catalog}
+          </a>
+          <a href="/application" @click="${() => this.setActiveButton('/application')}" class="sd-btn red-mate" rel="noopener">
+            ${locales.home_link_auth}</a>
+          <a href="https://github.com/vicdata4/seed" class="sd-btn-mix purple" rel="noopener">
+            <i class="material-icons">cloud_queue</i>
+            Github
+          </a>
         </div>
         <language-selector></language-selector>
       </section>

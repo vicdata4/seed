@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { seedButtonStyle } from 'seed-catalog/styles.js';
+import { locales } from '../../assets/translations';
 import 'seed-catalog/components/seed-modal.js';
 
 class CatalogView extends LitElement {
@@ -26,13 +27,13 @@ class CatalogView extends LitElement {
       <section>
           <h1>Seed catalog</h1>
           <hr>
-          <h3>Web components catalog</h3>
-          <p>Seed-catalog is a free and open-source web-components library. It contains CSS-styles and standard web-based templates for buttons, modals, dropdowns and other interface components.</p>
+          <h3>${locales.catalog_subtitle}</h3>
+          <p>${locales.catalog_text}</p>
           <div>
 
         <seed-modal>
           <button slot="button" class="sd-btn-mix red"><i class="material-icons">tv</i>Default modal</button>
-          <span slot="title">Building Web Components</span>
+          <span slot="title">${locales.catalog_modal_title}</span>
           <button slot="close-btn" class="sd-btn-empty"><i class="material-icons blue-mate">close</i></button>
         
           <div slot="content">
@@ -46,7 +47,7 @@ class CatalogView extends LitElement {
 
         <seed-modal alignWindow="center">
           <button slot="button" class="sd-btn-mix blue-mate"><i class="material-icons">info</i>Centered modal</button>
-          <span slot="title">Building Web Components</span>
+          <span slot="title">${locales.catalog_modal_title}</span>
           <button slot="close-btn" class="sd-btn-empty"><i class="material-icons green-mate">close</i></button>
           
           <div slot="content">

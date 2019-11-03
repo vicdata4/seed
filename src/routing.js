@@ -32,14 +32,14 @@ export const navigator = [
   },
   {
     path: '/catalog',
-    name: 'Catalog'
+    name: locales.home_link_catalog
   },
   {
     path: '/dependencies',
-    name: 'Dependencies'
+    name: locales.home_link_dependencies
   },
   {
     path: '/application',
-    name: 'Auth'
+    name: locales.home_link_auth
   }
 ];

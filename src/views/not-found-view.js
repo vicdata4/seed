@@ -1,11 +1,14 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
+import { locales } from '../../assets/translations';
+import { seedButtonStyle } from 'seed-catalog/styles.js';
 
 class NotFoundView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
       ViewStyle,
+      seedButtonStyle,
       css`
         :host{
           background-image: url('assets/images/backgrounds/lamp.jpg');
@@ -17,9 +20,11 @@ class NotFoundView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>Page not found</h1>
+        <h1>${locales.page_not_found}</h1>
         <hr>
-        <a href="/" class="custom-link red" @click="${this.setActiveButton}">Go to Home page</a>
+        <a href="/" class="sd-btn red-mate" @click="${this.setActiveButton}">
+          ${locales.page_not_found_text}
+        </a>
       </section>
     `;
   }
