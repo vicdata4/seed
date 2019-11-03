@@ -4,7 +4,6 @@ import { countryPath, locales } from '../assets/translations';
 import './views/home-view';
 import './views/catalog-view';
 import './views/dependencies-view';
-import './views/server-view';
 import './views/not-found-view';
 import './views/app-view';
 
@@ -34,10 +33,6 @@ export const navigator = [
   {
     path: '/catalog',
     name: 'Catalog'
-  },
-  {
-    path: '/server',
-    name: 'Server'
   },
   {
     path: '/dependencies',

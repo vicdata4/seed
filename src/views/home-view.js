@@ -49,11 +49,9 @@ class HomeView extends LitElement {
         <p>${locales.subtitle}</p>
         <div class="links">
           <a href="/dependencies" @click="${() => this.setActiveButton('/dependencies')}" class="sd-btn blue-mate" rel="noopener">Dependencies</a>
-          <a href="#" class="sd-btn-mix blue" rel="noopener"><i class="material-icons">star_border</i> Catalog</a>
-          <a href="#" class="sd-btn red-mate" rel="noopener">Seed Server</a>
-          <a href="/application" @click="${() => this.setActiveButton('/application')}" class="sd-btn-mixr purple" rel="noopener">Auth<i class="material-icons">lock</i></a>
-          <!--<a href="https://github.com/vicdata4/Roll_Lit_Redux_Seed" class="custom-link" target="_blank" rel="noopener">${locales.github}</a>
-          <a href="/rollup" class="custom-link red-mate" @click="${this.setActiveButton}">${locales.quick_start}</a>-->
+          <a href="/catalog" @click="${() => this.setActiveButton('/catalog')}" class="sd-btn-mix blue" rel="noopener"><i class="material-icons">import_contacts</i>Catalog</a>
+          <a href="/application" @click="${() => this.setActiveButton('/application')}" class="sd-btn red-mate" rel="noopener">Auth</a>
+          <a href="https://github.com/vicdata4/seed" class="sd-btn-mix purple" rel="noopener"><i class="material-icons">cloud_queue</i>Github</a>
         </div>
         <language-selector></language-selector>
       </section>

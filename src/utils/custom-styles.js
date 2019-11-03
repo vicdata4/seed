@@ -54,20 +54,6 @@ export const CustomStyles = css`
     color: #c7b788;
   }
 
-  .custom-link {
-    display: inline-block;
-    background-color: #1C8281;
-    border: none;
-    padding: 10px;
-    font-size: 15px;
-    width: fit-content;
-    width: -moz-fit-content;
-    color: white;
-    border-radius: 7px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
   .npm-command {
     color: red;
   }
