@@ -60,8 +60,14 @@ class LoginForm extends connect(store)(LitElement) {
           name="Login"
           onsubmit="return false">
           <input type="text" id="email" placeholder="email@address.com" required>
-          <input type="password" id="pass" placeholder="password" required>
-          <input type="submit" value="Login" @click="${this.login}" aria-label="Add note" class="sd-btn green-mate">
+          <input type="password" id="pass" placeholder="${locales.login_password}" required>
+          <input
+            type="submit"
+            value="${locales.login_submit}"
+            @click="${this.login}"
+            aria-label="${locales.login_submit}"
+            class="sd-btn green-mate"
+          >
           <h5>${this.alert}</h5>
         </form>
       </section>

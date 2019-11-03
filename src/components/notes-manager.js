@@ -96,7 +96,12 @@ class NotesManager extends connect(store)(LitElement) {
           onsubmit="return false">
           <input id="title" type="text" placeholder="title">
           <textarea id="content" style="height: 200px;" type="text" placeholder="content"></textarea>
-          <input type="submit" value="Add note" @click="${this.addNote}" class="submit-btn" aria-label="Add note">
+          <input
+            type="submit"
+            value="Add note"
+            @click="${this.addNote}"
+            class="submit-btn"
+            aria-label="Add note">
         </form>
         <span class="alert">${this.alert}</span>
         <notes-list></notes-list>

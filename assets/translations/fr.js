@@ -24,6 +24,10 @@ export default {
   dependencies_redux: 'Redux est un conteneur à états prévisibles pour les applications JavaScript. Il vous aide à écrire des applications qui se comportent de manière cohérente, s\'exécutent dans différents environnements (client, serveur et natif) et sont faciles à tester. En plus de cela, il fournit une grande expérience de développement, telle que l’édition de code en temps réel combinée à un débogueur temporel. Vous pouvez utiliser Redux avec React ou avec toute autre bibliothèque de vues. Il est minuscule (2 Ko, dépendances comprises), mais dispose d\'un vaste écosystème d\'addons disponibles.',
   dependencies_vaadin: 'Le routeur Vaadin est une petite bibliothèque. Il utilise une syntaxe expresse pour les routeurs (/ id) afin de mapper les URLs sur les composants Web. This is available to buy the routeur: résolument asynchrone, transition animée, routes enfants, protections de navigation, redirections, etc. Le routeur Vaadin fonctionne avec les composants Web, que sont-ils alors? été créée.',
 
+  login_password: 'mot de passe',
+  login_submit: 'S\'identifier',
+  login_logout: 'Se déconnecter',
+
   page_not_found: 'Page non trouvée',
   page_not_found_text: 'Aller à la page d\'accueil'
 };

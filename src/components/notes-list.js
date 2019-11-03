@@ -62,9 +62,15 @@ class NotesList extends connect(store)(LitElement) {
               <li>
                 <note-card .info="${x}"></note-card>
                 <div class="options">
-                  <button class="sd-icon green sm circle"><i class="material-icons">star</i></button>
-                  <button class="sd-icon blue sm circle"><i class="material-icons">edit</i></button>
-                  <button class="sd-icon red circle sm" @click="${() => this.deleteElement(x)}"><i class="material-icons">close</i></button>
+                  <button class="sd-icon green sm circle">
+                    <i class="material-icons">star</i>
+                  </button>
+                  <button class="sd-icon blue sm circle">
+                    <i class="material-icons">edit</i>
+                  </button>
+                  <button class="sd-icon red circle sm" @click="${() => this.deleteElement(x)}">
+                    <i class="material-icons">close</i>
+                  </button>
                 </div>
               </li>
             `;

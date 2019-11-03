@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { countryPath } from '../../assets/translations';
+import { countryPath, locales } from '../../assets/translations';
 import { close } from '../utils/svg-icons';
 import { navigator } from '../routing';
 import { logout } from '../store/actions/auth-actions';
@@ -120,7 +120,7 @@ class NavigationMenu extends LitElement {
           ${navigator.map((x, i) => html`
             <li><a class="link" href="${x.path}" @click="${() => this.setActive(i)}">${x.name}</a></li>
           `)}
-        ${this.logged ? html`<li><a href="#" @click="${logout}" style="color: red">Logout</a></li>` : ''}
+        ${this.logged ? html`<li><a href="#" @click="${logout}" style="color: red">${locales.login_logout}</a></li>` : ''}
         </ul>
       </nav>
     `;
