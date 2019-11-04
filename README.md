@@ -200,7 +200,11 @@ https://github.com/vicdata4/seed-server.git
 
 #### Seed Catalog
 
-Seed-catalog is a free and open-source `web-components library`. It contains CSS-styles and web-components based templates as buttons, modals, dropdowns and other interface components.
+Seed-catalog is a free and open-source `web-components library`. It contains CSS-styles and standard-web based templates such as buttons, modals, dropdowns and other interface components.
+
+[Seed Catalog repository](https://github.com/vicdata4/seed-catalog)
+
+
 
 
 
