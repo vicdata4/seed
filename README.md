@@ -190,15 +190,15 @@ const deleteExample = await fetch(http.delete());
 
 #### [src/utils/functions.js](https://github.com/vicdata4/seed/blob/master/src/utils/functions.js)
 
-#### `loginValidator()` 
-#### `emailValidator()` 
+##### `loginValidator()` 
+##### `emailValidator()` 
 
 
-#### Node Server
+### Seed Server
 
-https://github.com/vicdata4/seed-server.git
+[Node API | Authentication](https://github.com/vicdata4/seed-server.git)
 
-#### Seed Catalog
+### Seed Catalog
 
 Seed-catalog is a free and open-source `web-components library`. It contains CSS-styles and standard-web based templates such as buttons, modals, dropdowns and other interface components.
 
