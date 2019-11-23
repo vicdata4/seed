@@ -75,6 +75,10 @@ export const CustomStyles = css`
     align-self: flex-end;
   }
 
+  .sm-title {
+    color: #63f6f7;
+  }
+
   @media (min-width: 768px) {
 
     form {

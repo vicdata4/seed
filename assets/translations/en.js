@@ -5,7 +5,7 @@ export default {
   dependencies_redux: 'Redux is a predictable state container for JavaScript apps.It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger. You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.',
   dependencies_vaadin: 'Vaadin router is a small (< 7kb) yet powerful client-side router JS library. It uses a widely adopted express.js syntax for routers (users/:id) to map URLs to views based on Web Component. It has all the features you expect from a modern router: async route resolution, animated transition, child routes, navigation guards, redirects, and more. Vaadin router works with Web Components regardless of how they are created.',
 
-  catalog_subtitle: 'Web components catalog',
+  catalog_subtitle: 'Web components library',
   catalog_text: 'Seed-catalog is a free and open-source web-components library. It contains CSS-styles and standard-web based templates such as buttons, modals, dropdowns and other interface components.',
   catalog_modal_title: 'Building Web Components',
 
