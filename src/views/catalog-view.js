@@ -3,7 +3,6 @@ import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { seedButtonStyle } from 'seed-catalog/styles.js';
 import { locales } from '../../assets/translations';
 import 'seed-catalog/components/seed-modal.js';
-import 'seed-catalog/components/seed-carousel.js';
 
 class CatalogView extends LitElement {
   static get styles() {
@@ -64,13 +63,6 @@ class CatalogView extends LitElement {
         </div>
         <div>
         </div>
-        <h6 class="sm-title">Carousel example</h6>
-        <seed-carousel arrows stepper>
-            <div class="black">Black</div> 
-            <div class="red">Red</div>
-            <div class="blue">Blue</div>
-            <div class="green">Green</div>    
-        </seed-carousel>
       </section>
     `;
   }
