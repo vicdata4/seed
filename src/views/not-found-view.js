@@ -1,14 +1,14 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { locales } from '../../assets/translations';
-import { seedButtonStyle } from 'seed-catalog/styles.js';
+import { seedStyle } from 'seed-catalog/styles.js';
 
 class NotFoundView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
       ViewStyle,
-      seedButtonStyle,
+      seedStyle,
       css`
         :host{
           background-image: url('assets/images/backgrounds/lamp.jpg');

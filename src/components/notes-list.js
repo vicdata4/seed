@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import { LitElement, html, css } from 'lit-element';
-import { seedButtonStyle } from 'seed-catalog/styles.js';
+import { seedStyle } from 'seed-catalog/styles.js';
 import { CustomStyles } from '../utils/custom-styles';
 import { connect } from 'pwa-helpers';
 import { store } from '../store/store';
@@ -12,7 +12,7 @@ class NotesList extends connect(store)(LitElement) {
   static get styles() {
     return [
       CustomStyles,
-      seedButtonStyle,
+      seedStyle,
       css`
         li {
           display: flex;

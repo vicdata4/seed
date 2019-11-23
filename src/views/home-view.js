@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
-import { seedButtonStyle } from 'seed-catalog/styles.js';
+import { seedStyle } from 'seed-catalog/styles.js';
 import { locales } from '../../assets/translations';
 import '../components/language-selector';
 
@@ -9,7 +9,7 @@ class HomeView extends LitElement {
     return [
       CustomStyles,
       ViewStyle,
-      seedButtonStyle,
+      seedStyle,
       css`
         :host{
           background-image: url('assets/images/backgrounds/lamp.jpg');

@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
-import { seedButtonStyle } from 'seed-catalog/styles.js';
+import { seedStyle } from 'seed-catalog/styles.js';
 import { locales } from '../../assets/translations';
 import { store } from '../store/store';
 import { connect } from 'pwa-helpers';
@@ -11,7 +11,7 @@ class LoginForm extends connect(store)(LitElement) {
     return [
       CustomStyles,
       ViewStyle,
-      seedButtonStyle,
+      seedStyle,
       css`
         section {
           background-color: rgba(0,0,0, .6);
