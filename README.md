@@ -34,7 +34,7 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 
 ## Dependencies:
 - [Rollup.js](https://rollupjs.org) Module bundler
-- [LitElement](https://lit-element.polymer-project.org) WebComponents
+- [LitElement](https://lit-element.polymer-project.org) Web Components
 - [Redux](https://redux.js.org) Store
 - [Vaadin](https://www.npmjs.com/package/@vaadin/router) Routing
 - [ESLint](https://eslint.org) Coding style
