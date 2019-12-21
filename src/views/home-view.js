@@ -51,7 +51,7 @@ class HomeView extends LitElement {
         <hr>
         <p>${locales.subtitle}</p>
         <div class="links">
-          <a href="/dependencies"
+          <a href="https://github.com/vicdata4/seed/blob/master/package.json"
              class="sd-btn blue-mate"
              @click="${() => this.setActiveButton('/dependencies')}"
              rel="noopener">
