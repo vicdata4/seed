@@ -204,6 +204,13 @@ Seed-catalog is a free and open-source `web-components library`. It contains CSS
 
 [Seed Catalog repository](https://github.com/vicdata4/seed-catalog)
 
+#### Documentation
+
+[Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
+
+[Polymer Project](https://www.polymer-project.org/)
+
+[Conventional commits](https://www.conventionalcommits.org/)
 
 
 
