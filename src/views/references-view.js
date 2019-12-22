@@ -70,6 +70,13 @@ class ReferencesView extends LitElement {
             <a href="https://developer.mozilla.org/" class="sm-title">https://developer.mozilla.org/</a>
           </div>
         </div>
+        <div class="container">
+          <img class="logo" src="assets/images/conventional.png" alt="conventional commits">
+          <div>
+            <h4>Conventional Commits</h4>
+            <a href="https://www.conventionalcommits.org/" class="sm-title">https://www.conventionalcommits.org/</a>
+          </div>
+        </div>
       </section>
     `;
   }
