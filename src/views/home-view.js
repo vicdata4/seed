@@ -55,7 +55,7 @@ class HomeView extends LitElement {
              class="sd-btn-mix blue-mate"
              @click="${() => this.setActiveButton('/dependencies')}"
              rel="noopener">
-             <i class="material-icons">cloud_queue</i>Repositorio
+             <i class="material-icons">cloud_queue</i>Github
           </a>
           <a href="/catalog"
              class="sd-btn-mixr blue"
@@ -69,10 +69,11 @@ class HomeView extends LitElement {
              rel="noopener">
              ${locales.home_link_auth}
           </a>
-          <a href="https://github.com/vicdata4/seed/blob/master/package.json"
+          <a href="/community"
              class="sd-btn purple"
+             @click="${() => this.setActiveButton('/community')}"
              rel="noopener">
-             ${locales.home_link_dependencies}
+             ${locales.community_title}
           </a>
         </div>
         <language-selector></language-selector>

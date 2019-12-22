@@ -16,7 +16,7 @@ class CommunityView extends LitElement {
 
         .logo {
           width: 80px;
-          height: auto;
+          height: min-intrinsic;
           margin-right: 25px;
         }
 
