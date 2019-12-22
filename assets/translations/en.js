@@ -1,5 +1,5 @@
 export default {
-  community_title: 'Community',
+  references_title: 'References',
 
   catalog_subtitle: 'Web components library',
   catalog_text: 'Seed-catalog is a free and open-source web-components library. It contains CSS-styles and standard-web based templates such as buttons, modals, dropdowns and other interface components.',

@@ -3,7 +3,7 @@ import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { seedStyle } from 'seed-catalog/styles.js';
 import { locales } from '../../assets/translations';
 
-class CommunityView extends LitElement {
+class ReferencesView extends LitElement {
   static get styles() {
     return [
       CustomStyles,
@@ -40,7 +40,7 @@ class CommunityView extends LitElement {
   render() {
     return html`
       <section>
-        <h1>${locales.community_title}</h1>
+        <h1>${locales.references_title}</h1>
         <hr>
         <div class="container">
           <img class="logo" src="assets/images/github_white.png" alt="github">
@@ -75,4 +75,4 @@ class CommunityView extends LitElement {
   }
 }
 
-window.customElements.define('community-view', CommunityView);
+window.customElements.define('references-view', ReferencesView);

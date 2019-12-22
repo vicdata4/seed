@@ -69,11 +69,11 @@ class HomeView extends LitElement {
              rel="noopener">
              ${locales.home_link_auth}
           </a>
-          <a href="/community"
+          <a href="/references"
              class="sd-btn purple"
-             @click="${() => this.setActiveButton('/community')}"
+             @click="${() => this.setActiveButton('/references')}"
              rel="noopener">
-             ${locales.community_title}
+             ${locales.references_title}
           </a>
         </div>
         <language-selector></language-selector>

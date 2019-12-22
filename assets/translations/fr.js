@@ -1,5 +1,5 @@
 export default {
-  community_title: 'Communauté',
+  references_title: 'Références',
 
   catalog_subtitle: 'Web components catalog',
   catalog_text: 'Seed-catalogue est une bibliothèque de composants Web gratuite et à code source ouvert. Il contient des styles CSS et des modèles Web standard pour boutons, modaux, listes déroulantes et autres composants d\'interface.',

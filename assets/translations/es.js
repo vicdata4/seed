@@ -1,5 +1,5 @@
 export default {
-  community_title: 'Comunidad',
+  references_title: 'Referencias',
 
   catalog_subtitle: 'Catálogo de Web components',
   catalog_text: 'Seed-catalog es una libreria de web comopnents open-source. Con tiene hojas de estilo y componentes basados en estándares web como botones, modales, deslizables y otros componentes visuales.',

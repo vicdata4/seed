@@ -3,7 +3,7 @@ import { countryPath, locales } from '../assets/translations';
 
 import './views/home-view';
 import './views/catalog-view';
-import './views/community-view';
+import './views/references-view';
 import './views/not-found-view';
 import './views/app-view';
 
@@ -14,7 +14,7 @@ export const routing = function() {
   var routes = [
     { path: '/', component: 'home-view' },
     { path: '/catalog', component: 'catalog-view' },
-    { path: '/community', component: 'community-view' },
+    { path: '/references', component: 'references-view' },
     { path: '/server', component: 'server-view' },
     { path: '/application', component: 'app-view' },
     { path: '(.*)', component: 'not-found-view' }
@@ -39,7 +39,7 @@ export const navigator = [
     name: locales.home_link_auth
   },
   {
-    path: '/community',
-    name: 'Community'
+    path: '/references',
+    name: locales.references_title
   }
 ];
