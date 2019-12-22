@@ -77,6 +77,7 @@ export const CustomStyles = css`
 
   .sm-title {
     color: #63f6f7;
+    font-size: 14px;
   }
 
   @media (min-width: 768px) {
