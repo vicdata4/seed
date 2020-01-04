@@ -10,6 +10,8 @@ ____ [assets](https://github.com/vicdata4/seed-project/tree/master/assets)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___ [backgrounds](https://github.com/vicdata4/seed-project/tree/master/assets/images/backgrounds)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+|___  [pwa_icons](https://github.com/vicdata4/seed-project/tree/master/assets/pwa_icons)\
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___  [translations](https://github.com/vicdata4/seed-project/tree/master/assets/translations)\
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 |___ [flags](https://github.com/vicdata4/seed-project/tree/master/assets/translations/flags)\
@@ -193,6 +195,36 @@ const deleteExample = await fetch(http.delete());
 ##### `loginValidator()` 
 ##### `emailValidator()` 
 
+### PWA Configuration
+
+[manifest.json](/manifest.json)
+
+[sw.js](/sw.js) service-worker
+
+from `index.html`
+
+```html
+<head>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/pwa_icons/icon-192-ios.png">
+  <meta name="theme-color" content="white"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">  
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  <meta name="apple-mobile-web-app-title" content="Seed Project"> 
+  <meta name="msapplication-TileImage" content="/assets/pwa_icons/icon-144.png">  
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+</head>
+```
+
+```js
+window.onload = () => {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js');
+  }
+};
+```
 
 ### Seed Server
 
