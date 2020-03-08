@@ -58,7 +58,7 @@ class CatalogView extends LitElement {
             <button class="sd-btn red-mate">Deny</button>
           </div> 
         </seed-modal>
-        <a href="https://seed-catalog.web.app" target="_blank" class="sd-btn-mix green"><i class="material-icons">star_border</i>Storybook</a>
+        <a href="https://seed-catalog.com" target="_blank" class="sd-btn-mix green"><i class="material-icons">star_border</i>Storybook</a>
         <a href="https://github.com/vicdata4/seed-catalog" target="_blank" class="sd-btn-mix yellow"><i class="material-icons">search</i>Github</a>
         </div>
         <div>
