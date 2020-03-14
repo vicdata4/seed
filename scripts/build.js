@@ -1,25 +1,22 @@
 /* eslint-disable no-console */
 const { rollup } = require('rollup');
-const babel = require('rollup-plugin-babel');
+
 const { rollupConfig } = require('./utils/rollupConfig.js');
+const { terser } = require('rollup-plugin-terser');
+
 const { output, ...config } = rollupConfig({
   output: {
-    entryFileNames: 'main-es5.js'
+    entryFileNames: 'main.js'
   },
   plugins: [
-    babel({
-      babelrc: false,
-      comments: true,
-      sourceMap: true,
-      presets: [
-        ['@babel/preset-env', {
-          modules: false,
-          loose: true
-        }]
-      ],
-      exclude: 'node_modules/**'
-    })
-  ]
+    terser({
+      module: true,
+      safari10: true,
+    }),
+  ],
+  config: {
+    treeshake: true
+  }
 });
 
 rollup(config)

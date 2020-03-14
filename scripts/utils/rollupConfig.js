@@ -16,7 +16,11 @@ const folders = {
 const files = {
   main: joinPath(folders.src, 'index.js'),
   src_index: resolvePath('.', 'index.html'),
-  build_index: joinPath(folders.build, 'index.html')
+  src_manifest: resolvePath('.', 'manifest.json'),
+  src_sw: resolvePath('.', 'sw.js'),
+  build_index: joinPath(folders.build, 'index.html'),
+  build_manifest: joinPath(folders.build, 'manifest.json'),
+  build_sw: joinPath(folders.build, 'sw.js'),
 };
 
 const rollupConfig = ({
@@ -42,11 +46,19 @@ const rollupConfig = ({
     copy({
       targets: {
         [folders.src_assets]: [folders.build_assets],
-        [files.src_index]: [files.build_index]
+        [files.src_index]: [files.build_index],
+        [files.src_manifest]: [files.build_manifest],
+        [files.src_sw]: [files.build_sw]
       }
     }),
     ...plugins
-  ]
+  ],
+  context: 'window',
+  onwarn(warning, warn) {
+    if (warning.code === 'CIRCULAR_DEPENDENCY') return;
+    warn(warning);
+  },
+  ...config
 });
 
 module.exports = {
