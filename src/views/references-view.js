@@ -23,11 +23,18 @@ class ReferencesView extends LitElement {
         .container {
           display: flex;
           flex-flow: row nowrap;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
         }
 
         a {
           text-decoration: none;
+        }
+
+        .sm-title {
+          font-size: 12px;
+          overflow-wrap: break-word;
+          hyphens: auto;
+
         }
 
         h4 {
