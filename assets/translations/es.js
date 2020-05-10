@@ -2,7 +2,7 @@ export default {
   references_title: 'Referencias',
 
   catalog_subtitle: 'Catálogo de Web components',
-  catalog_text: 'Seed-catalog es una libreria de web comopnents open-source. Con tiene hojas de estilo y componentes basados en estándares web como botones, modales, deslizables y otros componentes visuales.',
+  catalog_text: 'Seed-catalog es una librería de web-components de código abierto. Contiene hojas de estilo y componentes basados en estándares web como botones, modales, deslizables y otros componentes visuales.',
   catalog_modal_title: 'Building Web Components',
 
   github: 'repositorio GitHub',
@@ -26,5 +26,5 @@ export default {
   page_not_found_text: 'Ir a la página de inicio',
 
   quick_start: 'Inicio',
-  subtitle: 'Aprende sobre RollUp, LitElement, Redux and Vaadin'
+  subtitle: 'Aprende sobre RollUp, LitElement, Redux y Vaadin'
 };
