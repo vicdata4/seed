@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
 import { locales } from '../../assets/translations';
-import { seedStyle } from 'seed-catalog/styles.js';
+import { seedStyle } from '@seed-catalog/styles';
 
 class NotFoundView extends LitElement {
   static get styles() {

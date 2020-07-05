@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
 import { CustomStyles, ViewStyle } from '../utils/custom-styles';
-import { seedStyle } from 'seed-catalog/styles.js';
+import { seedStyle } from '@seed-catalog/styles';
 import { locales } from '../../assets/translations';
-import 'seed-catalog/modal.js';
+import '@seed-catalog/modal';
 
 class CatalogView extends LitElement {
   static get styles() {
