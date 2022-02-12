@@ -6147,19 +6147,19 @@ class HomeView extends LitElement {
           </a>
           <a href="/seed/catalog"
              class="sd-btn-mixr blue"
-             @click="${() => this.setActiveButton('/seed/catalog')}"
+             @click="${() => this.setActiveButton('/catalog')}"
              rel="noopener">
              ${locales.home_link_catalog}<i class="material-icons">import_contacts</i>
           </a>
           <a href="/seed/application"
              class="sd-btn red-mate"
-             @click="${() => this.setActiveButton('/seed/application')}"
+             @click="${() => this.setActiveButton('/application')}"
              rel="noopener">
              ${locales.home_link_auth}
           </a>
           <a href="/seed/references"
              class="sd-btn purple"
-             @click="${() => this.setActiveButton('/seed/references')}"
+             @click="${() => this.setActiveButton('/references')}"
              rel="noopener">
              ${locales.references_title}
           </a>
@@ -7975,7 +7975,7 @@ const routing = function () {
 
 const navigator$1 = [
   {
-    path: '/seed/',
+    path: '/seed',
     name: locales.nav_home
   },
   {

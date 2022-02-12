@@ -32,7 +32,7 @@ export const routing = function () {
 
 export const navigator = [
   {
-    path: '/seed/',
+    path: '/seed',
     name: locales.nav_home
   },
   {
