@@ -12,7 +12,7 @@ export const routing = function() {
   const router = new Router(outlet);
 
   var routes = [
-    { path: '/', component: 'home-view' },
+    { path: '/seed', component: 'home-view' },
     { path: '/catalog', component: 'catalog-view' },
     { path: '/references', component: 'references-view' },
     { path: '/server', component: 'server-view' },
@@ -27,7 +27,7 @@ export const routing = function() {
 
 export const navigator = [
   {
-    path: '/',
+    path: '/seed',
     name: locales.nav_home
   },
   {
