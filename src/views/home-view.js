@@ -59,19 +59,19 @@ class HomeView extends LitElement {
           </a>
           <a href="/seed/catalog"
              class="sd-btn-mixr blue"
-             @click="${() => this.setActiveButton('/catalog')}"
+             @click="${() => this.setActiveButton('/seed/catalog')}"
              rel="noopener">
              ${locales.home_link_catalog}<i class="material-icons">import_contacts</i>
           </a>
           <a href="/seed/application"
              class="sd-btn red-mate"
-             @click="${() => this.setActiveButton('/application')}"
+             @click="${() => this.setActiveButton('/seed/application')}"
              rel="noopener">
              ${locales.home_link_auth}
           </a>
           <a href="/seed/references"
              class="sd-btn purple"
-             @click="${() => this.setActiveButton('/references')}"
+             @click="${() => this.setActiveButton('/seed/references')}"
              rel="noopener">
              ${locales.references_title}
           </a>
