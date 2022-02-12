@@ -7956,7 +7956,7 @@ const routing = function () {
 
   var routes = [
     {
-      path: '/seed',
+      path: '/seed/',
       children: [
         { path: '', component: 'home-view' },
         { path: '/catalog', component: 'catalog-view' },
