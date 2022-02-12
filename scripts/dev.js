@@ -20,11 +20,11 @@ const { output, ...config } = rollupConfig({
       host: ['127.0.0.1'],
       port: 2900,
       historyApiFallback: true
-    }),
-    liveReload({
+    })
+    /* ,liveReload({
       watch: folders.build,
       delay: 500
-    })
+    }) */
   ]
 });
 

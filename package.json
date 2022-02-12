@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "node ./scripts/dev.js",
         "build:pro": "node ./scripts/build.js",
-        "lint": "eslint"
+        "lint": "eslint",
+        "github-build": "rm -rf ./docs/ && mv ./build/ ./docs"
     },
     "author": "",
     "license": "ISC",
