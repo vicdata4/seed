@@ -104,7 +104,7 @@ class NavigationMenu extends LitElement {
   }
 
   async authenticate() {
-    this.logged = await auth2();
+    // this.logged = await auth2();
   }
 
   firstUpdated() {
