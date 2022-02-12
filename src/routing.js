@@ -7,17 +7,22 @@ import './views/references-view';
 import './views/not-found-view';
 import './views/app-view';
 
-export const routing = function() {
+export const routing = function () {
   const outlet = this.shadowRoot.getElementById('root');
   const router = new Router(outlet);
 
   var routes = [
-    { path: '/seed', component: 'home-view' },
-    { path: '/catalog', component: 'catalog-view' },
-    { path: '/references', component: 'references-view' },
-    { path: '/server', component: 'server-view' },
-    { path: '/application', component: 'app-view' },
-    { path: '(.*)', component: 'not-found-view' }
+    {
+      path: '/seed',
+      children: [
+        { path: '', component: 'home-view' },
+        { path: '/catalog', component: 'catalog-view' },
+        { path: '/references', component: 'references-view' },
+        { path: '/server', component: 'server-view' },
+        { path: '/application', component: 'app-view' },
+        { path: '(.*)', component: 'not-found-view' }
+      ]
+    }
   ];
 
   if (countryPath) routes.unshift({ path: window.location.pathname, redirect: '/' });
@@ -31,15 +36,15 @@ export const navigator = [
     name: locales.nav_home
   },
   {
-    path: '/catalog',
+    path: '/seed/catalog',
     name: locales.home_link_catalog
   },
   {
-    path: '/application',
+    path: '/seed/application',
     name: locales.home_link_auth
   },
   {
-    path: '/references',
+    path: '/seed/references',
     name: locales.references_title
   }
 ];

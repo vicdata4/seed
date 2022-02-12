@@ -6162,19 +6162,19 @@ class HomeView extends LitElement {
              rel="noopener">
              <i class="material-icons">cloud_queue</i>Github
           </a>
-          <a href="/catalog"
+          <a href="/seed/catalog"
              class="sd-btn-mixr blue"
              @click="${() => this.setActiveButton('/catalog')}"
              rel="noopener">
              ${locales.home_link_catalog}<i class="material-icons">import_contacts</i>
           </a>
-          <a href="/application"
+          <a href="/seed/application"
              class="sd-btn red-mate"
              @click="${() => this.setActiveButton('/application')}"
              rel="noopener">
              ${locales.home_link_auth}
           </a>
-          <a href="/references"
+          <a href="/seed/references"
              class="sd-btn purple"
              @click="${() => this.setActiveButton('/references')}"
              rel="noopener">
@@ -6481,7 +6481,7 @@ class ReferencesView extends LitElement {
       seedStyle,
       css`
         :host{
-          background-image: url('assets/images/backgrounds/keyboard.jpg');
+          background-image: url('./assets/images/backgrounds/keyboard.jpg');
         }
 
         .logo {
@@ -6520,35 +6520,35 @@ class ReferencesView extends LitElement {
         <h1>${locales.references_title}</h1>
         <hr>
         <div class="container">
-          <img class="logo" src="assets/images/github_white.png" alt="github">
+          <img class="logo" src="./assets/images/github_white.png" alt="github">
           <div>
             <h4>Github</h4>
             <a href="https://github.com/" class="sm-title">https://github.com/</a>
           </div>
         </div>
         <div class="container">
-          <img class="logo" src="assets/images/opensource.jpg" alt="opensource">
+          <img class="logo" src="./assets/images/opensource.jpg" alt="opensource">
           <div>
             <h4>Open source</h4>
             <a href="https://opensource.org/community" class="sm-title">https://opensource.org/community</a>
           </div>
         </div>
         <div class="container">
-          <img class="logo" src="assets/images/polymer.png" alt="polymer">
+          <img class="logo" src="./assets/images/polymer.png" alt="polymer">
           <div>
             <h4>Polymer Project</h4>
             <a href="https://www.polymer-project.org/blog/" class="sm-title">https://www.polymer-project.org/blog/</a>
           </div>
         </div>
         <div class="container">
-          <img class="logo" src="assets/images/mdn.png" alt="mdn">
+          <img class="logo" src="./assets/images/mdn.png" alt="mdn">
           <div>
             <h4>Mozilla</h4>
             <a href="https://developer.mozilla.org/" class="sm-title">https://developer.mozilla.org/</a>
           </div>
         </div>
         <div class="container">
-          <img class="logo" src="assets/images/conventional.png" alt="conventional commits">
+          <img class="logo" src="./assets/images/conventional.png" alt="conventional commits">
           <div>
             <h4>Conventional Commits</h4>
             <a href="https://www.conventionalcommits.org/" class="sm-title">https://www.conventionalcommits.org/</a>
@@ -7973,17 +7973,22 @@ class AppView extends LitElement {
 
 window.customElements.define('app-view', AppView);
 
-const routing = function() {
+const routing = function () {
   const outlet = this.shadowRoot.getElementById('root');
   const router = new Router(outlet);
 
   var routes = [
-    { path: '/seed', component: 'home-view' },
-    { path: '/catalog', component: 'catalog-view' },
-    { path: '/references', component: 'references-view' },
-    { path: '/server', component: 'server-view' },
-    { path: '/application', component: 'app-view' },
-    { path: '(.*)', component: 'not-found-view' }
+    {
+      path: '/seed',
+      children: [
+        { path: '', component: 'home-view' },
+        { path: '/catalog', component: 'catalog-view' },
+        { path: '/references', component: 'references-view' },
+        { path: '/server', component: 'server-view' },
+        { path: '/application', component: 'app-view' },
+        { path: '(.*)', component: 'not-found-view' }
+      ]
+    }
   ];
 
   if (countryPath) routes.unshift({ path: window.location.pathname, redirect: '/' });
@@ -7997,15 +8002,15 @@ const navigator$1 = [
     name: locales.nav_home
   },
   {
-    path: '/catalog',
+    path: '/seed/catalog',
     name: locales.home_link_catalog
   },
   {
-    path: '/application',
+    path: '/seed/application',
     name: locales.home_link_auth
   },
   {
-    path: '/references',
+    path: '/seed/references',
     name: locales.references_title
   }
 ];
