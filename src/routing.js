@@ -13,7 +13,7 @@ export const routing = function () {
 
   var routes = [
     {
-      path: '/seed',
+      path: '/seed/',
       children: [
         { path: '', component: 'home-view' },
         { path: '/catalog', component: 'catalog-view' },
@@ -32,7 +32,7 @@ export const routing = function () {
 
 export const navigator = [
   {
-    path: '/seed',
+    path: '/seed/',
     name: locales.nav_home
   },
   {
