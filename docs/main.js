@@ -7954,9 +7954,9 @@ const routing = function () {
 
   var routes = [
     {
-      path: '/seed/',
+      path: '/seed',
       children: [
-        { path: '', component: 'home-view' },
+        { path: '/', component: 'home-view' },
         { path: '/catalog', component: 'catalog-view' },
         { path: '/references', component: 'references-view' },
         { path: '/server', component: 'server-view' },
@@ -7973,7 +7973,7 @@ const routing = function () {
 
 const navigator$1 = [
   {
-    path: '/seed/',
+    path: '/seed',
     name: locales.nav_home
   },
   {
