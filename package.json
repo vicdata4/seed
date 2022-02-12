@@ -8,7 +8,7 @@
         "dev": "node ./scripts/dev.js",
         "build:pro": "node ./scripts/build.js",
         "lint": "eslint",
-        "github-build": "rm -rf ./docs/ && mv ./build/ ./docs"
+        "github-build": "rm -rf ./docs/ && cp -R ./build/ ./docs"
     },
     "author": "",
     "license": "ISC",
