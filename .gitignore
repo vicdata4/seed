@@ -11,7 +11,6 @@
 # production
 /build
 /.vscode
-config.js
 src/store/host.js
 
 # misc
