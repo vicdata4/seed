@@ -19,7 +19,7 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
  
     <title>Seed</title>
-    <link rel="icon" href="/assets/favicon.png">
+    <link rel="icon" href="./assets/favicon.png">
     <style type="text/css">
         * {
             box-sizing: border-box;
@@ -46,9 +46,13 @@
             'use strict';
 
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./sw.js');
+                //navigator.serviceWorker.register('./sw.js');
             }
         };
+
+        const path = window.location.pathname.slice(1);
+        localStorage.setItem('path', path);
+        window.location.href='../';
     </script>
 </head>
 <body>
